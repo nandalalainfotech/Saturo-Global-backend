@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <table style="border:1px solid black;width: 100%; margin-top: 10px; font-size: 0.8em;">
+        <tr>
+            <th colspan="25" style="text-align:center;width: 100%;">
+                NANDALALA ERP
+            </th>
+        </tr>
+
+        <tr>
+            <th colspan="25" style="text-align:center;width: 100%;">Manufacture Issue Item</th>
+        </tr>
+
+        <tr>
+            <th>ID</th>
+            <th>Series</th>
+            <th> Date</th>
+            <th>Supplier</th>
+            <th>Email ID</th>
+            <th>Contact</th>
+            <th>Item</th>
+            <th>Required Date</th>
+            <th>Quantity</th>
+            <th>WareHouse</th>
+
+
+        </tr>
+        {{#each PrreqQuot}}
+        <tr>
+            <th>{{this.prqId}}</th>
+            <th>{{this.rqSeries}}</th>
+            <th>{{this.date}}</th>
+            <th>{{this.supplier}}</th>
+            <th>{{this.emailId}}</th>
+            <th>{{this.contact}}</th>
+            <th>{{this.itemCode}}</th>
+            <th>{{this.requiredDate}}</th>
+            <th>{{this.quantity}}</th>
+            <th>{{this.warehouse}}</th>
+
+        </tr>
+        {{/each}}
+
+    </table>
+</body>
+
+</html>

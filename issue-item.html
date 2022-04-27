@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <table style="border:1px solid black;width: 100%; margin-top: 10px; font-size: 0.8em;">
+        <tr>
+            <th colspan="25" style="text-align:center;width: 100%;">
+                NANDALALA ERP
+            </th>
+        </tr>
+
+        <tr>
+            <th colspan="25" style="text-align:center;width: 100%;">Manufacture Issue Item</th>
+        </tr>
+
+        <tr>
+            <th>ID</th>
+            <th>PROrder Code</th>
+            <th>Issued Date</th>
+            <th>Item Issued</th>
+            <th>Company</th>
+            <th>Quantity</th>
+            <th>UOM</th>
+            <th>Amount</th>
+            <th>Serial Number</th>
+            <th>Source WH</th>
+            <th>Target WH</th>
+            <th>Stock Entry</th>
+            <th>Description</th>
+
+        </tr>
+        {{#each IssueItem}}
+        <tr>
+            <th>{{this.issueId}}</th>
+            <th>{{this.porderCode}}</th>
+            <th>{{this.issueDate}}</th>
+            <th>{{this.itemcode}}</th>
+            <th>{{this.company}}</th>
+            <th>{{this.quantity}}</th>
+            <th>{{this.uom}}</th>
+            <th>{{this.amount}}</th>
+            <th>{{this.serialNo}}</th>
+            <th>{{this.sourceWh}}</th>
+            <th>{{this.targetWh}}</th>
+            <th>{{this.stockEntry}}</th>
+            <th>{{this.description}}</th>
+        </tr>
+        {{/each}}
+
+    </table>
+</body>
+
+</html>

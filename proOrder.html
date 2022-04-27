@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <table style="border:1px solid black;width: 100%; margin-top: 10px; font-size: 0.8em;">
+        <tr>
+            <th colspan="25" style="text-align:center;width: 100%;">
+                NANDALALA ERP
+            </th>
+        </tr>
+
+        <tr>
+            <th colspan="25" style="text-align:center;width: 100%;">Production Order</th>
+        </tr>
+
+        <tr>
+            <th colspan="4">ID</th>
+            <th colspan="7">Items To Manufacture</th>
+            <th colspan="7">Status</th>
+            <th colspan="7">ProductOrder Code</th>
+        </tr>
+        {{#each pOrders}}
+        <tr>
+            <th colspan="4">{{this.prId}}</th>
+            <th colspan="7">{{this.itemtoManufacture}}</th>
+            <th colspan="7">{{this.status}}</th>
+            <th colspan="7">{{this.prorderCode}}</th>
+
+        </tr>
+        {{/each}}
+
+    </table>
+</body>
+
+</html>
