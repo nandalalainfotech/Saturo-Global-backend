@@ -12,7 +12,7 @@ import { Routeofadministration001mb } from "./Routeofadministration001mb";
 import { Unitsinglevalue001mb } from "./Unitsinglevalue001mb";
 import { Unithighendvalue001mb } from "./Unithighendvalue001mb";
 import { Unitlowendvalue001mb } from "./Unitlowendvalue001mb";
-import { Ligandversion001mb } from "./Ligandversion001mb";
+import { Ligand001wb } from "./Ligand001wb";
 import { AssayDTO } from "src/dto/Assay.dto";
 
 @Index("assayType_slno", ["assayTypeSlno"], {})
@@ -144,13 +144,14 @@ export class Assay001wb {
   @JoinColumn([{ name: "united_slno", referencedColumnName: "id" }])
   unitedSlno2: Unitlowendvalue001mb;
 
-  @ManyToOne(
-    () => Ligandversion001mb,
-    (ligandversion001mb) => ligandversion001mb.assay001wbs,
-    { onDelete: "CASCADE", onUpdate: "RESTRICT" }
-  )
-  @JoinColumn([{ name: "ligandVersion_slno", referencedColumnName: "id" }])
-  ligandVersionSlno2: Ligandversion001mb;
+  @ManyToOne(() => Ligand001wb, (ligand001wb) => ligand001wb.assay001wbs, {
+    onDelete: "CASCADE",
+    onUpdate: "RESTRICT",
+  })
+  @JoinColumn([
+    { name: "ligandVersion_slno", referencedColumnName: "ligandId" },
+  ])
+  ligandVersionSlno2: Ligand001wb;
 
 
   setProperties(assayDTO: AssayDTO) {
@@ -178,4 +179,5 @@ export class Assay001wb {
     this.updatedDatetime = assayDTO.updatedDatetime;
 
   }
+
 }
