@@ -4,7 +4,7 @@ import { LigandVersionDTO } from "src/dto/Ligandversion.dto";
 import { Ligandversion001mb } from "src/entity/Ligandversion001mb";
 import { LigandVersionService } from "src/service/Ligandversion.service";
 
-@Controller('/testandreportstudio/api/activity')
+@Controller('/testandreportstudio/api/version')
 export class LigandVersionController {
 	constructor(private readonly ligandVersionService: LigandVersionService) { }
 	@UseGuards(JwtAuthGuard)
@@ -26,9 +26,9 @@ export class LigandVersionController {
 	}
 
 	@UseGuards(JwtAuthGuard)
-	@Delete('delete/:slNo')
-	remove(@Param('slNo') slNo: number): Promise<void> {
-		return this.ligandVersionService.remove(slNo);
+	@Delete('delete/:id')
+	remove(@Param('id') id: number): Promise<void> {
+		return this.ligandVersionService.remove(id);
 	}
     
 	@UseGuards(JwtAuthGuard)

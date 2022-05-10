@@ -30,7 +30,7 @@ export class LigandTypeService {
     findOne(id: number): Promise<Ligandtype001mb> {
         return this.ligandtypeRepository.findOne(id);
     }
-    async remove(slNo: number): Promise<void> {
-        await this.ligandtypeRepository.delete(slNo);
+    async remove(id: number): Promise<void> {
+        await this.ligandtypeRepository.delete(id);
     }
 }

@@ -24,7 +24,7 @@ export class LigandService {
     }
 
     async findAll(): Promise<Ligand001wb[]> {
-        return await this.ligandRepository.find();
+        return await this.ligandRepository.find({ relations: ["ligandVersionSlno2", "ligandTypeSlno2"] });
     }
 
     findOne(id: number): Promise<Ligand001wb> {

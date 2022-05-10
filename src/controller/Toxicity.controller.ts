@@ -4,7 +4,7 @@ import { ToxicityDTO } from "src/dto/Toxicity.dto";
 import { Toxicity001mb } from "src/entity/Toxicity001mb";
 import { ToxicityService } from "src/service/Toxicity.service";
 
-@Controller('/testandreportstudio/api/activity')
+@Controller('/testandreportstudio/api/toxicity')
 export class ToxicityController {
 	constructor(private readonly toxicityService: ToxicityService) { }
 	@UseGuards(JwtAuthGuard)
@@ -26,9 +26,9 @@ export class ToxicityController {
 	}
 
 	@UseGuards(JwtAuthGuard)
-	@Delete('delete/:slNo')
-	remove(@Param('slNo') slNo: number): Promise<void> {
-		return this.toxicityService.remove(slNo);
+	@Delete('delete/:id')
+	remove(@Param('id') id: number): Promise<void> {
+		return this.toxicityService.remove(id);
 	}
     
 	@UseGuards(JwtAuthGuard)

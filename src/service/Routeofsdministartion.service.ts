@@ -30,7 +30,7 @@ export class RouteOfAdministartionService {
     findOne(id: number): Promise<Routeofadministration001mb> {
         return this.routeofadministration.findOne(id);
     }
-    async remove(slNo: number): Promise<void> {
-        await this.routeofadministration.delete(slNo);
+    async remove(id: number): Promise<void> {
+        await this.routeofadministration.delete(id);
     }
 }

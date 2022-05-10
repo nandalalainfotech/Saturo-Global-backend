@@ -4,7 +4,7 @@ import { LigandDTO } from "src/dto/Ligand.dto";
 import { Ligand001wb } from "src/entity/Ligand001wb";
 import { LigandService } from "src/service/Ligand.service";
 
-@Controller('/testandreportstudio/api/activity')
+@Controller('/testandreportstudio/api/ligand')
 export class LigandController {
 	constructor(private readonly ligandService: LigandService) { }
 	@UseGuards(JwtAuthGuard)

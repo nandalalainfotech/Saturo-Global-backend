@@ -4,7 +4,7 @@ import { LigandTypeDTO } from "src/dto/Ligandtype.dto";
 import { Ligandtype001mb } from "src/entity/Ligandtype001mb";
 import { LigandTypeService } from "src/service/LigandType.service";
 
-@Controller('/testandreportstudio/api/activity')
+@Controller('/testandreportstudio/api/type')
 export class LigandTypeController {
 	constructor(private readonly ligandtypeService: LigandTypeService) { }
 	@UseGuards(JwtAuthGuard)
@@ -26,9 +26,9 @@ export class LigandTypeController {
 	}
 
 	@UseGuards(JwtAuthGuard)
-	@Delete('delete/:slNo')
-	remove(@Param('slNo') slNo: number): Promise<void> {
-		return this.ligandtypeService.remove(slNo);
+	@Delete('delete/:id')
+	remove(@Param('id') id: number): Promise<void> {
+		return this.ligandtypeService.remove(id);
 	}
     
 	@UseGuards(JwtAuthGuard)

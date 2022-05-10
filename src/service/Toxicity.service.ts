@@ -30,7 +30,7 @@ export class ToxicityService {
     findOne(id: number): Promise<Toxicity001mb> {
         return this.toxicityRepository.findOne(id);
     }
-    async remove(slNo: number): Promise<void> {
-        await this.toxicityRepository.delete(slNo);
+    async remove(id: number): Promise<void> {
+        await this.toxicityRepository.delete(id);
     }
 }
