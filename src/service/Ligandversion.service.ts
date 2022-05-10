@@ -19,7 +19,7 @@ export class LigandVersionService {
     async update(ligandVersionDTO: LigandVersionDTO): Promise<Ligandversion001mb> {
         const ligandversion001mb = new Ligandversion001mb();
         ligandversion001mb.setProperties(ligandVersionDTO);
-        await this.ligandversionRepository.update({  }, ligandversion001mb);
+        await this.ligandversionRepository.update({ id: ligandversion001mb.id  }, ligandversion001mb);
         return ligandversion001mb;
     }
 
@@ -30,7 +30,7 @@ export class LigandVersionService {
     findOne(id: number): Promise<Ligandversion001mb> {
         return this.ligandversionRepository.findOne(id);
     }
-    async remove(slNo: number): Promise<void> {
-        await this.ligandversionRepository.delete(slNo);
+    async remove(id: number): Promise<void> {
+        await this.ligandversionRepository.delete(id);
     }
 }

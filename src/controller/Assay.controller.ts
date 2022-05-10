@@ -4,7 +4,7 @@ import { AssayDTO } from "src/dto/Assay.dto";
 import { Assay001wb } from "src/entity/Assay001wb";
 import { AssayService } from "src/service/Assay.service";
 
-@Controller('/')
+@Controller('/testandreportstudio/api/')
 export class AssayController {
     constructor(private readonly assayService: AssayService) { }
 	@UseGuards(JwtAuthGuard)
@@ -26,9 +26,9 @@ export class AssayController {
 	}
 
 	@UseGuards(JwtAuthGuard)
-	@Delete('delete/:slNo')
-	remove(@Param('slNo') slNo: number): Promise<void> {
-		return this.assayService.remove(slNo);
+	@Delete('delete/:id')
+	remove(@Param('id') id: number): Promise<void> {
+		return this.assayService.remove(id);
 	}
     
 	@UseGuards(JwtAuthGuard)

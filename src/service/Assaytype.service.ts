@@ -30,7 +30,7 @@ export class AssaytypeService {
     findOne(id: number): Promise<Assaytype001mb> {
         return this.assaytypeRepository.findOne(id);
     }
-    async remove(slNo: number): Promise<void> {
-        await this.assaytypeRepository.delete(slNo);
+    async remove(id: number): Promise<void> {
+        await this.assaytypeRepository.delete(id);
     }
 }

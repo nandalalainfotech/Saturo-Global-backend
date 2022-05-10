@@ -4,7 +4,7 @@ import { RouteOfAdministartionDTO } from "src/dto/Routeofadministration.dto";
 import { Routeofadministration001mb } from "src/entity/Routeofadministration001mb";
 import { RouteOfAdministartionService } from "src/service/Routeofsdministartion.service";
 
-@Controller('/testandreportstudio/api/activity')
+@Controller('/testandreportstudio/api/routeofadmin')
 export class RouteOfAdministartionController {
 	constructor(private readonly routeOfAdministartionService: RouteOfAdministartionService) { }
 	@UseGuards(JwtAuthGuard)
@@ -26,9 +26,9 @@ export class RouteOfAdministartionController {
 	}
 
 	@UseGuards(JwtAuthGuard)
-	@Delete('delete/:slNo')
-	remove(@Param('slNo') slNo: number): Promise<void> {
-		return this.routeOfAdministartionService.remove(slNo);
+	@Delete('delete/:id')
+	remove(@Param('id') id: number): Promise<void> {
+		return this.routeOfAdministartionService.remove(id);
 	}
     
 	@UseGuards(JwtAuthGuard)
