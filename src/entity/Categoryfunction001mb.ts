@@ -10,6 +10,18 @@ export class Categoryfunction001mb {
   @Column("varchar", { name: "function", length: 100 })
   function: string;
 
+  @Column("varchar", { name: "insert_user", length: 40 })
+  insertUser: string;
+
+  @Column("datetime", { name: "insert_datetime" })
+  insertDatetime: Date;
+
+  @Column("varchar", { name: "updated_user", nullable: true, length: 40 })
+  updatedUser: string | null;
+
+  @Column("datetime", { name: "updated_datetime", nullable: true })
+  updatedDatetime: Date | null;
+
   @OneToMany(
     () => Measurement001wb,
     (measurement001wb) => measurement001wb.functionSlno2
@@ -21,5 +33,9 @@ export class Categoryfunction001mb {
   setProperties(categoryFunctionDTO: CategoryFunctionDTO) {
     this.id = categoryFunctionDTO.id;
     this.function = categoryFunctionDTO.function;
+    this.insertUser = categoryFunctionDTO.insertUser;
+    this.insertDatetime = categoryFunctionDTO.insertDatetime;
+    this.updatedUser = categoryFunctionDTO.updatedUser;
+    this.updatedDatetime = categoryFunctionDTO.updatedDatetime;
   }
 }
