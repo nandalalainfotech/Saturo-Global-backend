@@ -105,14 +105,10 @@ export class Person001mb {
     this.dob = personDTO.dob;
     this.sex = personDTO.sex;
     this.maritalstatus = personDTO.maritalstatus;
-    this.updatedDatetime = personDTO.updatedDatetime;
     this.bloodgroup = personDTO.bloodgroup;
     this.address1 = personDTO.address1;
     this.address2 = personDTO.address2;
     this.address3 = personDTO.address3;
-    this.insertDatetime = personDTO.insertDatetime;
-    this.updatedUser = personDTO.updatedUser;
-    this.updatedDatetime = personDTO.updatedDatetime;
     this.religion = personDTO.religion;
     this.city = personDTO.city;
     this.state = personDTO.state;
@@ -124,9 +120,10 @@ export class Person001mb {
     this.primaryemail = personDTO.primaryemail;
     this.secondaryemail = personDTO.secondaryemail;
     this.occupationtype = personDTO.occupationtype;
+    this.occupationrole = personDTO.occupationrole;
     this.insertUser = personDTO.insertUser;
     this.insertDatetime = personDTO.insertDatetime;
     this.updatedUser = personDTO.updatedUser;
     this.updatedDatetime = personDTO.updatedDatetime;
-}
+  }
 }

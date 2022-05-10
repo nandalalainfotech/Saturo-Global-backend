@@ -4,26 +4,26 @@ import { TypeOrmModule, TypeOrmModuleOptions } from '@nestjs/typeorm';
 import { SnakeNamingStrategy } from 'typeorm-naming-strategies';
 import { AuthModule } from './auth/auth.module';
 import { MailModule } from './mail/mail.module';
-import { BomTypeModule } from './module/bom-type.module';
-import { CompleteOrderModule } from './module/complete-order.module';
-import { IssueItemModule } from './module/issue-item.module';
-import { ItemStatusModule } from './module/item-status.module';
-import { ItemModule } from './module/item.module';
-import { ToolsModule } from './module/manu-tool.module';
-import { ManufacturesetModule } from './module/manufactureset.module';
-import { MaterialModule } from './module/material.module';
-import { OpenProdOrderModule } from './module/open-prod-order.module';
-import { OperationModule } from './module/operation.module';
+import { AssayModule } from './module/Assay.module';
+import { AssaytypeModule } from './module/Assaytype.module';
+import { CategoryModule } from './module/Category.module';
+import { CategoryfunctionModule } from './module/Categoryfunction.module';
+import { GenderModule } from './module/Gender.mdule';
+import { LigandModule } from './module/Ligand.module';
+import { LigandTypeModule } from './module/LigandType.module';
+import { LigandVersionModule } from './module/Ligandversion.module';
+import { MeasurementModule } from './module/Measurement.module';
+import { OriginalPrefixModule } from './module/Originalprefix.module';
 import { PersonModule } from './module/person.module';
-import { ProdOrderModule } from './module/prod-order.module';
-import { ProdPlanModule } from './module/prod-plan.module';
-import { ProdStockModule } from './module/prod-stock.module';
-import { ProdTimeSheetModule } from './module/prod-time-sheet.module';
-import { ProgProdOrderModule } from './module/prog-prod-order.module';
 import { RoleModule } from './module/role.module';
+import { RouteOfAdministartionModule } from './module/Routeofadministartion.module';
 import { SystemPropertiesModule } from './module/system-properties.module';
+import { ToxicityModule } from './module/Toxicity.module';
+import { TypeModule } from './module/Type.module';
+import { UnitHighEndValueModule } from './module/Unithighendvalue.module';
+import { UnitlowendvalueModule } from './module/Unitlowendvalue.module';
+import { UnitSingleValueModule } from './module/Unitsinglevalue.module';
 import { UserModule } from './module/user.module';
-import { WorkStationModule } from './module/work-station.module';
 
 
 
@@ -56,26 +56,26 @@ import { WorkStationModule } from './module/work-station.module';
         AuthModule,
         MailModule,
         SystemPropertiesModule,
-        ProdOrderModule,
-        ProdPlanModule,
-        ProdStockModule,
-        ProdTimeSheetModule,
-        BomTypeModule,
-        CompleteOrderModule,
-        OpenProdOrderModule,
-        ItemModule,
         PersonModule,
         RoleModule,
         UserModule,
-        MaterialModule,
-        ItemStatusModule,
-        WorkStationModule,
-        OperationModule,
-        ToolsModule,
-        ManufacturesetModule,
-        OpenProdOrderModule,
-        IssueItemModule,
-        ProgProdOrderModule
+        AssayModule,
+        AssaytypeModule,
+        CategoryModule,
+        CategoryfunctionModule,
+        GenderModule,
+        LigandModule,
+        LigandTypeModule,
+        LigandVersionModule,
+        MeasurementModule,
+        OriginalPrefixModule,
+        RouteOfAdministartionModule,
+        ToxicityModule,
+        TypeModule,
+        UnitHighEndValueModule,
+        UnitlowendvalueModule,
+        UnitSingleValueModule
+        
     ],
     
       
