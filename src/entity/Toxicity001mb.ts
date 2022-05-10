@@ -10,6 +10,18 @@ export class Toxicity001mb {
   @Column("varchar", { name: "toxiCity", length: 30 })
   toxiCity: string;
 
+  @Column("varchar", { name: "insert_user", length: 40 })
+  insertUser: string;
+
+  @Column("datetime", { name: "insert_datetime" })
+  insertDatetime: Date;
+
+  @Column("varchar", { name: "updated_user", nullable: true, length: 40 })
+  updatedUser: string | null;
+
+  @Column("datetime", { name: "updated_datetime", nullable: true })
+  updatedDatetime: Date | null;
+
   @OneToMany(() => Assay001wb, (assay001wb) => assay001wb.toxiCitySlno2)
   assay001wbs: Assay001wb[];
 
@@ -17,5 +29,9 @@ export class Toxicity001mb {
   setProperties(toxicityDTO: ToxicityDTO) {
     this.id = toxicityDTO.id;
     this.toxiCity = toxicityDTO.toxiCity;
+    this.insertUser = toxicityDTO.insertUser;
+    this.insertDatetime = toxicityDTO.insertDatetime;
+    this.updatedUser = toxicityDTO.updatedUser;
+    this.updatedDatetime = toxicityDTO.updatedDatetime;
   }
 }

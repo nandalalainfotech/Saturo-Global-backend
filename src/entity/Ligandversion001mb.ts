@@ -11,6 +11,18 @@ export class Ligandversion001mb {
   @Column("varchar", { name: "ligandVersion", length: 30 })
   ligandVersion: string;
 
+  @Column("varchar", { name: "insert_user", length: 40 })
+  insertUser: string;
+
+  @Column("datetime", { name: "insert_datetime" })
+  insertDatetime: Date;
+
+  @Column("varchar", { name: "updated_user", nullable: true, length: 40 })
+  updatedUser: string | null;
+
+  @Column("datetime", { name: "updated_datetime", nullable: true })
+  updatedDatetime: Date | null;
+
   @OneToMany(() => Assay001wb, (assay001wb) => assay001wb.ligandVersionSlno2)
   assay001wbs: Assay001wb[];
 
@@ -21,5 +33,9 @@ export class Ligandversion001mb {
   setProperties(ligandVersionDTO: LigandVersionDTO) {
     this.id = ligandVersionDTO.id;
     this.ligandVersion = ligandVersionDTO.ligandVersion;
-}
+    this.insertUser = ligandVersionDTO.insertUser;
+    this.insertDatetime = ligandVersionDTO.insertDatetime;
+    this.updatedUser = ligandVersionDTO.updatedUser;
+    this.updatedDatetime = ligandVersionDTO.updatedDatetime;
+  }
 }
