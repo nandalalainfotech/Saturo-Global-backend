@@ -4,11 +4,13 @@ import {
   Index,
   JoinColumn,
   ManyToOne,
+  OneToMany,
   PrimaryGeneratedColumn,
 } from "typeorm";
 import { Ligandversion001mb } from "./Ligandversion001mb";
 import { Ligandtype001mb } from "./Ligandtype001mb";
 import { LigandDTO } from "src/dto/Ligand.dto";
+import { Assay001wb } from "./Assay001wb";
 
 @Index("ligandVersion_slno", ["ligandVersionSlno"], {})
 @Index("ligandType_slno", ["ligandTypeSlno"], {})
@@ -99,6 +101,9 @@ export class Ligand001wb {
   )
   @JoinColumn([{ name: "ligandVersion_slno", referencedColumnName: "id" }])
   ligandVersionSlno2: Ligandversion001mb;
+
+  @OneToMany(() => Assay001wb, (assay001wb) => assay001wb.ligandVersionSlno2)
+  assay001wbs: Assay001wb[];
 
   @ManyToOne(
     () => Ligandtype001mb,
