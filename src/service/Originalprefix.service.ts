@@ -30,7 +30,7 @@ export class OriginalPrefixService {
     findOne(id: number): Promise<Originalprefix001mb> {
         return this.originalprefixRepository.findOne(id);
     }
-    async remove(slNo: number): Promise<void> {
-        await this.originalprefixRepository.delete(slNo);
+    async remove(id: number): Promise<void> {
+        await this.originalprefixRepository.delete(id);
     }
 }
