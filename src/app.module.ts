@@ -8,7 +8,6 @@ import { AssayModule } from './module/Assay.module';
 import { AssaytypeModule } from './module/Assaytype.module';
 import { CategoryModule } from './module/Category.module';
 import { CategoryfunctionModule } from './module/Categoryfunction.module';
-import { GenderModule } from './module/Gender.mdule';
 import { LigandModule } from './module/Ligand.module';
 import { LigandTypeModule } from './module/LigandType.module';
 import { LigandVersionModule } from './module/Ligandversion.module';
@@ -63,7 +62,6 @@ import { UserModule } from './module/user.module';
         AssaytypeModule,
         CategoryModule,
         CategoryfunctionModule,
-        GenderModule,
         LigandModule,
         LigandTypeModule,
         LigandVersionModule,

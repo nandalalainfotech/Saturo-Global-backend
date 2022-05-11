@@ -26,9 +26,9 @@ export class MeasurementController {
 	}
 
 	@UseGuards(JwtAuthGuard)
-	@Delete('delete/:slNo')
-	remove(@Param('slNo') slNo: number): Promise<void> {
-		return this.measurementService.remove(slNo);
+	@Delete('delete/:measurementId')
+	remove(@Param('measurementId') measurementId: number): Promise<void> {
+		return this.measurementService.remove(measurementId);
 	}
     
 	@UseGuards(JwtAuthGuard)

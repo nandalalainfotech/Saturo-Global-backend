@@ -2,6 +2,7 @@ import { Measurement001wb } from "src/entity/Measurement001wb";
 
 export class MeasurementDTO {
     measurementId: number;
+    dataLocator: string;
     categorySlno: number;
     functionSlno: number;
     parameter: string;
@@ -21,8 +22,8 @@ export class MeasurementDTO {
     organDetail: string;
     species: string;
     speciesDetail: string;
-    genderSlno: number;
     ageGroup: string;
+    gender: string;
     insertUser: string;
     insertDatetime: Date;
     updatedUser: string | null;
@@ -30,6 +31,7 @@ export class MeasurementDTO {
 
     setProperties(measurement001wb: Measurement001wb) {
         this.measurementId = measurement001wb.measurementId;
+        this.dataLocator = measurement001wb.dataLocator;
         this.categorySlno = measurement001wb.categorySlno;
         this.functionSlno = measurement001wb.functionSlno;
         this.parameter = measurement001wb.parameter;
@@ -49,7 +51,7 @@ export class MeasurementDTO {
         this.organDetail = measurement001wb.organDetail;
         this.species = measurement001wb.species;
         this.speciesDetail = measurement001wb.speciesDetail;
-        this.genderSlno = measurement001wb.genderSlno;
+        this.gender = measurement001wb.gender;
         this.ageGroup = measurement001wb.ageGroup;
         this.insertUser = measurement001wb.insertUser;
         this.insertDatetime = measurement001wb.insertDatetime;

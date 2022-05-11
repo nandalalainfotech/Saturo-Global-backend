@@ -25,13 +25,13 @@ export class MeasurementService {
     }
 
     async findAll(): Promise<Measurement001wb[]> {
-        return await this.measurementRepository.find();
+        return await this.measurementRepository.find({relations: ["categorySlno2","functionSlno2","originalPrefixSlno2","typeSlno2"]});
     }
 
     findOne(id: number): Promise<Measurement001wb> {
         return this.measurementRepository.findOne(id);
     }
-    async remove(slNo: number): Promise<void> {
-        await this.measurementRepository.delete(slNo);
+    async remove(measurementId: number): Promise<void> {
+        await this.measurementRepository.delete(measurementId);
     }
 }
