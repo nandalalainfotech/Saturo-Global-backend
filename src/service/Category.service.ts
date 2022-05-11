@@ -30,7 +30,7 @@ export class CategoryService {
     findOne(id: number): Promise<Category001mb> {
         return this.categoryRepository.findOne(id);
     }
-    async remove(slNo: number): Promise<void> {
-        await this.categoryRepository.delete(slNo);
+    async remove(id: number): Promise<void> {
+        await this.categoryRepository.delete(id);
     }
 }

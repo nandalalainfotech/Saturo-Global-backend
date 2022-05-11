@@ -30,7 +30,7 @@ export class TypeService {
     findOne(id: number): Promise<Type001mb> {
         return this.typeRepository.findOne(id);
     }
-    async remove(slNo: number): Promise<void> {
-        await this.typeRepository.delete(slNo);
+    async remove(id: number): Promise<void> {
+        await this.typeRepository.delete(id);
     }
 }

@@ -4,7 +4,7 @@ import { OriginalPrefixDTO } from "src/dto/Originalprefix.dto";
 import { Originalprefix001mb } from "src/entity/Originalprefix001mb";
 import { OriginalPrefixService } from "src/service/Originalprefix.service";
 
-@Controller('/testandreportstudio/api/activity')
+@Controller('/testandreportstudio/api/originalprefix')
 export class OriginalPrefixController {
 	constructor(private readonly originalPrefixService: OriginalPrefixService) { }
 	@UseGuards(JwtAuthGuard)
@@ -26,9 +26,9 @@ export class OriginalPrefixController {
 	}
 
 	@UseGuards(JwtAuthGuard)
-	@Delete('delete/:slNo')
-	remove(@Param('slNo') slNo: number): Promise<void> {
-		return this.originalPrefixService.remove(slNo);
+	@Delete('delete/:id')
+	remove(@Param('id') id: number): Promise<void> {
+		return this.originalPrefixService.remove(id);
 	}
     
 	@UseGuards(JwtAuthGuard)

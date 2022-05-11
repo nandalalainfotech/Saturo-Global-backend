@@ -4,7 +4,7 @@ import { CategoryFunctionDTO } from "src/dto/Categoryfunction.dto";
 import { Categoryfunction001mb } from "src/entity/Categoryfunction001mb";
 import { CategoryFunctionService } from "src/service/Categoryfunction.service";
 
-@Controller('/testandreportstudio/api/activity')
+@Controller('/testandreportstudio/api/categoryfunction')
 export class CategoryFunctionController {
 	constructor(private readonly categoryFunctionService: CategoryFunctionService) { }
 	@UseGuards(JwtAuthGuard)
@@ -26,9 +26,9 @@ export class CategoryFunctionController {
 	}
 
 	@UseGuards(JwtAuthGuard)
-	@Delete('delete/:slNo')
-	remove(@Param('slNo') slNo: number): Promise<void> {
-		return this.categoryFunctionService.remove(slNo);
+	@Delete('delete/:id')
+	remove(@Param('id') id: number): Promise<void> {
+		return this.categoryFunctionService.remove(id);
 	}
     
 	@UseGuards(JwtAuthGuard)

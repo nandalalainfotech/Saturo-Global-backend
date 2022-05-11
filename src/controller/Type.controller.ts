@@ -4,7 +4,7 @@ import { TypeDTO } from "src/dto/Type.dto";
 import { Type001mb } from "src/entity/Type001mb";
 import { TypeService } from "src/service/Type.service";
 
-@Controller('/testandreportstudio/api/activity')
+@Controller('/testandreportstudio/api/types')
 export class TypeController {
 	constructor(private readonly typeService: TypeService) { }
 	@UseGuards(JwtAuthGuard)
@@ -26,9 +26,9 @@ export class TypeController {
 	}
 
 	@UseGuards(JwtAuthGuard)
-	@Delete('delete/:slNo')
-	remove(@Param('slNo') slNo: number): Promise<void> {
-		return this.typeService.remove(slNo);
+	@Delete('delete/:id')
+	remove(@Param('id') id: number): Promise<void> {
+		return this.typeService.remove(id);
 	}
     
 	@UseGuards(JwtAuthGuard)
