@@ -23,7 +23,7 @@ export class AssayService {
     }
 
     async findAll(): Promise<Assay001wb[]> {
-        return await this.assayRepository.find();
+        return await this.assayRepository.find({relations: ["assayTypeSlno2", "toxiCitySlno2", "routeSlno2", "unitSlno2", "unitsSlno2", "unitedSlno2","ligandVersionSlno2"]});
     }
 
     findOne(id: number): Promise<Assay001wb> {
