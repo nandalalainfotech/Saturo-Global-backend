@@ -26,9 +26,9 @@ export class LigandController {
 	}
 
 	@UseGuards(JwtAuthGuard)
-	@Delete('delete/:slNo')
-	remove(@Param('slNo') slNo: number): Promise<void> {
-		return this.ligandService.remove(slNo);
+	@Delete('delete/:ligandId')
+	remove(@Param('ligandId') ligandId: number): Promise<void> {
+		return this.ligandService.remove(ligandId);
 	}
     
 	@UseGuards(JwtAuthGuard)

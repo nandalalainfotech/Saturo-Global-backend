@@ -1,3 +1,4 @@
+import { MeasurementDTO } from "src/dto/Measurement.dto";
 import {
   Column,
   Entity,
@@ -10,14 +11,11 @@ import { Category001mb } from "./Category001mb";
 import { Categoryfunction001mb } from "./Categoryfunction001mb";
 import { Originalprefix001mb } from "./Originalprefix001mb";
 import { Type001mb } from "./Type001mb";
-import { Gender001mb } from "./Gender001mb";
-import { MeasurementDTO } from "src/dto/Measurement.dto";
 
 @Index("category_slno", ["categorySlno"], {})
 @Index("function_slno", ["functionSlno"], {})
 @Index("originalPrefix_slno", ["originalPrefixSlno"], {})
 @Index("type_slno", ["typeSlno"], {})
-@Index("gender_slno", ["genderSlno"], {})
 @Entity("measurement001wb", { schema: "saturo" })
 export class Measurement001wb {
   @PrimaryGeneratedColumn({ type: "int", name: "measurementId" })
@@ -83,11 +81,11 @@ export class Measurement001wb {
   @Column("varchar", { name: "speciesDetail", length: 150 })
   speciesDetail: string;
 
-  @Column("int", { name: "gender_slno" })
-  genderSlno: number;
-
   @Column("varchar", { name: "ageGroup", length: 50 })
   ageGroup: string;
+
+  @Column("varchar", { name: "gender", nullable: true, length: 30 })
+  gender: string | null;
 
   @Column("varchar", { name: "insert_user", length: 40 })
   insertUser: string;
@@ -132,18 +130,10 @@ export class Measurement001wb {
   @JoinColumn([{ name: "type_slno", referencedColumnName: "id" }])
   typeSlno2: Type001mb;
 
-  @ManyToOne(
-    () => Gender001mb,
-    (gender001mb) => gender001mb.measurement001wbs,
-    { onDelete: "CASCADE", onUpdate: "RESTRICT" }
-  )
-  @JoinColumn([{ name: "gender_slno", referencedColumnName: "id" }])
-  genderSlno2: Gender001mb;
-
-
 
   setProperties(measurementDTO: MeasurementDTO) {
     this.measurementId = measurementDTO.measurementId;
+    this.dataLocator = measurementDTO.dataLocator;
     this.categorySlno = measurementDTO.categorySlno;
     this.functionSlno = measurementDTO.functionSlno;
     this.parameter = measurementDTO.parameter;
@@ -163,12 +153,12 @@ export class Measurement001wb {
     this.organDetail = measurementDTO.organDetail;
     this.species = measurementDTO.species;
     this.speciesDetail = measurementDTO.speciesDetail;
-    this.genderSlno = measurementDTO.genderSlno;
+    this.gender = measurementDTO.gender;
     this.ageGroup = measurementDTO.ageGroup;
     this.insertUser = measurementDTO.insertUser;
     this.insertDatetime = measurementDTO.insertDatetime;
     this.updatedUser = measurementDTO.updatedUser;
     this.updatedDatetime = measurementDTO.updatedDatetime;
-    
-}
+
+  }
 }
