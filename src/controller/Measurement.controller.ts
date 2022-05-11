@@ -4,7 +4,7 @@ import { MeasurementDTO } from "src/dto/Measurement.dto";
 import { Measurement001wb } from "src/entity/Measurement001wb";
 import { MeasurementService } from "src/service/Measurement.service";
 
-@Controller('/testandreportstudio/api/activity')
+@Controller('/testandreportstudio/api/measurement')
 export class MeasurementController {
 	constructor(private readonly measurementService: MeasurementService) { }
 	@UseGuards(JwtAuthGuard)
