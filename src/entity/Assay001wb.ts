@@ -159,6 +159,7 @@ export class Assay001wb {
     this.ordinal = assayDTO.ordinal;
     this.collectionId = assayDTO.collectionId;
     this.ligandVersionSlno = assayDTO.ligandVersionSlno;
+    this.assayTypeSlno = assayDTO.assayTypeSlno;
     this.toxiCitySlno = assayDTO.toxiCitySlno;
     this.routeSlno = assayDTO.routeSlno;
     this.ligandSvalue = assayDTO.ligandSvalue;
@@ -171,6 +172,7 @@ export class Assay001wb {
     this.target = assayDTO.target;
     this.conditionType = assayDTO.conditionType;
     this.conditionMaterial = assayDTO.conditionMaterial;
+    this.conditionMaterialid = assayDTO.conditionMaterialid;
     this.value = assayDTO.value;
     this.unitedSlno = assayDTO.unitedSlno;
     this.insertUser = assayDTO.insertUser;

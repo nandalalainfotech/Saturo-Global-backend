@@ -4,7 +4,7 @@ import { AssayDTO } from "src/dto/Assay.dto";
 import { Assay001wb } from "src/entity/Assay001wb";
 import { AssayService } from "src/service/Assay.service";
 
-@Controller('/testandreportstudio/api/')
+@Controller('/testandreportstudio/api/assay')
 export class AssayController {
     constructor(private readonly assayService: AssayService) { }
 	@UseGuards(JwtAuthGuard)
