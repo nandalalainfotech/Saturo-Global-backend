@@ -4,7 +4,7 @@ import { UnitHighEndValueDTO } from "src/dto/Unithighendvalue.dto";
 import { Unithighendvalue001mb } from "src/entity/Unithighendvalue001mb";
 import { UnitHighEndValueService } from "src/service/Unithighendvalue.service";
 
-@Controller('/testandreportstudio/api/activity')
+@Controller('/testandreportstudio/api/unitHighEndValue')
 export class UnitHighEndValueController {
 	constructor(private readonly unitHighEndValueService: UnitHighEndValueService) { }
 	@UseGuards(JwtAuthGuard)

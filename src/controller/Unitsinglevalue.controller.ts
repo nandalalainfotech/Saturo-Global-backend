@@ -4,7 +4,7 @@ import { UnitSingleValueDTO } from "src/dto/Unitsinglevalue.dto";
 import { Unitsinglevalue001mb } from "src/entity/Unitsinglevalue001mb";
 import { UnitSingleValueService } from "src/service/Unitsinglevalue.service";
 
-@Controller('/testandreportstudio/api/activity')
+@Controller('/testandreportstudio/api/unitSingleValue')
 export class UnitSingleValueController {
 	constructor(private readonly unitSingleValueService: UnitSingleValueService) { }
 	@UseGuards(JwtAuthGuard)
