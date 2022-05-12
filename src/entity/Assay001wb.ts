@@ -21,7 +21,7 @@ import { AssayDTO } from "src/dto/Assay.dto";
 @Index("unit_slno", ["unitSlno"], {})
 @Index("units_slno", ["unitsSlno"], {})
 @Index("united_slno", ["unitedSlno"], {})
-@Index("ligandVersion_slno", ["ligandVersionSlno"], {})
+@Index("ligand_slno", ["ligandSlno"], {})
 @Entity("assay001wb", { schema: "saturo" })
 export class Assay001wb {
   @PrimaryGeneratedColumn({ type: "int", name: "assayId" })
@@ -33,8 +33,8 @@ export class Assay001wb {
   @Column("varchar", { name: "collectionId", length: 30 })
   collectionId: string;
 
-  @Column("int", { name: "ligandVersion_slno" })
-  ligandVersionSlno: number;
+  @Column("int", { name: "ligand_slno" })
+  ligandSlno: number;
 
   @Column("int", { name: "assayType_slno" })
   assayTypeSlno: number;
@@ -148,17 +148,17 @@ export class Assay001wb {
     onDelete: "CASCADE",
     onUpdate: "RESTRICT",
   })
-  @JoinColumn([
-    { name: "ligandVersion_slno", referencedColumnName: "ligandId" },
-  ])
-  ligandVersionSlno2: Ligand001wb;
+  @JoinColumn([{ name: "ligand_slno", referencedColumnName: "ligandId" }])
+  ligandSlno2: Ligand001wb;
+
+
 
 
   setProperties(assayDTO: AssayDTO) {
     this.assayId = assayDTO.assayId;
     this.ordinal = assayDTO.ordinal;
     this.collectionId = assayDTO.collectionId;
-    this.ligandVersionSlno = assayDTO.ligandVersionSlno;
+    this.ligandSlno = assayDTO.ligandSlno;
     this.assayTypeSlno = assayDTO.assayTypeSlno;
     this.toxiCitySlno = assayDTO.toxiCitySlno;
     this.routeSlno = assayDTO.routeSlno;

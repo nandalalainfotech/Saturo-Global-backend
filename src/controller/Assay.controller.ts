@@ -26,9 +26,9 @@ export class AssayController {
 	}
 
 	@UseGuards(JwtAuthGuard)
-	@Delete('delete/:id')
-	remove(@Param('id') id: number): Promise<void> {
-		return this.assayService.remove(id);
+	@Delete('delete/:assayId')
+	remove(@Param('assayId') assayId: number): Promise<void> {
+		return this.assayService.remove(assayId);
 	}
     
 	@UseGuards(JwtAuthGuard)
