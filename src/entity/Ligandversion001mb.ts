@@ -23,7 +23,7 @@ export class Ligandversion001mb {
   @Column("datetime", { name: "updated_datetime", nullable: true })
   updatedDatetime: Date | null;
 
-  @OneToMany(() => Assay001wb, (assay001wb) => assay001wb.ligandVersionSlno2)
+  @OneToMany(() => Assay001wb, (assay001wb) => assay001wb.ligandSlno2)
   assay001wbs: Assay001wb[];
 
   @OneToMany(() => Ligand001wb, (ligand001wb) => ligand001wb.ligandVersionSlno2)
