@@ -4,7 +4,7 @@ export class AssayDTO {
     assayId: number;
     ordinal: string;
     collectionId: string;
-    ligandVersionSlno: number;
+    ligandSlno: number;
     assayTypeSlno: number;
     toxiCitySlno: number;
     routeSlno: number;
@@ -31,7 +31,7 @@ export class AssayDTO {
         this.assayId = assay001wb.assayId;
         this.ordinal = assay001wb.ordinal;
         this.collectionId = assay001wb.collectionId;
-        this.ligandVersionSlno = assay001wb.ligandVersionSlno;
+        this.ligandSlno = assay001wb.ligandSlno;
         this.assayTypeSlno = assay001wb.assayTypeSlno;
         this.toxiCitySlno = assay001wb.toxiCitySlno;
         this.routeSlno = assay001wb.routeSlno;

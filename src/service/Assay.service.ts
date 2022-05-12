@@ -18,12 +18,12 @@ export class AssayService {
     async update(assayDTO: AssayDTO): Promise<Assay001wb> {
         const assay001wb = new Assay001wb();
         assay001wb.setProperties(assayDTO);
-        await this.assayRepository.update({ }, assay001wb);
+        await this.assayRepository.update({assayId: assay001wb.assayId }, assay001wb);
         return assay001wb;
     }
 
     async findAll(): Promise<Assay001wb[]> {
-        return await this.assayRepository.find({relations: ["assayTypeSlno2", "toxiCitySlno2", "routeSlno2", "unitSlno2", "unitsSlno2", "unitedSlno2","ligandVersionSlno2"]});
+        return await this.assayRepository.find({relations: ["assayTypeSlno2", "toxiCitySlno2", "routeSlno2", "unitSlno2", "unitsSlno2", "unitedSlno2","ligandSlno2", "ligandSlno2.ligandVersionSlno2"]});
     }
 
     findOne(id: number): Promise<Assay001wb> {

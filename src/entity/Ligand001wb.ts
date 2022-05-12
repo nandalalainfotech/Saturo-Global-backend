@@ -102,9 +102,9 @@ export class Ligand001wb {
   @JoinColumn([{ name: "ligandVersion_slno", referencedColumnName: "id" }])
   ligandVersionSlno2: Ligandversion001mb;
 
-  @OneToMany(() => Assay001wb, (assay001wb) => assay001wb.ligandVersionSlno2)
+  @OneToMany(() => Assay001wb, (assay001wb) => assay001wb.ligandSlno2)
   assay001wbs: Assay001wb[];
-
+  
   @ManyToOne(
     () => Ligandtype001mb,
     (ligandtype001mb) => ligandtype001mb.ligand001wbs,
