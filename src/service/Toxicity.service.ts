@@ -19,7 +19,7 @@ export class ToxicityService {
     async update(toxicityDTO: ToxicityDTO): Promise<Toxicity001mb> {
         const toxicity001mb = new Toxicity001mb();
         toxicity001mb.setProperties(toxicityDTO);
-        await this.toxicityRepository.update({}, toxicity001mb);
+        await this.toxicityRepository.update({id: toxicity001mb.id}, toxicity001mb);
         return toxicity001mb;
     }
 

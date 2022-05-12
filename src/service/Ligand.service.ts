@@ -19,7 +19,7 @@ export class LigandService {
     async update(ligandDTO: LigandDTO): Promise<Ligand001wb> {
         const ligand001wb = new Ligand001wb();
         ligand001wb.setProperties(ligandDTO);
-        await this.ligandRepository.update({}, ligand001wb);
+        await this.ligandRepository.update({ ligandId: ligand001wb.ligandId}, ligand001wb);
         return ligand001wb;
     }
 

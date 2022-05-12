@@ -20,7 +20,7 @@ export class MeasurementService {
     async update(measurementDTO: MeasurementDTO): Promise<Measurement001wb> {
         const measurement001wb = new Measurement001wb();
         measurement001wb.setProperties(measurementDTO);
-        await this.measurementRepository.update({}, measurement001wb);
+        await this.measurementRepository.update({ measurementId: measurement001wb.measurementId }, measurement001wb);
         return measurement001wb;
     }
 

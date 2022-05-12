@@ -19,7 +19,7 @@ export class TypeService {
     async update(typeDTO: TypeDTO): Promise<Type001mb> {
         const type001mb = new Type001mb();
         type001mb.setProperties(typeDTO);
-        await this.typeRepository.update({}, type001mb);
+        await this.typeRepository.update({ id: type001mb.id}, type001mb);
         return type001mb;
     }
 
