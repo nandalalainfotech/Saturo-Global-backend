@@ -19,7 +19,7 @@ export class OriginalPrefixService {
     async update(originalPrefixDTO: OriginalPrefixDTO): Promise<Originalprefix001mb> {
         const originalprefix001mb = new Originalprefix001mb();
         originalprefix001mb.setProperties(originalPrefixDTO);
-        await this.originalprefixRepository.update({}, originalprefix001mb);
+        await this.originalprefixRepository.update({ id: originalprefix001mb.id}, originalprefix001mb);
         return originalprefix001mb;
     }
 

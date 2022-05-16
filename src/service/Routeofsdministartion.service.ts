@@ -19,7 +19,7 @@ export class RouteOfAdministartionService {
     async update(routeOfAdministartionDTO: RouteOfAdministartionDTO): Promise<Routeofadministration001mb> {
         const routeofadministration001mb = new Routeofadministration001mb();
         routeofadministration001mb.setProperties(routeOfAdministartionDTO);
-        await this.routeofadministration.update({}, routeofadministration001mb);
+        await this.routeofadministration.update({id: routeofadministration001mb.id}, routeofadministration001mb);
         return routeofadministration001mb;
     }
 

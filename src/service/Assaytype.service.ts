@@ -19,7 +19,7 @@ export class AssaytypeService {
     async update(assayTypeDTO: AssayTypeDTO): Promise<Assaytype001mb> {
         const assaytype001mb = new Assaytype001mb();
         assaytype001mb.setProperties(assayTypeDTO);
-        await this.assaytypeRepository.update({}, assaytype001mb);
+        await this.assaytypeRepository.update({id: assaytype001mb.id }, assaytype001mb);
         return assaytype001mb;
     }
 

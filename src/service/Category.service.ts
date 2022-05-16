@@ -19,7 +19,7 @@ export class CategoryService {
     async update(categoryDTO: CategoryDTO): Promise<Category001mb> {
         const category001mb = new Category001mb();
         category001mb.setProperties(categoryDTO);
-        await this.categoryRepository.update({ }, category001mb);
+        await this.categoryRepository.update({ id: category001mb.id }, category001mb);
         return category001mb;
     }
 
