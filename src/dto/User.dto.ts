@@ -1,12 +1,13 @@
-import { Person001mb } from "src/entity/Person001mb";
 import { User001mb } from "src/entity/User001mb";
-import { PersonDTO } from "./Person.dto";
+import { Role } from "src/role/role.enum";
+import { BaseDTO } from "./Base.dto";
+import { PersonDTO } from "./person.dto";
 
 
 export class UserDTO extends PersonDTO {
     personId: number;
-    domain: string;
     username: string;
+    roleid: number;
     password: string;
     status: string;
     email: string;
@@ -17,7 +18,6 @@ export class UserDTO extends PersonDTO {
     insertDatetime: Date;
     updatedUser: string | null;
     updatedDatetime: Date | null;
-    person: Person001mb;
 
     setProperties(user001mb: User001mb) {
         this.personId = user001mb.personId;
@@ -47,8 +47,8 @@ export class UserDTO extends PersonDTO {
         this.updatedUser = user001mb.person.updatedUser;
         this.updatedDatetime = user001mb.person.updatedDatetime;
         this.personId =  user001mb.person.personId;
-        this.domain = user001mb.domain;
         this.username = user001mb.username;
+        this.roleid = user001mb.roleid;
         this.password = user001mb.password;
         this.status = user001mb.status;
         this.email = user001mb.email;

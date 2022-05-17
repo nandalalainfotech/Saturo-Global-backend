@@ -22,8 +22,7 @@ export class Unithighendvalue001mb {
   @Column("datetime", { name: "updated_datetime", nullable: true })
   updatedDatetime: Date | null;
 
-  @OneToMany(() => Assay001wb, (assay001wb) => assay001wb.unitsSlno2)
-  assay001wbs: Assay001wb[];
+ 
 
 
 

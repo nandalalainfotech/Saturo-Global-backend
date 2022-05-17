@@ -1,25 +1,23 @@
 import { Body, Controller, Delete, Get, Param, Post, Put, UseGuards } from "@nestjs/common";
 import { JwtAuthGuard } from "src/auth/jwt-auth.guard";
-import { PersonDTO } from "src/dto/Person.dto";
+import { PersonDTO } from "src/dto/person.dto";
 import { Person001mb } from "src/entity/Person001mb";
 import { PersonService } from "src/service/person.service";
 
 @Controller('/testandreportstudio/api/person')
 export class PersonController {
     constructor(private readonly personService: PersonService) { }
-
     // --------------------------user registration-------------
     @Post("regSave")
     create1(@Body() personDTO: PersonDTO): Promise<Person001mb> {
         return this.personService.create(personDTO);
     }
+
     @Get('regFindAll')
     findAll1(): Promise<Person001mb[]> {
-        console.log("person test");
         return this.personService.findAll();
     }
     // --------------------------user registration-------------
-    
     @UseGuards(JwtAuthGuard)
     @Post("save")
     create(@Body() personDTO: PersonDTO): Promise<Person001mb> {
