@@ -16,16 +16,14 @@ export class RoleService {
 
 	async update(roleDTO: RoleDTO): Promise<Role001mb> {
 		const role001mb = await this.roleRepository.findOne({ where: { id: roleDTO.id } });
-		role001mb.rlid = roleDTO.rlid;
 		role001mb.rolename = roleDTO.rolename;
-		role001mb.status = roleDTO.status;
 		role001mb.updatedUser = roleDTO.updatedUser;
 		role001mb.updatedDatetime = roleDTO.updatedDatetime;
 		return this.roleRepository.save(role001mb);
 	}
 
 	async findAll(): Promise<Role001mb[]> {
-		return this.roleRepository.find({ relations: ["rl"] });
+		return this.roleRepository.find();
 	}
 
 	findOne(id: number): Promise<Role001mb> {

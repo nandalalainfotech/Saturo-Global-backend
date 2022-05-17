@@ -9,7 +9,9 @@ export class LigandDTO {
     collection: string;
     ligandTypeSlno: number;
     ligandDetail: string;
-    collectionName: string;
+    identifier1: string;
+    identifier2: string;
+    identifier3: string;
     collectionId: string;
     locator: string;
     sourceType: string;
@@ -38,7 +40,9 @@ export class LigandDTO {
         this.collection = ligand001wb.collection;
         this.ligandTypeSlno = ligand001wb.ligandTypeSlno;
         this.ligandDetail = ligand001wb.ligandDetail;
-        this.collectionName = ligand001wb.collectionName;
+        this.identifier1 = ligand001wb.identifier1;
+        this.identifier2 = ligand001wb.identifier2;
+        this.identifier3 = ligand001wb.identifier3;
         this.collectionId = ligand001wb.collectionId;
         this.locator = ligand001wb.locator;
         this.sourceType = ligand001wb.sourceType;

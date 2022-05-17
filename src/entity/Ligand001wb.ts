@@ -7,10 +7,10 @@ import {
   OneToMany,
   PrimaryGeneratedColumn,
 } from "typeorm";
+import { Assay001wb } from "./Assay001wb";
 import { Ligandversion001mb } from "./Ligandversion001mb";
 import { Ligandtype001mb } from "./Ligandtype001mb";
 import { LigandDTO } from "src/dto/Ligand.dto";
-import { Assay001wb } from "./Assay001wb";
 
 @Index("ligandVersion_slno", ["ligandVersionSlno"], {})
 @Index("ligandType_slno", ["ligandTypeSlno"], {})
@@ -40,8 +40,14 @@ export class Ligand001wb {
   @Column("varchar", { name: "ligandDetail", length: 100 })
   ligandDetail: string;
 
-  @Column("varchar", { name: "collectionName", length: 100 })
-  collectionName: string;
+  @Column("varchar", { name: "Identifier1", nullable: true, length: 100 })
+  identifier1: string | null;
+
+  @Column("varchar", { name: "Identifier2", nullable: true, length: 100 })
+  identifier2: string | null;
+
+  @Column("varchar", { name: "Identifier3", nullable: true, length: 100 })
+  identifier3: string | null;
 
   @Column("varchar", { name: "collectionId", length: 30 })
   collectionId: string;
@@ -94,6 +100,9 @@ export class Ligand001wb {
   @Column("datetime", { name: "updated_datetime", nullable: true })
   updatedDatetime: Date | null;
 
+  @OneToMany(() => Assay001wb, (assay001wb) => assay001wb.ligandSlno2)
+  assay001wbs: Assay001wb[];
+
   @ManyToOne(
     () => Ligandversion001mb,
     (ligandversion001mb) => ligandversion001mb.ligand001wbs,
@@ -102,9 +111,6 @@ export class Ligand001wb {
   @JoinColumn([{ name: "ligandVersion_slno", referencedColumnName: "id" }])
   ligandVersionSlno2: Ligandversion001mb;
 
-  @OneToMany(() => Assay001wb, (assay001wb) => assay001wb.ligandSlno2)
-  assay001wbs: Assay001wb[];
-  
   @ManyToOne(
     () => Ligandtype001mb,
     (ligandtype001mb) => ligandtype001mb.ligand001wbs,
@@ -112,6 +118,8 @@ export class Ligand001wb {
   )
   @JoinColumn([{ name: "ligandType_slno", referencedColumnName: "id" }])
   ligandTypeSlno2: Ligandtype001mb;
+
+
 
 
   setProperties(ligandDTO: LigandDTO) {
@@ -123,7 +131,9 @@ export class Ligand001wb {
     this.collection = ligandDTO.collection;
     this.ligandTypeSlno = ligandDTO.ligandTypeSlno;
     this.ligandDetail = ligandDTO.ligandDetail;
-    this.collectionName = ligandDTO.collectionName;
+    this.identifier1 = ligandDTO.identifier1;
+    this.identifier2 = ligandDTO.identifier2;
+    this.identifier3 = ligandDTO.identifier3;
     this.collectionId = ligandDTO.collectionId;
     this.locator = ligandDTO.locator;
     this.sourceType = ligandDTO.sourceType;

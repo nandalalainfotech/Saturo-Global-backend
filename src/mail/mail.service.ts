@@ -12,7 +12,7 @@ export class MailService {
     const temppassword = "erpnext001";
     await this.mailerService.sendMail({
       to: user001mb.email,
-      from: 'selvamraja1104@gmail.com', // override default from
+      from: 'kavichandran877@gmail.com', // override default from
       subject: 'Welcome to Nandalala Info Tech App! Confirm your Email',
       template: './confirmation', // `.hbs` extension is appended automatically
       context: {

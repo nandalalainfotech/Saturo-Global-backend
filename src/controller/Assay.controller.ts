@@ -2,36 +2,49 @@ import { Body, Controller, Delete, Get, Param, Post, Put, UseGuards } from "@nes
 import { JwtAuthGuard } from "src/auth/jwt-auth.guard";
 import { AssayDTO } from "src/dto/Assay.dto";
 import { Assay001wb } from "src/entity/Assay001wb";
+import { hasRole } from "src/role/role.decorator";
+import { Role } from "src/role/role.enum";
+import { RolesGuard } from "src/role/role.guard";
 import { AssayService } from "src/service/Assay.service";
 
 @Controller('/testandreportstudio/api/assay')
 export class AssayController {
     constructor(private readonly assayService: AssayService) { }
-	@UseGuards(JwtAuthGuard)
+	
+	@hasRole(Role.admin,Role.user)
+	@UseGuards(JwtAuthGuard, RolesGuard)
 	@Post("save")
 	create(@Body() assayDTO: AssayDTO): Promise<Assay001wb> {
 		return this.assayService.create(assayDTO);
 	}
 
-	@UseGuards(JwtAuthGuard)
+	
+	@hasRole(Role.admin,Role.user)
+	@UseGuards(JwtAuthGuard, RolesGuard)
 	@Put("update")
 	update(@Body() assayDTO: AssayDTO): Promise<Assay001wb> {
 		return this.assayService.update(assayDTO);
 	}
 	
-	@UseGuards(JwtAuthGuard)
-	@Get('findAll')
-	findAll(): Promise<Assay001wb[]> {
-		return this.assayService.findAll();
+	
+	@hasRole(Role.admin,Role.user)
+	@UseGuards(JwtAuthGuard, RolesGuard)
+	@Get('findAll/:username')
+	findAll(@Param('username') username: any): Promise<Assay001wb[]> {
+		return this.assayService.findAll(username);
 	}
 
-	@UseGuards(JwtAuthGuard)
+	
+	@hasRole(Role.admin,Role.user)
+	@UseGuards(JwtAuthGuard, RolesGuard)
 	@Delete('delete/:assayId')
 	remove(@Param('assayId') assayId: number): Promise<void> {
 		return this.assayService.remove(assayId);
 	}
     
-	@UseGuards(JwtAuthGuard)
+	
+	@hasRole(Role.admin,Role.user)
+	@UseGuards(JwtAuthGuard, RolesGuard)
 	@Get(':id')
 	findOne(@Param('id') id: number): Promise<Assay001wb> {
 		return this.assayService.findOne(id);

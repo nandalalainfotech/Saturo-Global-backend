@@ -1,4 +1,3 @@
-import { Person001mb } from "src/entity/Person001mb";
 
 export class PersonDTO {
     personId: number;
@@ -28,4 +27,5 @@ export class PersonDTO {
     insertDatetime: Date;
     updatedUser: string | null;
     updatedDatetime: Date | null;
+
 }

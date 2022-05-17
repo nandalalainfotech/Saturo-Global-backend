@@ -10,7 +10,6 @@ import { Assaytype001mb } from "./Assaytype001mb";
 import { Toxicity001mb } from "./Toxicity001mb";
 import { Routeofadministration001mb } from "./Routeofadministration001mb";
 import { Unitsinglevalue001mb } from "./Unitsinglevalue001mb";
-import { Unithighendvalue001mb } from "./Unithighendvalue001mb";
 import { Unitlowendvalue001mb } from "./Unitlowendvalue001mb";
 import { Ligand001wb } from "./Ligand001wb";
 import { AssayDTO } from "src/dto/Assay.dto";
@@ -19,7 +18,6 @@ import { AssayDTO } from "src/dto/Assay.dto";
 @Index("toxiCity_slno", ["toxiCitySlno"], {})
 @Index("route_slno", ["routeSlno"], {})
 @Index("unit_slno", ["unitSlno"], {})
-@Index("units_slno", ["unitsSlno"], {})
 @Index("united_slno", ["unitedSlno"], {})
 @Index("ligand_slno", ["ligandSlno"], {})
 @Entity("assay001wb", { schema: "saturo" })
@@ -57,9 +55,6 @@ export class Assay001wb {
   @Column("varchar", { name: "ligandLvalue", length: 30 })
   ligandLvalue: string;
 
-  @Column("int", { name: "units_slno" })
-  unitsSlno: number;
-
   @Column("varchar", { name: "administration", length: 50 })
   administration: string;
 
@@ -77,6 +72,21 @@ export class Assay001wb {
 
   @Column("varchar", { name: "conditionMaterialid", length: 30 })
   conditionMaterialid: string;
+
+  @Column("varchar", { name: "singleCondition", length: 50 })
+  singleCondition: string;
+
+  @Column("varchar", { name: "singleUnit", length: 50 })
+  singleUnit: string;
+
+  @Column("varchar", { name: "highCondition", length: 50 })
+  highCondition: string;
+
+  @Column("varchar", { name: "lowCondition", length: 50 })
+  lowCondition: string;
+
+  @Column("varchar", { name: "highLowUnit", length: 50 })
+  highLowUnit: string;
 
   @Column("varchar", { name: "value", length: 100 })
   value: string;
@@ -129,14 +139,6 @@ export class Assay001wb {
   unitSlno2: Unitsinglevalue001mb;
 
   @ManyToOne(
-    () => Unithighendvalue001mb,
-    (unithighendvalue001mb) => unithighendvalue001mb.assay001wbs,
-    { onDelete: "CASCADE", onUpdate: "RESTRICT" }
-  )
-  @JoinColumn([{ name: "units_slno", referencedColumnName: "id" }])
-  unitsSlno2: Unithighendvalue001mb;
-
-  @ManyToOne(
     () => Unitlowendvalue001mb,
     (unitlowendvalue001mb) => unitlowendvalue001mb.assay001wbs,
     { onDelete: "CASCADE", onUpdate: "RESTRICT" }
@@ -166,13 +168,17 @@ export class Assay001wb {
     this.unitSlno = assayDTO.unitSlno;
     this.ligandHvalue = assayDTO.ligandHvalue;
     this.ligandLvalue = assayDTO.ligandLvalue;
-    this.unitsSlno = assayDTO.unitsSlno;
     this.administration = assayDTO.administration;
     this.procedure = assayDTO.procedure;
     this.target = assayDTO.target;
     this.conditionType = assayDTO.conditionType;
     this.conditionMaterial = assayDTO.conditionMaterial;
     this.conditionMaterialid = assayDTO.conditionMaterialid;
+    this.singleCondition = assayDTO.singleCondition;
+    this.singleUnit = assayDTO.singleUnit;
+    this.highCondition = assayDTO.highCondition;
+    this.lowCondition = assayDTO.lowCondition;
+    this.highLowUnit = assayDTO.highLowUnit;
     this.value = assayDTO.value;
     this.unitedSlno = assayDTO.unitedSlno;
     this.insertUser = assayDTO.insertUser;

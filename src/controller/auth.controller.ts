@@ -7,8 +7,8 @@ import { AuthService } from 'src/auth/services/auth.service';
 export class AuthController {
 	constructor(private AuthService: AuthService) { }
 
-	@Get('getUserAuthentication/:username/:password/:domain')
-	getUserAuthentication(@Param('username') username: string, @Param('password') password: string, @Param('domain') domain: string): Promise<any> {
+	@Get('getUserAuthentication/:username/:password/')
+	getUserAuthentication(@Param('username') username: string, @Param('password') password: string): Promise<any> {
 		return this.AuthService.getUserAuthentication(username, password);
 	}
 

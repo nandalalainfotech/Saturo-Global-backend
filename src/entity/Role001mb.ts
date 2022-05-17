@@ -1,28 +1,14 @@
 import { RoleDTO } from "src/dto/Role.dto";
-import {
-  Column,
-  Entity,
-  Index,
-  JoinColumn,
-  ManyToOne,
-  PrimaryGeneratedColumn,
-} from "typeorm";
+import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 import { User001mb } from "./User001mb";
 
-@Index("rlid", ["rlid"], {})
-@Entity("role001mb", { schema: "saturo" })
+@Entity("role001mb", { schema: "trims" })
 export class Role001mb {
   @PrimaryGeneratedColumn({ type: "int", name: "id" })
   id: number;
 
-  @Column("int", { name: "rlid" })
-  rlid: number;
-
   @Column("varchar", { name: "rolename", length: 40 })
   rolename: string;
-
-  @Column("char", { name: "status", length: 1 })
-  status: string;
 
   @Column("varchar", { name: "insert_user", length: 40 })
   insertUser: string;
@@ -36,18 +22,12 @@ export class Role001mb {
   @Column("datetime", { name: "updated_datetime", nullable: true })
   updatedDatetime: Date | null;
 
-  @ManyToOne(() => User001mb, (user001mb) => user001mb.role001mbs, {
-    onDelete: "RESTRICT",
-    onUpdate: "RESTRICT",
-  })
-  @JoinColumn([{ name: "rlid", referencedColumnName: "personId" }])
-  rl: User001mb;
+  @OneToMany(() => User001mb, (user001mb) => user001mb.role)
+  user001mbs: User001mb[];
 
   setProperties(roleDTO: RoleDTO) {
     this.id = roleDTO.id;
-    this.rlid = roleDTO.rlid;
     this.rolename = roleDTO.rolename;
-    this.status = roleDTO.status;
     this.insertUser = roleDTO.insertUser;
     this.insertDatetime = roleDTO.insertDatetime;
     this.updatedUser = roleDTO.updatedUser;

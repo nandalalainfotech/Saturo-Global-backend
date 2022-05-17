@@ -1,22 +1,25 @@
 import {
   Column,
   Entity,
+  Index,
   JoinColumn,
-  OneToMany,
+  ManyToOne,
   OneToOne,
   PrimaryGeneratedColumn,
 } from "typeorm";
-import { Role001mb } from "./Role001mb";
 import { Person001mb } from "./Person001mb";
+import { Role001mb } from "./Role001mb";
 import { UserDTO } from "src/dto/User.dto";
 
-@Entity("user001mb", { schema: "saturo" })
+
+@Index("roleid", ["roleid"], {})
+@Entity("user001mb", { schema: "trims" })
 export class User001mb {
   @PrimaryGeneratedColumn({ type: "int", name: "person_id" })
   personId: number;
 
-  @Column("varchar", { name: "domain", length: 40 })
-  domain: string;
+  @Column("int", { name: "roleid" })
+  roleid: number;
 
   @Column("varchar", { name: "username", length: 40 })
   username: string;
@@ -56,9 +59,6 @@ export class User001mb {
   @Column("datetime", { name: "updated_datetime", nullable: true })
   updatedDatetime: Date | null;
 
-  @OneToMany(() => Role001mb, (role001mb) => role001mb.rl)
-  role001mbs: Role001mb[];
-
   @OneToOne(() => Person001mb, (person001mb) => person001mb.user001mb, {
     onDelete: "RESTRICT",
     onUpdate: "RESTRICT",
@@ -66,10 +66,17 @@ export class User001mb {
   @JoinColumn([{ name: "person_id", referencedColumnName: "personId" }])
   person: Person001mb;
 
+  @ManyToOne(() => Role001mb, (role001mb) => role001mb.user001mbs, {
+    onDelete: "CASCADE",
+    onUpdate: "RESTRICT",
+  })
+  @JoinColumn([{ name: "roleid", referencedColumnName: "id" }])
+  role: Role001mb;
+
   setProperties(userDTO: UserDTO) {
     this.personId = userDTO.personId;
-    this.domain = userDTO.domain;
     this.username = userDTO.username;
+    this.roleid = userDTO.roleid;
     this.password = userDTO.password;
     this.status = userDTO.status;
     this.email = userDTO.email;
