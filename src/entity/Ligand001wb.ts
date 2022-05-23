@@ -61,8 +61,14 @@ export class Ligand001wb {
   @Column("varchar", { name: "citation", length: 30 })
   citation: string;
 
-  @Column("varchar", { name: "diseaseName", length: 30 })
-  diseaseName: string;
+  @Column("varchar", { name: "diseaseName1", length: 30 })
+  diseaseName1: string;
+
+  @Column("varchar", { name: "diseaseName2", length: 30 })
+  diseaseName2: string;
+
+  @Column("varchar", { name: "diseaseName3", length: 30 })
+  diseaseName3: string;
 
   @Column("varchar", { name: "target", length: 150 })
   target: string;
@@ -138,7 +144,9 @@ export class Ligand001wb {
     this.locator = ligandDTO.locator;
     this.sourceType = ligandDTO.sourceType;
     this.citation = ligandDTO.citation;
-    this.diseaseName = ligandDTO.diseaseName;
+    this.diseaseName1 = ligandDTO.diseaseName1;
+    this.diseaseName2 = ligandDTO.diseaseName2;
+    this.diseaseName3 = ligandDTO.diseaseName3;
     this.target = ligandDTO.target;
     this.targetVersion = ligandDTO.targetVersion;
     this.targetStatus = ligandDTO.targetStatus;

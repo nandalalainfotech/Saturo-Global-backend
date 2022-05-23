@@ -1,4 +1,5 @@
 import { Ligand001wb } from "src/entity/Ligand001wb";
+import { Ligandversion001mb } from "src/entity/Ligandversion001mb";
 
 export class LigandDTO {
     ligandId: number;
@@ -16,7 +17,9 @@ export class LigandDTO {
     locator: string;
     sourceType: string;
     citation: string;
-    diseaseName: string;
+    diseaseName1: string;
+    diseaseName2: string;
+    diseaseName3: string;
     target: string;
     targetVersion: string;
     targetStatus: string;
@@ -29,7 +32,7 @@ export class LigandDTO {
     insertDatetime: Date;
     updatedUser: string | null;
     updatedDatetime: Date | null;
-
+    ligandVersionSlno2: Ligandversion001mb;
 
     setProperties(ligand001wb: Ligand001wb) {
         this.ligandId = ligand001wb.ligandId;
@@ -47,7 +50,9 @@ export class LigandDTO {
         this.locator = ligand001wb.locator;
         this.sourceType = ligand001wb.sourceType;
         this.citation = ligand001wb.citation;
-        this.diseaseName = ligand001wb.diseaseName;
+        this.diseaseName1 = ligand001wb.diseaseName1;
+        this.diseaseName2 = ligand001wb.diseaseName2;
+        this.diseaseName3 = ligand001wb.diseaseName3;
         this.target = ligand001wb.target;
         this.targetVersion = ligand001wb.targetVersion;
         this.targetStatus = ligand001wb.targetStatus;

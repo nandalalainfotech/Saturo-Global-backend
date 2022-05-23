@@ -4,6 +4,7 @@ import {
   Index,
   JoinColumn,
   ManyToOne,
+  OneToMany,
   PrimaryGeneratedColumn,
 } from "typeorm";
 import { Assaytype001mb } from "./Assaytype001mb";
@@ -12,6 +13,7 @@ import { Routeofadministration001mb } from "./Routeofadministration001mb";
 import { Unitsinglevalue001mb } from "./Unitsinglevalue001mb";
 import { Unitlowendvalue001mb } from "./Unitlowendvalue001mb";
 import { Ligand001wb } from "./Ligand001wb";
+import { Measurement001wb } from "./Measurement001wb";
 import { AssayDTO } from "src/dto/Assay.dto";
 
 @Index("assayType_slno", ["assayTypeSlno"], {})
@@ -88,8 +90,6 @@ export class Assay001wb {
   @Column("varchar", { name: "highLowUnit", length: 50 })
   highLowUnit: string;
 
-  @Column("varchar", { name: "value", length: 100 })
-  value: string;
 
   @Column("int", { name: "united_slno" })
   unitedSlno: number;
@@ -153,6 +153,12 @@ export class Assay001wb {
   @JoinColumn([{ name: "ligand_slno", referencedColumnName: "ligandId" }])
   ligandSlno2: Ligand001wb;
 
+  @OneToMany(
+    () => Measurement001wb,
+    (measurement001wb) => measurement001wb.assaySlno2
+  )
+  measurement001wbs: Measurement001wb[];
+
 
 
 
@@ -179,7 +185,6 @@ export class Assay001wb {
     this.highCondition = assayDTO.highCondition;
     this.lowCondition = assayDTO.lowCondition;
     this.highLowUnit = assayDTO.highLowUnit;
-    this.value = assayDTO.value;
     this.unitedSlno = assayDTO.unitedSlno;
     this.insertUser = assayDTO.insertUser;
     this.insertDatetime = assayDTO.insertDatetime;
