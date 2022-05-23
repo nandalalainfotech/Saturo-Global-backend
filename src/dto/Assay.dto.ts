@@ -1,4 +1,5 @@
 import { Assay001wb } from "src/entity/Assay001wb";
+import { Ligand001wb } from "src/entity/Ligand001wb";
 
 export class AssayDTO {
     assayId: number;
@@ -23,12 +24,13 @@ export class AssayDTO {
     highCondition: string;
     lowCondition: string;
     highLowUnit: string;
-    value: string;
     unitedSlno: number;
     insertUser: string;
     insertDatetime: Date;
     updatedUser: string | null;
     updatedDatetime: Date | null;
+
+    ligandSlno2: Ligand001wb;
 
     
     setProperties(assay001wb: Assay001wb) {
@@ -54,7 +56,6 @@ export class AssayDTO {
         this.highCondition = assay001wb.highCondition;
         this.lowCondition = assay001wb.lowCondition;
         this.highLowUnit = assay001wb.highLowUnit;
-        this.value = assay001wb.value;
         this.unitedSlno = assay001wb.unitedSlno;
         this.insertUser = assay001wb.insertUser;
         this.insertDatetime = assay001wb.insertDatetime;

@@ -20,7 +20,6 @@ import { RouteOfAdministartionModule } from './module/Routeofadministartion.modu
 import { SystemPropertiesModule } from './module/system-properties.module';
 import { ToxicityModule } from './module/Toxicity.module';
 import { TypeModule } from './module/Type.module';
-import { UnitHighEndValueModule } from './module/Unithighendvalue.module';
 import { UnitlowendvalueModule } from './module/Unitlowendvalue.module';
 import { UnitSingleValueModule } from './module/Unitsinglevalue.module';
 import { UserModule } from './module/user.module';
@@ -71,7 +70,6 @@ import { UserModule } from './module/user.module';
         RouteOfAdministartionModule,
         ToxicityModule,
         TypeModule,
-        UnitHighEndValueModule,
         UnitlowendvalueModule,
         UnitSingleValueModule,
         ReportsModule

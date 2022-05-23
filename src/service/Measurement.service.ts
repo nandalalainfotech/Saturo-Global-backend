@@ -22,14 +22,14 @@ export class MeasurementService {
     async update(measurementDTO: MeasurementDTO): Promise<Measurement001wb> {
         const measurement001wb = new Measurement001wb();
         measurement001wb.setProperties(measurementDTO);
-        await this.measurementRepository.update({}, measurement001wb);
+        await this.measurementRepository.update({measurementId: measurement001wb.measurementId}, measurement001wb);
         return measurement001wb;
     }
 
     async findAll(username: any): Promise<Measurement001wb[]> {
         // console.log("username",username);
         
-        return await this.measurementRepository.find({relations: ["categorySlno2","functionSlno2","originalPrefixSlno2","typeSlno2"],where: { "insertUser": username }});
+        return await this.measurementRepository.find({relations: ["categorySlno2","functionSlno2","originalPrefixSlno2","typeSlno2","assaySlno2", "assaySlno2.ligandSlno2", "assaySlno2.ligandSlno2.ligandVersionSlno2"],where: { "insertUser": username }});
     }
 
     findOne(id: number): Promise<Measurement001wb> {

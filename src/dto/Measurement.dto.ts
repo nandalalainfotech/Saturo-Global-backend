@@ -1,7 +1,9 @@
+import { Assay001wb } from "src/entity/Assay001wb";
 import { Measurement001wb } from "src/entity/Measurement001wb";
 
 export class MeasurementDTO {
     measurementId: number;
+    assaySlno: number;
     dataLocator: string;
     categorySlno: number;
     functionSlno: number;
@@ -28,9 +30,12 @@ export class MeasurementDTO {
     insertDatetime: Date;
     updatedUser: string | null;
     updatedDatetime: Date | null;
+   
+    assaySlno2: Assay001wb;
 
     setProperties(measurement001wb: Measurement001wb) {
         this.measurementId = measurement001wb.measurementId;
+        this.assaySlno = measurement001wb.assaySlno;
         this.dataLocator = measurement001wb.dataLocator;
         this.categorySlno = measurement001wb.categorySlno;
         this.functionSlno = measurement001wb.functionSlno;

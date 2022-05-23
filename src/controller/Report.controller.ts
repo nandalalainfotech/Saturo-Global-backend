@@ -16,7 +16,7 @@ export class ReportsController {
     constructor(private readonly reportsService: ReportsService) { }
 
 
-    @hasRole(Role.renewer)
+    @hasRole(Role.renewer,Role.admin)
 	@UseGuards(JwtAuthGuard, RolesGuard)
     @Get('excel')
     @Header("Content-Type",
