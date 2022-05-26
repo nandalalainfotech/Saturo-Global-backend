@@ -22,14 +22,14 @@ export class UserController {
 		return this.userService.findAll();
 	}
 	// --------------------------user registration end-------------
-	@hasRole(Role.admin)
+	@hasRole(Role.Admin)
 	@UseGuards(JwtAuthGuard, RolesGuard)
 	@Post("save")
 	create(@Body() userDTO: UserDTO): Promise<User001mb> {
 		return this.userService.create(userDTO);
 	}
 
-	@hasRole(Role.admin)
+	@hasRole(Role.Admin)
 	@UseGuards(JwtAuthGuard, RolesGuard)
 	@Put("update")
 	update(@Body() userDTO: UserDTO): Promise<User001mb> {
@@ -37,7 +37,7 @@ export class UserController {
 		return this.userService.update(userDTO);
 	}
 
-	@hasRole(Role.admin)
+	@hasRole(Role.Admin)
 	@UseGuards(JwtAuthGuard, RolesGuard)
 	@Put("updateRole")
 	updateRole(@Body() roleid: any): Promise<User001mb> {
@@ -50,35 +50,35 @@ export class UserController {
 		return this.userService.update1(updateTheme);
 	}
 
-	@hasRole(Role.admin)
+	@hasRole(Role.Admin)
 	@UseGuards(JwtAuthGuard, RolesGuard)
 	@Post('updateUserName')
 	updateUserName(@Body() userName: any): Promise<User001mb> {
 		return this.userService.updateUserName(userName);
 	}
 
-	@hasRole(Role.admin)
+	@hasRole(Role.Admin)
 	@UseGuards(JwtAuthGuard, RolesGuard)
 	@Post('updatePassword')
 	updatePassword(@Body() userDTO: UserDTO): Promise<User001mb> {
 		return this.userService.updatePassword(userDTO);
 	}
 
-	@hasRole(Role.admin)
+	@hasRole(Role.Admin)
 	@UseGuards(JwtAuthGuard, RolesGuard)
 	@Get('findAll')
 	findAll(): Promise<User001mb[]> {
 		return this.userService.findAll();
 	}
 
-	@hasRole(Role.admin)
+	@hasRole(Role.Admin)
 	@UseGuards(JwtAuthGuard, RolesGuard)
 	@Get(':id')
 	findOne(@Param('id') id: number): Promise<User001mb> {
 		return this.userService.findOne(id);
 	}
 
-	@hasRole(Role.admin)
+	@hasRole(Role.Admin)
 	@UseGuards(JwtAuthGuard, RolesGuard)
 	@Delete('delete/:id')
 	remove(@Param('id') id: number): Promise<void> {
