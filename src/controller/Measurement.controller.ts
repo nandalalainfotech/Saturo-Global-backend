@@ -10,35 +10,35 @@ import { MeasurementService } from "src/service/Measurement.service";
 @Controller('/testandreportstudio/api/measurement')
 export class MeasurementController {
 	constructor(private readonly measurementService: MeasurementService) { }
-	@hasRole(Role.admin,Role.user)
+	@hasRole(Role.Admin,Role.User)
 	@UseGuards(JwtAuthGuard, RolesGuard)
 	@Post("save")
 	create(@Body() measurementDTO: MeasurementDTO): Promise<Measurement001wb> {
 		return this.measurementService.create(measurementDTO);
 	}
 
-	@hasRole(Role.admin,Role.user)
+	@hasRole(Role.Admin,Role.User)
 	@UseGuards(JwtAuthGuard, RolesGuard)
 	@Put("update")
 	update(@Body() measurementDTO: MeasurementDTO): Promise<Measurement001wb> {
 		return this.measurementService.update(measurementDTO);
 	}
 	
-	@hasRole(Role.admin,Role.user)
+	@hasRole(Role.Admin,Role.User)
 	@UseGuards(JwtAuthGuard, RolesGuard)
 	@Get('findAll/:username')
 	findAll(@Param('username') username: any): Promise<Measurement001wb[]> {
 		return this.measurementService.findAll(username);
 	}
 
-	@hasRole(Role.admin,Role.user)
+	@hasRole(Role.Admin,Role.User)
 	@UseGuards(JwtAuthGuard, RolesGuard)
 	@Delete('delete/:measurementId')
 	remove(@Param('measurementId') measurementId: number): Promise<void> {
 		return this.measurementService.remove(measurementId);
 	}
     
-	@hasRole(Role.admin,Role.user)
+	@hasRole(Role.Admin,Role.User)
 	@UseGuards(JwtAuthGuard, RolesGuard)
 	@Get(':id')
 	findOne(@Param('id') id: number): Promise<Measurement001wb> {
