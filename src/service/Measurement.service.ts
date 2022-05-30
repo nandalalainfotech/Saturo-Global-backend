@@ -29,7 +29,7 @@ export class MeasurementService {
     async findAll(username: any): Promise<Measurement001wb[]> {
         // console.log("username",username);
         
-        return await this.measurementRepository.find({relations: ["categorySlno2","functionSlno2","originalPrefixSlno2","typeSlno2","assaySlno2", "assaySlno2.ligandSlno2", "assaySlno2.ligandSlno2.ligandVersionSlno2"],where: { "insertUser": username }});
+        return await this.measurementRepository.find({relations: ["categorySlno2","functionSlno2","originalPrefixSlno2","typeSlno2","assaySlno2", "assaySlno2.ligandSlno2","assaySlno2.assayTypeSlno2", "assaySlno2.toxiCitySlno2","assaySlno2.routeSlno2","assaySlno2.unitSlno2","assaySlno2.unitedSlno2","assaySlno2.ligandSlno2.ligandVersionSlno2","assaySlno2.ligandSlno2.ligandTypeSlno2"],where: { "insertUser": username }});
     }
 
     findOne(id: number): Promise<Measurement001wb> {

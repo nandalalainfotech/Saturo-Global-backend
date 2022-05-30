@@ -1,5 +1,10 @@
 import { Assay001wb } from "src/entity/Assay001wb";
+import { Assaytype001mb } from "src/entity/Assaytype001mb";
 import { Ligand001wb } from "src/entity/Ligand001wb";
+import { Routeofadministration001mb } from "src/entity/Routeofadministration001mb";
+import { Toxicity001mb } from "src/entity/Toxicity001mb";
+import { Unitlowendvalue001mb } from "src/entity/Unitlowendvalue001mb";
+import { Unitsinglevalue001mb } from "src/entity/Unitsinglevalue001mb";
 
 export class AssayDTO {
     assayId: number;
@@ -31,6 +36,11 @@ export class AssayDTO {
     updatedDatetime: Date | null;
 
     ligandSlno2: Ligand001wb;
+    assayTypeSlno2: Assaytype001mb;
+    toxiCitySlno2: Toxicity001mb;
+    routeSlno2: Routeofadministration001mb;
+    unitSlno2: Unitsinglevalue001mb;
+    unitedSlno2: Unitlowendvalue001mb;
 
     
     setProperties(assay001wb: Assay001wb) {
