@@ -48,7 +48,7 @@ export class ReportsService {
             { key: 'H', width: 20.0 }, { key: 'I', width: 20.0 }, { key: 'J', width: 20.0 }, { key: 'K', width: 20.0 },
             { key: 'L', width: 20.0 }, { key: 'M', width: 20.0 }, { key: 'N', width: 20.0 }, { key: 'O', width: 20.0 },
             { key: 'P', width: 20.0 }, { key: 'Q', width: 20.0 }, { key: 'R', width: 20.0 }, { key: 'S', width: 20.0 },
-            { key: 'T', width: 20.0 }, { key: 'U', width: 20.0 }, { key: 'V', width: 20.0 }, { key: 'W', width: 40.0 },
+            { key: 'T', width: 20.0 }, { key: 'U', width: 28.0 }, { key: 'V', width: 28.0 }, { key: 'W', width: 40.0 },
             { key: 'X', width: 20.0 }, { key: 'Y', width: 20.0 }, { key: 'Z', width: 20.0 }, { key: 'AA', width: 20.0 },
             { key: 'AB', width: 20.0 }, { key: 'AC', width: 20.0 }, { key: 'AD', width: 20.0 }, { key: 'AE', width: 20.0 },
             { key: 'AF', width: 20.0 }, { key: 'AG', width: 20.0 }, { key: 'AH', width: 20.0 }, { key: 'AI', width: 20.0 },
@@ -58,7 +58,7 @@ export class ReportsService {
             { key: 'AV', width: 20.0 }, { key: 'AW', width: 20.0 }, { key: 'AX', width: 20.0 }, { key: 'AY', width: 20.0 },
             { key: 'AZ', width: 20.0 }, { key: 'BA', width: 20.0 }, { key: 'BB', width: 20.0 }, { key: 'BC', width: 20.0 },
             { key: 'BD', width: 20.0 }, { key: 'BE', width: 20.0 }, { key: 'BF', width: 20.0 }, { key: 'BG', width: 20.0 },
-            { key: 'BH', width: 20.0 }, { key: 'BI', width: 20.0 }, { key: 'BJ', width: 20.0 }, { key: 'BK', width: 40.0 },
+            { key: 'BH', width: 30.0 }, { key: 'BI', width: 30.0 }, { key: 'BJ', width: 30.0 }, { key: 'BK', width: 100.0 },
             { key: 'BL', width: 20.0 }, { key: 'BM', width: 20.0 }, { key: 'BN', width: 20.0 }, { key: 'BO', width: 20.0 },
             { key: 'BP', width: 20.0 }, { key: 'BQ', width: 20.0 }, { key: 'BR', width: 20.0 }, { key: 'BS', width: 20.0 },
             { key: 'BT', width: 20.0 }, { key: 'BU', width: 20.0 }, { key: 'BV', width: 20.0 }, { key: 'BW', width: 20.0 },
@@ -148,7 +148,7 @@ export class ReportsService {
             };
 
             worksheet.getCell('H1').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('H1').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'fabf8f' }, bgColor: { argb: 'fabf8f' } };
+            worksheet.getCell('H1').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '00b050' }, bgColor: { argb: '00b050' } };
             worksheet.mergeCells('H1');
             worksheet.getCell('H1').value = "Ligand";
             worksheet.getCell('H1').font = {
@@ -158,7 +158,7 @@ export class ReportsService {
             };
 
             worksheet.getCell('I1').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('I1').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'fabf8f' }, bgColor: { argb: 'fabf8f' } };
+            worksheet.getCell('I1').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '00b050' }, bgColor: { argb: '00b050' } };
             worksheet.mergeCells('I1');
             worksheet.getCell('I1').value = "Ligand";
             worksheet.getCell('I1').font = {
@@ -168,7 +168,7 @@ export class ReportsService {
             };
 
             worksheet.getCell('J1').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('J1').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'fabf8f' }, bgColor: { argb: 'fabf8f' } };
+            worksheet.getCell('J1').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '00b050' }, bgColor: { argb: '00b050' } };
             worksheet.mergeCells('J1');
             worksheet.getCell('J1').value = "Ligand";
             worksheet.getCell('J1').font = {
@@ -218,7 +218,7 @@ export class ReportsService {
             };
 
             worksheet.getCell('O1').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('O1').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'fabf8f' }, bgColor: { argb: 'fabf8f' } };
+            worksheet.getCell('O1').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '00b050' }, bgColor: { argb: '00b050' } };
             worksheet.mergeCells('O1');
             worksheet.getCell('O1').value = "Reference";
             worksheet.getCell('O1').font = {
@@ -228,7 +228,7 @@ export class ReportsService {
             };
 
             worksheet.getCell('P1').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('P1').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'fabf8f' }, bgColor: { argb: 'fabf8f' } };
+            worksheet.getCell('P1').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '00b050' }, bgColor: { argb: '00b050' } };
             worksheet.mergeCells('P1');
             worksheet.getCell('P1').value = "Substance-match";
             worksheet.getCell('P1').font = {
@@ -238,7 +238,7 @@ export class ReportsService {
             };
 
             worksheet.getCell('Q1').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('Q1').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'fabf8f' }, bgColor: { argb: 'fabf8f' } };
+            worksheet.getCell('Q1').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '00b050' }, bgColor: { argb: '00b050' } };
             worksheet.mergeCells('Q1');
             worksheet.getCell('Q1').value = "Assay";
             worksheet.getCell('Q1').font = {
@@ -248,7 +248,7 @@ export class ReportsService {
             };
 
             worksheet.getCell('R1').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('R1').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'fabf8f' }, bgColor: { argb: 'fabf8f' } };
+            worksheet.getCell('R1').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '00b050' }, bgColor: { argb: '00b050' } };
             worksheet.mergeCells('R1');
             worksheet.getCell('R1').value = "Assay";
             worksheet.getCell('R1').font = {
@@ -258,7 +258,7 @@ export class ReportsService {
             };
 
             worksheet.getCell('S1').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('S1').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'fabf8f' }, bgColor: { argb: 'fabf8f' } };
+            worksheet.getCell('S1').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '00b050' }, bgColor: { argb: '00b050' } };
             worksheet.mergeCells('S1');
             worksheet.getCell('S1').value = "Assay";
             worksheet.getCell('S1').font = {
@@ -268,7 +268,7 @@ export class ReportsService {
             };
 
             worksheet.getCell('T1').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('T1').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'fabf8f' }, bgColor: { argb: 'fabf8f' } };
+            worksheet.getCell('T1').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '00b050' }, bgColor: { argb: '00b050' } };
             worksheet.mergeCells('T1');
             worksheet.getCell('T1').value = "Assay";
             worksheet.getCell('T1').font = {
@@ -279,7 +279,7 @@ export class ReportsService {
 
 
             worksheet.getCell('U1').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('U1').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'fabf8f' }, bgColor: { argb: 'fabf8f' } };
+            worksheet.getCell('U1').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '00b050' }, bgColor: { argb: '00b050' } };
             worksheet.mergeCells('U1');
             worksheet.getCell('U1').value = "Assay";
             worksheet.getCell('U1').font = {
@@ -289,7 +289,7 @@ export class ReportsService {
             };
 
             worksheet.getCell('V1').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('V1').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'fabf8f' }, bgColor: { argb: 'fabf8f' } };
+            worksheet.getCell('V1').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '00b050' }, bgColor: { argb: '00b050' } };
             worksheet.mergeCells('V1');
             worksheet.getCell('V1').value = "Assay";
             worksheet.getCell('V1').font = {
@@ -299,7 +299,7 @@ export class ReportsService {
             };
 
             worksheet.getCell('W1').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('W1').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'fabf8f' }, bgColor: { argb: 'fabf8f' } };
+            worksheet.getCell('W1').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '00b050' }, bgColor: { argb: '00b050' } };
             worksheet.mergeCells('W1');
             worksheet.getCell('W1').value = "Assay";
             worksheet.getCell('W1').font = {
@@ -309,7 +309,7 @@ export class ReportsService {
             };
 
             worksheet.getCell('X1').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('X1').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'fabf8f' }, bgColor: { argb: 'fabf8f' } };
+            worksheet.getCell('X1').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '00b050' }, bgColor: { argb: '00b050' } };
             worksheet.mergeCells('X1');
             worksheet.getCell('X1').value = "Assay";
             worksheet.getCell('X1').font = {
@@ -319,7 +319,7 @@ export class ReportsService {
             };
 
             worksheet.getCell('Y1').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('Y1').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'fabf8f' }, bgColor: { argb: 'fabf8f' } };
+            worksheet.getCell('Y1').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '00b050' }, bgColor: { argb: '00b050' } };
             worksheet.mergeCells('Y1');
             worksheet.getCell('Y1').value = "Assay";
             worksheet.getCell('Y1').font = {
@@ -329,7 +329,7 @@ export class ReportsService {
             };
 
             worksheet.getCell('Z1').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('Z1').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'fabf8f' }, bgColor: { argb: 'fabf8f' } };
+            worksheet.getCell('Z1').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '00b050' }, bgColor: { argb: 'fa00b050bf8f' } };
             worksheet.mergeCells('Z1');
             worksheet.getCell('Z1').value = "Assay";
             worksheet.getCell('Z1').font = {
@@ -339,7 +339,7 @@ export class ReportsService {
             };
 
             worksheet.getCell('AA1').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('AA1').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'fabf8f' }, bgColor: { argb: 'fabf8f' } };
+            worksheet.getCell('AA1').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '00b050' }, bgColor: { argb: '00b050' } };
             worksheet.mergeCells('AA1');
             worksheet.getCell('AA1').value = "Assay";
             worksheet.getCell('AA1').font = {
@@ -349,7 +349,7 @@ export class ReportsService {
             };
 
             worksheet.getCell('AB1').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('AB1').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'fabf8f' }, bgColor: { argb: 'fabf8f' } };
+            worksheet.getCell('AB1').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '00b050' }, bgColor: { argb: '00b050' } };
             worksheet.mergeCells('AB1');
             worksheet.getCell('AB1').value = "Assay";
             worksheet.getCell('AB1').font = {
@@ -359,7 +359,7 @@ export class ReportsService {
             };
 
             worksheet.getCell('AC1').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('AC1').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'fabf8f' }, bgColor: { argb: 'fabf8f' } };
+            worksheet.getCell('AC1').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '00b050' }, bgColor: { argb: '00b050' } };
             worksheet.mergeCells('AC1');
             worksheet.getCell('AC1').value = "Assay";
             worksheet.getCell('AC1').font = {
@@ -369,7 +369,7 @@ export class ReportsService {
             };
 
             worksheet.getCell('AD1').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('AD1').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'fabf8f' }, bgColor: { argb: 'fabf8f' } };
+            worksheet.getCell('AD1').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '00b050' }, bgColor: { argb: '00b050' } };
             worksheet.mergeCells('AD1');
             worksheet.getCell('AD1').value = "Assay";
             worksheet.getCell('AD1').font = {
@@ -379,7 +379,7 @@ export class ReportsService {
             };
 
             worksheet.getCell('AE1').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('AE1').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'fabf8f' }, bgColor: { argb: 'fabf8f' } };
+            worksheet.getCell('AE1').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '00b050' }, bgColor: { argb: '00b050' } };
             worksheet.mergeCells('AE1');
             worksheet.getCell('AE1').value = "Assay";
             worksheet.getCell('AE1').font = {
@@ -389,7 +389,7 @@ export class ReportsService {
             };
 
             worksheet.getCell('AF1').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('AF1').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'fabf8f' }, bgColor: { argb: 'fabf8f' } };
+            worksheet.getCell('AF1').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '00b050' }, bgColor: { argb: '00b050' } };
             worksheet.mergeCells('AF1');
             worksheet.getCell('AF1').value = "Assay";
             worksheet.getCell('AF1').font = {
@@ -399,7 +399,7 @@ export class ReportsService {
             };
 
             worksheet.getCell('AG1').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('AG1').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'fabf8f' }, bgColor: { argb: 'fabf8f' } };
+            worksheet.getCell('AG1').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '00b050' }, bgColor: { argb: '00b050' } };
             worksheet.mergeCells('AG1');
             worksheet.getCell('AG1').value = "Assay";
             worksheet.getCell('AG1').font = {
@@ -409,7 +409,7 @@ export class ReportsService {
             };
 
             worksheet.getCell('AH1').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('AH1').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'fabf8f' }, bgColor: { argb: 'fabf8f' } };
+            worksheet.getCell('AH1').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '00b050' }, bgColor: { argb: '00b050' } };
             worksheet.mergeCells('AH1');
             worksheet.getCell('AH1').value = "Assay";
             worksheet.getCell('AH1').font = {
@@ -419,7 +419,7 @@ export class ReportsService {
             };
 
             worksheet.getCell('AI1').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('AI1').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'fabf8f' }, bgColor: { argb: 'fabf8f' } };
+            worksheet.getCell('AI1').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '00b050' }, bgColor: { argb: '00b050' } };
             worksheet.mergeCells('AI1');
             worksheet.getCell('AI1').value = "Assay";
             worksheet.getCell('AI1').font = {
@@ -429,7 +429,7 @@ export class ReportsService {
             };
 
             worksheet.getCell('AJ1').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('AJ1').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'fabf8f' }, bgColor: { argb: 'fabf8f' } };
+            worksheet.getCell('AJ1').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '00b050' }, bgColor: { argb: '00b050' } };
             worksheet.mergeCells('AJ1');
             worksheet.getCell('AJ1').value = "Assay";
             worksheet.getCell('AJ1').font = {
@@ -439,7 +439,7 @@ export class ReportsService {
             };
 
             worksheet.getCell('AK1').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('AK1').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'fabf8f' }, bgColor: { argb: 'fabf8f' } };
+            worksheet.getCell('AK1').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '00b050' }, bgColor: { argb: '00b050' } };
             worksheet.mergeCells('AK1');
             worksheet.getCell('AK1').value = "Assay";
             worksheet.getCell('AK1').font = {
@@ -449,9 +449,9 @@ export class ReportsService {
             };
 
             worksheet.getCell('AL1').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('AL1').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'fabf8f' }, bgColor: { argb: 'fabf8f' } };
+            worksheet.getCell('AL1').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '00b050' }, bgColor: { argb: '00b050' } };
             worksheet.mergeCells('AL1');
-            worksheet.getCell('AL1').value = "Assay";
+            worksheet.getCell('AL1').value = "Measurement";
             worksheet.getCell('AL1').font = {
                 size: 11,
                 name: 'Calibri',
@@ -581,7 +581,7 @@ export class ReportsService {
             worksheet.getCell('AY1').alignment = { vertical: 'bottom', horizontal: 'left' };
             worksheet.getCell('AY1').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '00b050' }, bgColor: { argb: '00b050' } };
             worksheet.mergeCells('AY1');
-            worksheet.getCell('AY1').value = "Measurement";
+            worksheet.getCell('AY1').value = "Biological system";
             worksheet.getCell('AY1').font = {
                 size: 11,
                 name: 'Calibri',
@@ -591,7 +591,7 @@ export class ReportsService {
             worksheet.getCell('AZ1').alignment = { vertical: 'bottom', horizontal: 'left' };
             worksheet.getCell('AZ1').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '00b050' }, bgColor: { argb: '00b050' } };
             worksheet.mergeCells('AZ1');
-            worksheet.getCell('AZ1').value = "Measurement";
+            worksheet.getCell('AZ1').value = "Biological system";
             worksheet.getCell('AZ1').font = {
                 size: 11,
                 name: 'Calibri',
@@ -671,7 +671,7 @@ export class ReportsService {
             worksheet.getCell('BH1').alignment = { vertical: 'bottom', horizontal: 'left' };
             worksheet.getCell('BH1').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '00b050' }, bgColor: { argb: '00b050' } };
             worksheet.mergeCells('BH1');
-            worksheet.getCell('BH1').value = "Biological system";
+            worksheet.getCell('BH1').value = "Disease";
             worksheet.getCell('BH1').font = {
                 size: 11,
                 name: 'Calibri',
@@ -681,7 +681,7 @@ export class ReportsService {
             worksheet.getCell('BI1').alignment = { vertical: 'bottom', horizontal: 'left' };
             worksheet.getCell('BI1').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '00b050' }, bgColor: { argb: '00b050' } };
             worksheet.mergeCells('BI1');
-            worksheet.getCell('BI1').value = "Biological system";
+            worksheet.getCell('BI1').value = "Disease";
             worksheet.getCell('BI1').font = {
                 size: 11,
                 name: 'Calibri',
@@ -780,13 +780,15 @@ export class ReportsService {
                 bold: true
             };
 
+           
+
 
 
             // --------------SECOND ROW---------------------
 
 
             worksheet.getCell('A2').alignment = { vertical: 'bottom', horizontal: 'left', wrapText: true };
-            worksheet.getCell('A2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '00b050' }, bgColor: { argb: '00b050' } };
+            worksheet.getCell('A2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF00' }, bgColor: { argb: 'FFFF00' } };
             worksheet.mergeCells('A2');
             worksheet.getCell('A2').value = "TAN Number";
             worksheet.getCell('A2').font = {
@@ -796,7 +798,7 @@ export class ReportsService {
             };
 
             worksheet.getCell('B2').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('B2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '00b050' }, bgColor: { argb: '00b050' } };
+            worksheet.getCell('B2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF00' }, bgColor: { argb: 'FFFF00' } };
             worksheet.mergeCells('B2');
             worksheet.getCell('B2').value = "Ligand-Uri";
             worksheet.getCell('B2').font = {
@@ -806,7 +808,7 @@ export class ReportsService {
             };
 
             worksheet.getCell('C2').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('C2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '00b050' }, bgColor: { argb: '00b050' } };
+            worksheet.getCell('C2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF00' }, bgColor: { argb: 'FFFF00' } };
             worksheet.mergeCells('C2');
             worksheet.getCell('C2').value = "Ligand-Version";
             worksheet.getCell('C2').font = {
@@ -816,7 +818,7 @@ export class ReportsService {
             };
 
             worksheet.getCell('D2').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('D2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '00b050' }, bgColor: { argb: '00b050' } };
+            worksheet.getCell('D2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF00' }, bgColor: { argb: 'FFFF00' } };
             worksheet.mergeCells('D2');
             worksheet.getCell('D2').value = "Ligand-status";
             worksheet.getCell('D2').font = {
@@ -826,7 +828,7 @@ export class ReportsService {
             };
 
             worksheet.getCell('E2').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('E2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '00b050' }, bgColor: { argb: '00b050' } };
+            worksheet.getCell('E2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF00' }, bgColor: { argb: 'FFFF00' } };
             worksheet.mergeCells('E2');
             worksheet.getCell('E2').value = "Collection";
             worksheet.getCell('E2').font = {
@@ -836,7 +838,7 @@ export class ReportsService {
             };
 
             worksheet.getCell('F2').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('F2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '00b050' }, bgColor: { argb: '00b050' } };
+            worksheet.getCell('F2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF00' }, bgColor: { argb: 'FFFF00' } };
             worksheet.mergeCells('F2');
             worksheet.getCell('F2').value = "Ligand-type";
             worksheet.getCell('F2').font = {
@@ -846,7 +848,7 @@ export class ReportsService {
             };
 
             worksheet.getCell('G2').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('G2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '00b050' }, bgColor: { argb: '00b050' } };
+            worksheet.getCell('G2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF00' }, bgColor: { argb: 'FFFF00' } };
             worksheet.mergeCells('G2');
             worksheet.getCell('G2').value = "Identifier1";
             worksheet.getCell('G2').font = {
@@ -856,7 +858,7 @@ export class ReportsService {
             };
 
             worksheet.getCell('H2').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('H2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'fabf8f' }, bgColor: { argb: 'fabf8f' } };
+            worksheet.getCell('H2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF00' }, bgColor: { argb: 'FFFF00' } };
             worksheet.mergeCells('H2');
             worksheet.getCell('H2').value = "Identifier2";
             worksheet.getCell('H2').font = {
@@ -866,7 +868,7 @@ export class ReportsService {
             };
 
             worksheet.getCell('I2').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('I2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'fabf8f' }, bgColor: { argb: 'fabf8f' } };
+            worksheet.getCell('I2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF00' }, bgColor: { argb: 'FFFF00' } };
             worksheet.mergeCells('I2');
             worksheet.getCell('I2').value = "Identifier3";
             worksheet.getCell('I2').font = {
@@ -876,7 +878,7 @@ export class ReportsService {
             };
 
             worksheet.getCell('J2').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('J2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'fabf8f' }, bgColor: { argb: 'fabf8f' } };
+            worksheet.getCell('J2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF00' }, bgColor: { argb: 'FFFF00' } };
             worksheet.mergeCells('J2');
             worksheet.getCell('J2').value = "Collection-id";
             worksheet.getCell('J2').font = {
@@ -886,7 +888,7 @@ export class ReportsService {
             };
 
             worksheet.getCell('K2').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('K2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '00b050' }, bgColor: { argb: '00b050' } };
+            worksheet.getCell('K2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF00' }, bgColor: { argb: 'FFFF00' } };
             worksheet.mergeCells('K2');
             worksheet.getCell('K2').value = "Ligand-detail";
             worksheet.getCell('K2').font = {
@@ -896,7 +898,7 @@ export class ReportsService {
             };
 
             worksheet.getCell('L2').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('L2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '00b050' }, bgColor: { argb: '00b050' } };
+            worksheet.getCell('L2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF00' }, bgColor: { argb: 'FFFF00' } };
             worksheet.mergeCells('L2');
             worksheet.getCell('L2').value = "Locator";
             worksheet.getCell('L2').font = {
@@ -906,7 +908,7 @@ export class ReportsService {
             };
 
             worksheet.getCell('M2').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('M2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '00b050' }, bgColor: { argb: '00b050' } };
+            worksheet.getCell('M2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF00' }, bgColor: { argb: 'FFFF00' } };
             worksheet.mergeCells('M2');
             worksheet.getCell('M2').value = "Source-type";
             worksheet.getCell('M2').font = {
@@ -916,7 +918,7 @@ export class ReportsService {
             };
 
             worksheet.getCell('N2').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('N2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '00b050' }, bgColor: { argb: '00b050' } };
+            worksheet.getCell('N2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF00' }, bgColor: { argb: 'FFFF00' } };
             worksheet.mergeCells('N2');
             worksheet.getCell('N2').value = "Citation";
             worksheet.getCell('N2').font = {
@@ -926,7 +928,7 @@ export class ReportsService {
             };
 
             worksheet.getCell('O2').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('O2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'fabf8f' }, bgColor: { argb: 'fabf8f' } };
+            worksheet.getCell('O2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF00' }, bgColor: { argb: 'FFFF00' } };
             worksheet.mergeCells('O2');
             worksheet.getCell('O2').value = "Related-document";
             worksheet.getCell('O2').font = {
@@ -936,7 +938,7 @@ export class ReportsService {
             };
 
             worksheet.getCell('P2').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('P2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'fabf8f' }, bgColor: { argb: 'fabf8f' } };
+            worksheet.getCell('P2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF00' }, bgColor: { argb: 'FFFF00' } };
             worksheet.mergeCells('P2');
             worksheet.getCell('P2').value = "Substance-uri registry-number";
             worksheet.getCell('P2').font = {
@@ -946,7 +948,7 @@ export class ReportsService {
             };
 
             worksheet.getCell('Q2').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('Q2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'fabf8f' }, bgColor: { argb: 'fabf8f' } };
+            worksheet.getCell('Q2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF00' }, bgColor: { argb: 'FFFF00' } };
             worksheet.mergeCells('Q2');
             worksheet.getCell('Q2').value = "Ordinal";
             worksheet.getCell('Q2').font = {
@@ -956,7 +958,7 @@ export class ReportsService {
             };
 
             worksheet.getCell('R2').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('R2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'fabf8f' }, bgColor: { argb: 'fabf8f' } };
+            worksheet.getCell('R2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF00' }, bgColor: { argb: 'FFFF00' } };
             worksheet.mergeCells('R2');
             worksheet.getCell('R2').value = "Collection-id";
             worksheet.getCell('R2').font = {
@@ -966,7 +968,7 @@ export class ReportsService {
             };
 
             worksheet.getCell('S2').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('S2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'fabf8f' }, bgColor: { argb: 'fabf8f' } };
+            worksheet.getCell('S2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF00' }, bgColor: { argb: 'FFFF00' } };
             worksheet.mergeCells('S2');
             worksheet.getCell('S2').value = "Assay-type";
             worksheet.getCell('S2').font = {
@@ -976,7 +978,7 @@ export class ReportsService {
             };
 
             worksheet.getCell('T2').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('T2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'fabf8f' }, bgColor: { argb: 'fabf8f' } };
+            worksheet.getCell('T2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF00' }, bgColor: { argb: 'FFFF00' } };
             worksheet.mergeCells('T2');
             worksheet.getCell('T2').value = "Toxicity-type";
             worksheet.getCell('T2').font = {
@@ -987,7 +989,7 @@ export class ReportsService {
 
 
             worksheet.getCell('U2').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('U2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'fabf8f' }, bgColor: { argb: 'fabf8f' } };
+            worksheet.getCell('U2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF00' }, bgColor: { argb: 'FFFF00' } };
             worksheet.mergeCells('U2');
             worksheet.getCell('U2').value = "Route-of-administration";
             worksheet.getCell('U2').font = {
@@ -997,9 +999,9 @@ export class ReportsService {
             };
 
             worksheet.getCell('V2').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('V2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'fabf8f' }, bgColor: { argb: 'fabf8f' } };
+            worksheet.getCell('V2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF00' }, bgColor: { argb: 'FFFF00' } };
             worksheet.mergeCells('V2');
-            worksheet.getCell('V2').value = "Ligand-Dose";
+            worksheet.getCell('V2').value = "Administration-regimen";
             worksheet.getCell('V2').font = {
                 size: 11,
                 name: 'Calibri',
@@ -1007,9 +1009,9 @@ export class ReportsService {
             };
 
             worksheet.getCell('W2').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('W2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'fabf8f' }, bgColor: { argb: 'fabf8f' } };
+            worksheet.getCell('W2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF00' }, bgColor: { argb: 'FFFF00' } };
             worksheet.mergeCells('W2');
-            worksheet.getCell('W2').value = "Administration-regimen";
+            worksheet.getCell('W2').value = "Procedure";
             worksheet.getCell('W2').font = {
                 size: 11,
                 name: 'Calibri',
@@ -1017,9 +1019,9 @@ export class ReportsService {
             };
 
             worksheet.getCell('X2').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('X2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'fabf8f' }, bgColor: { argb: 'fabf8f' } };
+            worksheet.getCell('X2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF00' }, bgColor: { argb: 'fabf8f' } };
             worksheet.mergeCells('X2');
-            worksheet.getCell('X2').value = "Procedure";
+            worksheet.getCell('X2').value = "Target-uri";
             worksheet.getCell('X2').font = {
                 size: 11,
                 name: 'Calibri',
@@ -1027,9 +1029,9 @@ export class ReportsService {
             };
 
             worksheet.getCell('Y2').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('Y2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'fabf8f' }, bgColor: { argb: 'fabf8f' } };
+            worksheet.getCell('Y2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF00' }, bgColor: { argb: 'FFFF00' } };
             worksheet.mergeCells('Y2');
-            worksheet.getCell('Y2').value = "Target-uri";
+            worksheet.getCell('Y2').value = "Single-value";
             worksheet.getCell('Y2').font = {
                 size: 11,
                 name: 'Calibri',
@@ -1037,9 +1039,9 @@ export class ReportsService {
             };
 
             worksheet.getCell('Z2').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('Z2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'fabf8f' }, bgColor: { argb: 'fabf8f' } };
+            worksheet.getCell('Z2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF00' }, bgColor: { argb: 'FFFF00' } };
             worksheet.mergeCells('Z2');
-            worksheet.getCell('Z2').value = "Single-value";
+            worksheet.getCell('Z2').value = "Unit";
             worksheet.getCell('Z2').font = {
                 size: 11,
                 name: 'Calibri',
@@ -1047,9 +1049,9 @@ export class ReportsService {
             };
 
             worksheet.getCell('AA2').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('AA2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'fabf8f' }, bgColor: { argb: 'fabf8f' } };
+            worksheet.getCell('AA2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF00' }, bgColor: { argb: 'FFFF00' } };
             worksheet.mergeCells('AA2');
-            worksheet.getCell('AA2').value = "Unit";
+            worksheet.getCell('AA2').value = "High-end-value";
             worksheet.getCell('AA2').font = {
                 size: 11,
                 name: 'Calibri',
@@ -1057,9 +1059,9 @@ export class ReportsService {
             };
 
             worksheet.getCell('AB2').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('AB2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'fabf8f' }, bgColor: { argb: 'fabf8f' } };
+            worksheet.getCell('AB2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF00' }, bgColor: { argb: 'FFFF00' } };
             worksheet.mergeCells('AB2');
-            worksheet.getCell('AB2').value = "High-end-value";
+            worksheet.getCell('AB2').value = "Low-end-value";
             worksheet.getCell('AB2').font = {
                 size: 11,
                 name: 'Calibri',
@@ -1067,9 +1069,9 @@ export class ReportsService {
             };
 
             worksheet.getCell('AC2').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('AC2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'fabf8f' }, bgColor: { argb: 'fabf8f' } };
+            worksheet.getCell('AC2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF00' }, bgColor: { argb: 'FFFF00' } };
             worksheet.mergeCells('AC2');
-            worksheet.getCell('AC2').value = "Low-end-value";
+            worksheet.getCell('AC2').value = "Unit1";
             worksheet.getCell('AC2').font = {
                 size: 11,
                 name: 'Calibri',
@@ -1077,9 +1079,9 @@ export class ReportsService {
             };
 
             worksheet.getCell('AD2').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('AD2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'fabf8f' }, bgColor: { argb: 'fabf8f' } };
+            worksheet.getCell('AD2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF00' }, bgColor: { argb: 'FFFF00' } };
             worksheet.mergeCells('AD2');
-            worksheet.getCell('AD2').value = "Unit1";
+            worksheet.getCell('AD2').value = "Condition Type";
             worksheet.getCell('AD2').font = {
                 size: 11,
                 name: 'Calibri',
@@ -1087,9 +1089,9 @@ export class ReportsService {
             };
 
             worksheet.getCell('AE2').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('AE2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'fabf8f' }, bgColor: { argb: 'fabf8f' } };
+            worksheet.getCell('AE2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF00' }, bgColor: { argb: 'FFFF00' } };
             worksheet.mergeCells('AE2');
-            worksheet.getCell('AE2').value = "Condition Type";
+            worksheet.getCell('AE2').value = "Material";
             worksheet.getCell('AE2').font = {
                 size: 11,
                 name: 'Calibri',
@@ -1097,9 +1099,9 @@ export class ReportsService {
             };
 
             worksheet.getCell('AF2').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('AF2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'fabf8f' }, bgColor: { argb: 'fabf8f' } };
+            worksheet.getCell('AF2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF00' }, bgColor: { argb: 'FFFF00' } };
             worksheet.mergeCells('AF2');
-            worksheet.getCell('AF2').value = "Material";
+            worksheet.getCell('AF2').value = "Material-id";
             worksheet.getCell('AF2').font = {
                 size: 11,
                 name: 'Calibri',
@@ -1107,9 +1109,9 @@ export class ReportsService {
             };
 
             worksheet.getCell('AG2').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('AG2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'fabf8f' }, bgColor: { argb: 'fabf8f' } };
+            worksheet.getCell('AG2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF00' }, bgColor: { argb: 'FFFF00' } };
             worksheet.mergeCells('AG2');
-            worksheet.getCell('AG2').value = "Material-id";
+            worksheet.getCell('AG2').value = "Single-value1";
             worksheet.getCell('AG2').font = {
                 size: 11,
                 name: 'Calibri',
@@ -1117,9 +1119,9 @@ export class ReportsService {
             };
 
             worksheet.getCell('AH2').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('AH2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'fabf8f' }, bgColor: { argb: 'fabf8f' } };
+            worksheet.getCell('AH2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF00' }, bgColor: { argb: 'FFFF00' } };
             worksheet.mergeCells('AH2');
-            worksheet.getCell('AH2').value = "Single-value1";
+            worksheet.getCell('AH2').value = "Unit2";
             worksheet.getCell('AH2').font = {
                 size: 11,
                 name: 'Calibri',
@@ -1127,9 +1129,9 @@ export class ReportsService {
             };
 
             worksheet.getCell('AI2').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('AI2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'fabf8f' }, bgColor: { argb: 'fabf8f' } };
+            worksheet.getCell('AI2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF00' }, bgColor: { argb: 'FFFF00' } };
             worksheet.mergeCells('AI2');
-            worksheet.getCell('AI2').value = "Unit2";
+            worksheet.getCell('AI2').value = "High-end-value1";
             worksheet.getCell('AI2').font = {
                 size: 11,
                 name: 'Calibri',
@@ -1137,9 +1139,9 @@ export class ReportsService {
             };
 
             worksheet.getCell('AJ2').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('AJ2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'fabf8f' }, bgColor: { argb: 'fabf8f' } };
+            worksheet.getCell('AJ2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF00' }, bgColor: { argb: 'FFFF00' } };
             worksheet.mergeCells('AJ2');
-            worksheet.getCell('AJ2').value = "High-end-value1";
+            worksheet.getCell('AJ2').value = "Low-end-value1";
             worksheet.getCell('AJ2').font = {
                 size: 11,
                 name: 'Calibri',
@@ -1147,9 +1149,9 @@ export class ReportsService {
             };
 
             worksheet.getCell('AK2').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('AK2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'fabf8f' }, bgColor: { argb: 'fabf8f' } };
+            worksheet.getCell('AK2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF00' }, bgColor: { argb: 'FFFF00' } };
             worksheet.mergeCells('AK2');
-            worksheet.getCell('AK2').value = "Low-end-value1";
+            worksheet.getCell('AK2').value = "Unit3";
             worksheet.getCell('AK2').font = {
                 size: 11,
                 name: 'Calibri',
@@ -1157,9 +1159,9 @@ export class ReportsService {
             };
 
             worksheet.getCell('AL2').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('AL2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'fabf8f' }, bgColor: { argb: 'fabf8f' } };
+            worksheet.getCell('AL2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF00' }, bgColor: { argb: 'FFFF00' } };
             worksheet.mergeCells('AL2');
-            worksheet.getCell('AL2').value = "Unit3";
+            worksheet.getCell('AL2').value = "Data-locator";
             worksheet.getCell('AL2').font = {
                 size: 11,
                 name: 'Calibri',
@@ -1167,9 +1169,9 @@ export class ReportsService {
             };
 
             worksheet.getCell('AM2').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('AM2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '00b050' }, bgColor: { argb: '00b050' } };
+            worksheet.getCell('AM2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF00' }, bgColor: { argb: 'FFFF00' } };
             worksheet.mergeCells('AM2');
-            worksheet.getCell('AM2').value = "Data-locator";
+            worksheet.getCell('AM2').value = "Category";
             worksheet.getCell('AM2').font = {
                 size: 11,
                 name: 'Calibri',
@@ -1177,9 +1179,9 @@ export class ReportsService {
             };
 
             worksheet.getCell('AN2').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('AN2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '00b050' }, bgColor: { argb: '00b050' } };
+            worksheet.getCell('AN2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF00' }, bgColor: { argb: 'FFFF00' } };
             worksheet.mergeCells('AN2');
-            worksheet.getCell('AN2').value = "Category";
+            worksheet.getCell('AN2').value = "Function";
             worksheet.getCell('AN2').font = {
                 size: 11,
                 name: 'Calibri',
@@ -1187,9 +1189,9 @@ export class ReportsService {
             };
 
             worksheet.getCell('AO2').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('AO2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '00b050' }, bgColor: { argb: '00b050' } };
+            worksheet.getCell('AO2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF00' }, bgColor: { argb: 'FFFF00' } };
             worksheet.mergeCells('AO2');
-            worksheet.getCell('AO2').value = "Function";
+            worksheet.getCell('AO2').value = "Parameter";
             worksheet.getCell('AO2').font = {
                 size: 11,
                 name: 'Calibri',
@@ -1197,9 +1199,9 @@ export class ReportsService {
             };
 
             worksheet.getCell('AP2').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('AP2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '00b050' }, bgColor: { argb: '00b050' } };
+            worksheet.getCell('AP2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF00' }, bgColor: { argb: 'FFFF00' } };
             worksheet.mergeCells('AP2');
-            worksheet.getCell('AP2').value = "Parameter";
+            worksheet.getCell('AP2').value = "Parameter-detail";
             worksheet.getCell('AP2').font = {
                 size: 11,
                 name: 'Calibri',
@@ -1207,9 +1209,9 @@ export class ReportsService {
             };
 
             worksheet.getCell('AQ2').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('AQ2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '00b050' }, bgColor: { argb: '00b050' } };
+            worksheet.getCell('AQ2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF00' }, bgColor: { argb: 'FFFF00' } };
             worksheet.mergeCells('AQ2');
-            worksheet.getCell('AQ2').value = "Parameter-detail";
+            worksheet.getCell('AQ2').value = "Original-prefix";
             worksheet.getCell('AQ2').font = {
                 size: 11,
                 name: 'Calibri',
@@ -1217,9 +1219,9 @@ export class ReportsService {
             };
 
             worksheet.getCell('AR2').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('AR2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '00b050' }, bgColor: { argb: '00b050' } };
+            worksheet.getCell('AR2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF00' }, bgColor: { argb: 'FFFF00' } };
             worksheet.mergeCells('AR2');
-            worksheet.getCell('AR2').value = "Original-prefix";
+            worksheet.getCell('AR2').value = "Single-value";
             worksheet.getCell('AR2').font = {
                 size: 11,
                 name: 'Calibri',
@@ -1227,9 +1229,9 @@ export class ReportsService {
             };
 
             worksheet.getCell('AS2').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('AS2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '00b050' }, bgColor: { argb: '00b050' } };
+            worksheet.getCell('AS2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF00' }, bgColor: { argb: 'FFFF00' } };
             worksheet.mergeCells('AS2');
-            worksheet.getCell('AS2').value = "Single-value";
+            worksheet.getCell('AS2').value = "Unit";
             worksheet.getCell('AS2').font = {
                 size: 11,
                 name: 'Calibri',
@@ -1237,9 +1239,9 @@ export class ReportsService {
             };
 
             worksheet.getCell('AT2').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('AT2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '00b050' }, bgColor: { argb: '00b050' } };
+            worksheet.getCell('AT2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF00' }, bgColor: { argb: 'FFFF00' } };
             worksheet.mergeCells('AT2');
-            worksheet.getCell('AT2').value = "Unit";
+            worksheet.getCell('AT2').value = "High-end-value";
             worksheet.getCell('AT2').font = {
                 size: 11,
                 name: 'Calibri',
@@ -1247,9 +1249,9 @@ export class ReportsService {
             };
 
             worksheet.getCell('AU2').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('AU2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '00b050' }, bgColor: { argb: '00b050' } };
+            worksheet.getCell('AU2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF00' }, bgColor: { argb: 'FFFF00' } };
             worksheet.mergeCells('AU2');
-            worksheet.getCell('AU2').value = "Original-prefix1";
+            worksheet.getCell('AU2').value = "Low-end-value";
             worksheet.getCell('AU2').font = {
                 size: 11,
                 name: 'Calibri',
@@ -1257,9 +1259,9 @@ export class ReportsService {
             };
 
             worksheet.getCell('AV2').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('AV2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '00b050' }, bgColor: { argb: '00b050' } };
+            worksheet.getCell('AV2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF00' }, bgColor: { argb: 'FFFF00' } };
             worksheet.mergeCells('AV2');
-            worksheet.getCell('AV2').value = "High-end-value";
+            worksheet.getCell('AV2').value = "Unit1";
             worksheet.getCell('AV2').font = {
                 size: 11,
                 name: 'Calibri',
@@ -1267,9 +1269,9 @@ export class ReportsService {
             };
 
             worksheet.getCell('AW2').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('AW2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '00b050' }, bgColor: { argb: '00b050' } };
+            worksheet.getCell('AW2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF00' }, bgColor: { argb: 'FFFF00' } };
             worksheet.mergeCells('AW2');
-            worksheet.getCell('AW2').value = "Low-end-value";
+            worksheet.getCell('AW2').value = "Non-numeric-value";
             worksheet.getCell('AW2').font = {
                 size: 11,
                 name: 'Calibri',
@@ -1277,9 +1279,9 @@ export class ReportsService {
             };
 
             worksheet.getCell('AX2').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('AX2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '00b050' }, bgColor: { argb: '00b050' } };
+            worksheet.getCell('AX2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF00' }, bgColor: { argb: 'FFFF00' } };
             worksheet.mergeCells('AX2');
-            worksheet.getCell('AX2').value = "Unit1";
+            worksheet.getCell('AX2').value = "Remarks";
             worksheet.getCell('AX2').font = {
                 size: 11,
                 name: 'Calibri',
@@ -1287,9 +1289,9 @@ export class ReportsService {
             };
 
             worksheet.getCell('AY2').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('AY2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '00b050' }, bgColor: { argb: '00b050' } };
+            worksheet.getCell('AY2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF00' }, bgColor: { argb: 'FFFF00' } };
             worksheet.mergeCells('AY2');
-            worksheet.getCell('AY2').value = "Non-numeric-value";
+            worksheet.getCell('AY2').value = "Type";
             worksheet.getCell('AY2').font = {
                 size: 11,
                 name: 'Calibri',
@@ -1297,9 +1299,9 @@ export class ReportsService {
             };
 
             worksheet.getCell('AZ2').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('AZ2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '00b050' }, bgColor: { argb: '00b050' } };
+            worksheet.getCell('AZ2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF00' }, bgColor: { argb: 'FFFF00' } };
             worksheet.mergeCells('AZ2');
-            worksheet.getCell('AZ2').value = "Remarks";
+            worksheet.getCell('AZ2').value = "Cell";
             worksheet.getCell('AZ2').font = {
                 size: 11,
                 name: 'Calibri',
@@ -1307,9 +1309,9 @@ export class ReportsService {
             };
 
             worksheet.getCell('BA2').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('BA2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '00b050' }, bgColor: { argb: '00b050' } };
+            worksheet.getCell('BA2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF00' }, bgColor: { argb: 'FFFF00' } };
             worksheet.mergeCells('BA2');
-            worksheet.getCell('BA2').value = "Type";
+            worksheet.getCell('BA2').value = "Cell-detail";
             worksheet.getCell('BA2').font = {
                 size: 11,
                 name: 'Calibri',
@@ -1317,9 +1319,9 @@ export class ReportsService {
             };
 
             worksheet.getCell('BB2').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('BB2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '00b050' }, bgColor: { argb: '00b050' } };
+            worksheet.getCell('BB2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF00' }, bgColor: { argb: 'FFFF00' } };
             worksheet.mergeCells('BB2');
-            worksheet.getCell('BB2').value = "Cell";
+            worksheet.getCell('BB2').value = "Organ";
             worksheet.getCell('BB2').font = {
                 size: 11,
                 name: 'Calibri',
@@ -1327,9 +1329,9 @@ export class ReportsService {
             };
 
             worksheet.getCell('BC2').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('BC2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '00b050' }, bgColor: { argb: '00b050' } };
+            worksheet.getCell('BC2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF00' }, bgColor: { argb: 'FFFF00' } };
             worksheet.mergeCells('BC2');
-            worksheet.getCell('BC2').value = "Cell-detail";
+            worksheet.getCell('BC2').value = "Organ-detail";
             worksheet.getCell('BC2').font = {
                 size: 11,
                 name: 'Calibri',
@@ -1337,9 +1339,9 @@ export class ReportsService {
             };
 
             worksheet.getCell('BD2').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('BD2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '00b050' }, bgColor: { argb: '00b050' } };
+            worksheet.getCell('BD2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF00' }, bgColor: { argb: 'FFFF00' } };
             worksheet.mergeCells('BD2');
-            worksheet.getCell('BD2').value = "Organ";
+            worksheet.getCell('BD2').value = "Species";
             worksheet.getCell('BD2').font = {
                 size: 11,
                 name: 'Calibri',
@@ -1347,9 +1349,9 @@ export class ReportsService {
             };
 
             worksheet.getCell('BE2').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('BE2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '00b050' }, bgColor: { argb: '00b050' } };
+            worksheet.getCell('BE2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF00' }, bgColor: { argb: 'FFFF00' } };
             worksheet.mergeCells('BE2');
-            worksheet.getCell('BE2').value = "Organ-detail";
+            worksheet.getCell('BE2').value = "Species-detail";
             worksheet.getCell('BE2').font = {
                 size: 11,
                 name: 'Calibri',
@@ -1357,9 +1359,9 @@ export class ReportsService {
             };
 
             worksheet.getCell('BF2').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('BF2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '00b050' }, bgColor: { argb: '00b050' } };
+            worksheet.getCell('BF2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF00' }, bgColor: { argb: 'FFFF00' } };
             worksheet.mergeCells('BF2');
-            worksheet.getCell('BF2').value = "Species";
+            worksheet.getCell('BF2').value = "Gender";
             worksheet.getCell('BF2').font = {
                 size: 11,
                 name: 'Calibri',
@@ -1367,9 +1369,9 @@ export class ReportsService {
             };
 
             worksheet.getCell('BG2').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('BG2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '00b050' }, bgColor: { argb: '00b050' } };
+            worksheet.getCell('BG2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF00' }, bgColor: { argb: 'FFFF00' } };
             worksheet.mergeCells('BG2');
-            worksheet.getCell('BG2').value = "Species-detail";
+            worksheet.getCell('BG2').value = "Age-group";
             worksheet.getCell('BG2').font = {
                 size: 11,
                 name: 'Calibri',
@@ -1377,9 +1379,9 @@ export class ReportsService {
             };
 
             worksheet.getCell('BH2').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('BH2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '00b050' }, bgColor: { argb: '00b050' } };
+            worksheet.getCell('BH2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF00' }, bgColor: { argb: 'FFFF00' } };
             worksheet.mergeCells('BH2');
-            worksheet.getCell('BH2').value = "Gender";
+            worksheet.getCell('BH2').value = "Original-disease-name1";
             worksheet.getCell('BH2').font = {
                 size: 11,
                 name: 'Calibri',
@@ -1387,9 +1389,9 @@ export class ReportsService {
             };
 
             worksheet.getCell('BI2').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('BI2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '00b050' }, bgColor: { argb: '00b050' } };
+            worksheet.getCell('BI2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF00' }, bgColor: { argb: 'FFFF00' } };
             worksheet.mergeCells('BI2');
-            worksheet.getCell('BI2').value = "Age-group";
+            worksheet.getCell('BI2').value = "Original-disease-name2";
             worksheet.getCell('BI2').font = {
                 size: 11,
                 name: 'Calibri',
@@ -1397,9 +1399,9 @@ export class ReportsService {
             };
 
             worksheet.getCell('BJ2').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('BJ2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '00b050' }, bgColor: { argb: '00b050' } };
+            worksheet.getCell('BJ2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF00' }, bgColor: { argb: 'FFFF00' } };
             worksheet.mergeCells('BJ2');
-            worksheet.getCell('BJ2').value = "Original-disease-name";
+            worksheet.getCell('BJ2').value = "Original-disease-name3";
             worksheet.getCell('BJ2').font = {
                 size: 11,
                 name: 'Calibri',
@@ -1407,7 +1409,7 @@ export class ReportsService {
             };
 
             worksheet.getCell('BK2').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('BK2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '00b050' }, bgColor: { argb: '00b050' } };
+            worksheet.getCell('BK2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF00' }, bgColor: { argb: 'FFFF00' } };
             worksheet.mergeCells('BK2');
             worksheet.getCell('BK2').value = "Target-uri";
             worksheet.getCell('BK2').font = {
@@ -1419,7 +1421,7 @@ export class ReportsService {
 
 
             worksheet.getCell('BL2').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('BL2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '00b050' }, bgColor: { argb: '00b050' } };
+            worksheet.getCell('BL2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF00' }, bgColor: { argb: 'FFFF00' } };
             worksheet.mergeCells('BL2');
             worksheet.getCell('BL2').value = "Target-version";
             worksheet.getCell('BL2').font = {
@@ -1429,7 +1431,7 @@ export class ReportsService {
             };
 
             worksheet.getCell('BM2').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('BM2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '00b050' }, bgColor: { argb: '00b050' } };
+            worksheet.getCell('BM2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF00' }, bgColor: { argb: 'FFFF00' } };
             worksheet.mergeCells('BM2');
             worksheet.getCell('BM2').value = "Target-status";
             worksheet.getCell('BM2').font = {
@@ -1439,7 +1441,7 @@ export class ReportsService {
             };
 
             worksheet.getCell('BN2').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('BN2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '00b050' }, bgColor: { argb: '00b050' } };
+            worksheet.getCell('BN2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF00' }, bgColor: { argb: 'FFFF00' } };
             worksheet.mergeCells('BN2');
             worksheet.getCell('BN2').value = "Collection-id";
             worksheet.getCell('BN2').font = {
@@ -1449,7 +1451,7 @@ export class ReportsService {
             };
 
             worksheet.getCell('BO2').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('BO2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '00b050' }, bgColor: { argb: '00b050' } };
+            worksheet.getCell('BO2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF00' }, bgColor: { argb: 'FFFF00' } };
             worksheet.mergeCells('BO2');
             worksheet.getCell('BO2').value = "Original-target-name";
             worksheet.getCell('BO2').font = {
@@ -1459,7 +1461,7 @@ export class ReportsService {
             };
 
             worksheet.getCell('BP2').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('BP2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '00b050' }, bgColor: { argb: '00b050' } };
+            worksheet.getCell('BP2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF00' }, bgColor: { argb: 'FFFF00' } };
             worksheet.mergeCells('BP2');
             worksheet.getCell('BP2').value = "Acronym";
             worksheet.getCell('BP2').font = {
@@ -1469,7 +1471,7 @@ export class ReportsService {
             };
 
             worksheet.getCell('BQ2').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('BQ2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '00b050' }, bgColor: { argb: '00b050' } };
+            worksheet.getCell('BQ2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF00' }, bgColor: { argb: 'FFFF00' } };
             worksheet.mergeCells('BQ2');
             worksheet.getCell('BQ2').value = "Organism-source";
             worksheet.getCell('BQ2').font = {
@@ -1479,7 +1481,7 @@ export class ReportsService {
             };
 
             worksheet.getCell('BR2').alignment = { vertical: 'bottom', horizontal: 'left' };
-            worksheet.getCell('BR2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '00b050' }, bgColor: { argb: '00b050' } };
+            worksheet.getCell('BR2').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF00' }, bgColor: { argb: 'FFFF00' } };
             worksheet.mergeCells('BR2');
             worksheet.getCell('BR2').value = "Variant";
             worksheet.getCell('BR2').font = {
@@ -1626,8 +1628,24 @@ export class ReportsService {
                     name: 'Calibri',
                 };
 
+                worksheet.mergeCells('BH' + temp);
+                worksheet.getCell('BH' + temp).value = ligand[i].diseaseName1;
+                worksheet.getCell('BH' + temp).alignment = { vertical: 'bottom', horizontal: 'left', wrapText: true };
+                worksheet.getCell('BH' + temp).font = {
+                    size: 10,
+                    name: 'Calibri',
+                };
+
+                worksheet.mergeCells('BI' + temp);
+                worksheet.getCell('BI' + temp).value = ligand[i].diseaseName2;
+                worksheet.getCell('BI' + temp).alignment = { vertical: 'bottom', horizontal: 'left', wrapText: true };
+                worksheet.getCell('BI' + temp).font = {
+                    size: 10,
+                    name: 'Calibri',
+                };
+
                 worksheet.mergeCells('BJ' + temp);
-                worksheet.getCell('BJ' + temp).value = ligand[i].diseaseName1;
+                worksheet.getCell('BJ' + temp).value = ligand[i].diseaseName3;
                 worksheet.getCell('BJ' + temp).alignment = { vertical: 'bottom', horizontal: 'left', wrapText: true };
                 worksheet.getCell('BJ' + temp).font = {
                     size: 10,
@@ -1702,7 +1720,7 @@ export class ReportsService {
             }
 
             for (let i = 0; i < assay.length; i++) {
-                console.log("assay", assay);
+                // console.log("assay", assay);
                 let temp = i + 3;
 
                 worksheet.mergeCells('Q' + temp);
@@ -1746,7 +1764,7 @@ export class ReportsService {
                 };
 
                 worksheet.mergeCells('V' + temp);
-                worksheet.getCell('V' + temp).value = "NA";
+                worksheet.getCell('V' + temp).value = assay[i].administration;
                 worksheet.getCell('V' + temp).alignment = { vertical: 'bottom', horizontal: 'left' };
                 worksheet.getCell('V' + temp).font = {
                     size: 10,
@@ -1754,7 +1772,7 @@ export class ReportsService {
                 };
 
                 worksheet.mergeCells('W' + temp);
-                worksheet.getCell('W' + temp).value = assay[i].administration;
+                worksheet.getCell('W' + temp).value = assay[i].procedure;
                 worksheet.getCell('W' + temp).alignment = { vertical: 'bottom', horizontal: 'left' };
                 worksheet.getCell('W' + temp).font = {
                     size: 10,
@@ -1762,7 +1780,7 @@ export class ReportsService {
                 };
 
                 worksheet.mergeCells('X' + temp);
-                worksheet.getCell('X' + temp).value = assay[i].procedure;
+                worksheet.getCell('X' + temp).value = assay[i].target;
                 worksheet.getCell('X' + temp).alignment = { vertical: 'bottom', horizontal: 'left' };
                 worksheet.getCell('X' + temp).font = {
                     size: 10,
@@ -1770,7 +1788,7 @@ export class ReportsService {
                 };
 
                 worksheet.mergeCells('Y' + temp);
-                worksheet.getCell('Y' + temp).value = assay[i].target;
+                worksheet.getCell('Y' + temp).value = assay[i].ligandSvalue;
                 worksheet.getCell('Y' + temp).alignment = { vertical: 'bottom', horizontal: 'left' };
                 worksheet.getCell('Y' + temp).font = {
                     size: 10,
@@ -1778,7 +1796,7 @@ export class ReportsService {
                 };
 
                 worksheet.mergeCells('Z' + temp);
-                worksheet.getCell('Z' + temp).value = assay[i].ligandSvalue;
+                worksheet.getCell('Z' + temp).value = assay[i].unitSlno2.unit;
                 worksheet.getCell('Z' + temp).alignment = { vertical: 'bottom', horizontal: 'left' };
                 worksheet.getCell('Z' + temp).font = {
                     size: 10,
@@ -1786,7 +1804,7 @@ export class ReportsService {
                 };
 
                 worksheet.mergeCells('AA' + temp);
-                worksheet.getCell('AA' + temp).value = assay[i].unitSlno2.unit;
+                worksheet.getCell('AA' + temp).value = assay[i].ligandHvalue;
                 worksheet.getCell('AA' + temp).alignment = { vertical: 'bottom', horizontal: 'left' };
                 worksheet.getCell('AA' + temp).font = {
                     size: 10,
@@ -1794,7 +1812,7 @@ export class ReportsService {
                 };
 
                 worksheet.mergeCells('AB' + temp);
-                worksheet.getCell('AB' + temp).value = assay[i].ligandHvalue;
+                worksheet.getCell('AB' + temp).value = assay[i].ligandLvalue;
                 worksheet.getCell('AB' + temp).alignment = { vertical: 'bottom', horizontal: 'left' };
                 worksheet.getCell('AB' + temp).font = {
                     size: 10,
@@ -1802,7 +1820,7 @@ export class ReportsService {
                 };
 
                 worksheet.mergeCells('AC' + temp);
-                worksheet.getCell('AC' + temp).value = assay[i].ligandLvalue;
+                worksheet.getCell('AC' + temp).value = assay[i].unitedSlno2.united;
                 worksheet.getCell('AC' + temp).alignment = { vertical: 'bottom', horizontal: 'left' };
                 worksheet.getCell('AC' + temp).font = {
                     size: 10,
@@ -1811,7 +1829,7 @@ export class ReportsService {
                 
 
                 worksheet.mergeCells('AD' + temp);
-                worksheet.getCell('AD' + temp).value = assay[i].unitedSlno2.united;
+                worksheet.getCell('AD' + temp).value = assay[i].conditionType;
                 worksheet.getCell('AD' + temp).alignment = { vertical: 'bottom', horizontal: 'left' };
                 worksheet.getCell('AD' + temp).font = {
                     size: 10,
@@ -1819,7 +1837,7 @@ export class ReportsService {
                 };
 
                 worksheet.mergeCells('AE' + temp);
-                worksheet.getCell('AE' + temp).value = assay[i].conditionType;
+                worksheet.getCell('AE' + temp).value = assay[i].conditionMaterial;
                 worksheet.getCell('AE' + temp).alignment = { vertical: 'bottom', horizontal: 'left' };
                 worksheet.getCell('AE' + temp).font = {
                     size: 10,
@@ -1827,7 +1845,7 @@ export class ReportsService {
                 };
 
                 worksheet.mergeCells('AF' + temp);
-                worksheet.getCell('AF' + temp).value = assay[i].conditionMaterial;
+                worksheet.getCell('AF' + temp).value = assay[i].conditionMaterialid;
                 worksheet.getCell('AF' + temp).alignment = { vertical: 'bottom', horizontal: 'left' };
                 worksheet.getCell('AF' + temp).font = {
                     size: 10,
@@ -1835,7 +1853,7 @@ export class ReportsService {
                 };
 
                 worksheet.mergeCells('AG' + temp);
-                worksheet.getCell('AG' + temp).value = assay[i].conditionMaterialid;
+                worksheet.getCell('AG' + temp).value = assay[i].singleCondition;
                 worksheet.getCell('AG' + temp).alignment = { vertical: 'bottom', horizontal: 'left' };
                 worksheet.getCell('AG' + temp).font = {
                     size: 10,
@@ -1843,7 +1861,7 @@ export class ReportsService {
                 };
 
                 worksheet.mergeCells('AH' + temp);
-                worksheet.getCell('AH' + temp).value = assay[i].singleCondition;
+                worksheet.getCell('AH' + temp).value = assay[i].singleUnit;
                 worksheet.getCell('AH' + temp).alignment = { vertical: 'bottom', horizontal: 'left' };
                 worksheet.getCell('AH' + temp).font = {
                     size: 10,
@@ -1851,7 +1869,7 @@ export class ReportsService {
                 };
 
                 worksheet.mergeCells('AI' + temp);
-                worksheet.getCell('AI' + temp).value = assay[i].singleUnit;
+                worksheet.getCell('AI' + temp).value = assay[i].highCondition;
                 worksheet.getCell('AI' + temp).alignment = { vertical: 'bottom', horizontal: 'left' };
                 worksheet.getCell('AI' + temp).font = {
                     size: 10,
@@ -1859,7 +1877,7 @@ export class ReportsService {
                 };
 
                 worksheet.mergeCells('AJ' + temp);
-                worksheet.getCell('AJ' + temp).value = assay[i].highCondition;
+                worksheet.getCell('AJ' + temp).value = assay[i].lowCondition;
                 worksheet.getCell('AJ' + temp).alignment = { vertical: 'bottom', horizontal: 'left' };
                 worksheet.getCell('AJ' + temp).font = {
                     size: 10,
@@ -1867,31 +1885,33 @@ export class ReportsService {
                 };
 
                 worksheet.mergeCells('AK' + temp);
-                worksheet.getCell('AK' + temp).value = assay[i].lowCondition;
+                worksheet.getCell('AK' + temp).value = assay[i].highLowUnit;
                 worksheet.getCell('AK' + temp).alignment = { vertical: 'bottom', horizontal: 'left' };
                 worksheet.getCell('AK' + temp).font = {
                     size: 10,
                     name: 'Calibri',
                 };
 
-                worksheet.mergeCells('AL' + temp);
-                worksheet.getCell('AL' + temp).value = assay[i].highLowUnit;
-                worksheet.getCell('AL' + temp).alignment = { vertical: 'bottom', horizontal: 'left' };
-                worksheet.getCell('AL' + temp).font = {
-                    size: 10,
-                    name: 'Calibri',
-                };
+               
 
 
 
             }
 
             for (let i = 0; i < measurement.length; i++) {
-                console.log("assay", measurement);
+                // console.log("assay", measurement);
                 let temp = i + 3;
 
+                worksheet.mergeCells('AL' + temp);
+                worksheet.getCell('AL' + temp).value = measurement[i].dataLocator;
+                worksheet.getCell('AL' + temp).alignment = { vertical: 'bottom', horizontal: 'left' };
+                worksheet.getCell('AL' + temp).font = {
+                    size: 10,
+                    name: 'Calibri',
+                };
+
                 worksheet.mergeCells('AM' + temp);
-                worksheet.getCell('AM' + temp).value = measurement[i].dataLocator;
+                worksheet.getCell('AM' + temp).value = measurement[i].categorySlno2.category;
                 worksheet.getCell('AM' + temp).alignment = { vertical: 'bottom', horizontal: 'left' };
                 worksheet.getCell('AM' + temp).font = {
                     size: 10,
@@ -1899,7 +1919,7 @@ export class ReportsService {
                 };
 
                 worksheet.mergeCells('AN' + temp);
-                worksheet.getCell('AN' + temp).value = measurement[i].categorySlno2.category;
+                worksheet.getCell('AN' + temp).value = measurement[i].functionSlno2.function;
                 worksheet.getCell('AN' + temp).alignment = { vertical: 'bottom', horizontal: 'left' };
                 worksheet.getCell('AN' + temp).font = {
                     size: 10,
@@ -1907,7 +1927,7 @@ export class ReportsService {
                 };
 
                 worksheet.mergeCells('AO' + temp);
-                worksheet.getCell('AO' + temp).value = measurement[i].functionSlno2.function;
+                worksheet.getCell('AO' + temp).value = measurement[i].parameter;
                 worksheet.getCell('AO' + temp).alignment = { vertical: 'bottom', horizontal: 'left' };
                 worksheet.getCell('AO' + temp).font = {
                     size: 10,
@@ -1915,7 +1935,7 @@ export class ReportsService {
                 };
 
                 worksheet.mergeCells('AP' + temp);
-                worksheet.getCell('AP' + temp).value = measurement[i].parameter;
+                worksheet.getCell('AP' + temp).value = measurement[i].parameterDetail;
                 worksheet.getCell('AP' + temp).alignment = { vertical: 'bottom', horizontal: 'left' };
                 worksheet.getCell('AP' + temp).font = {
                     size: 10,
@@ -1923,7 +1943,7 @@ export class ReportsService {
                 };
 
                 worksheet.mergeCells('AQ' + temp);
-                worksheet.getCell('AQ' + temp).value = measurement[i].parameterDetail;
+                worksheet.getCell('AQ' + temp).value = measurement[i].originalPrefixSlno2.originalPrefix;
                 worksheet.getCell('AQ' + temp).alignment = { vertical: 'bottom', horizontal: 'left' };
                 worksheet.getCell('AQ' + temp).font = {
                     size: 10,
@@ -1931,7 +1951,7 @@ export class ReportsService {
                 };
 
                 worksheet.mergeCells('AR' + temp);
-                worksheet.getCell('AR' + temp).value = measurement[i].originalPrefixSlno2.originalPrefix;
+                worksheet.getCell('AR' + temp).value = measurement[i].singleValue;
                 worksheet.getCell('AR' + temp).alignment = { vertical: 'bottom', horizontal: 'left' };
                 worksheet.getCell('AR' + temp).font = {
                     size: 10,
@@ -1939,7 +1959,7 @@ export class ReportsService {
                 };
 
                 worksheet.mergeCells('AS' + temp);
-                worksheet.getCell('AS' + temp).value = measurement[i].singleValue;
+                worksheet.getCell('AS' + temp).value = measurement[i].unit;
                 worksheet.getCell('AS' + temp).alignment = { vertical: 'bottom', horizontal: 'left' };
                 worksheet.getCell('AS' + temp).font = {
                     size: 10,
@@ -1947,7 +1967,7 @@ export class ReportsService {
                 };
 
                 worksheet.mergeCells('AT' + temp);
-                worksheet.getCell('AT' + temp).value = measurement[i].unit;
+                worksheet.getCell('AT' + temp).value =  measurement[i].highEndValue;
                 worksheet.getCell('AT' + temp).alignment = { vertical: 'bottom', horizontal: 'left' };
                 worksheet.getCell('AT' + temp).font = {
                     size: 10,
@@ -1955,7 +1975,7 @@ export class ReportsService {
                 };
 
                 worksheet.mergeCells('AU' + temp);
-                worksheet.getCell('AU' + temp).value = "NA";
+                worksheet.getCell('AU' + temp).value = measurement[i].lowEndValue;
                 worksheet.getCell('AU' + temp).alignment = { vertical: 'bottom', horizontal: 'left' };
                 worksheet.getCell('AU' + temp).font = {
                     size: 10,
@@ -1963,7 +1983,7 @@ export class ReportsService {
                 };
 
                 worksheet.mergeCells('AV' + temp);
-                worksheet.getCell('AV' + temp).value = measurement[i].highEndValue;
+                worksheet.getCell('AV' + temp).value = measurement[i].units;
                 worksheet.getCell('AV' + temp).alignment = { vertical: 'bottom', horizontal: 'left' };
                 worksheet.getCell('AV' + temp).font = {
                     size: 10,
@@ -1971,7 +1991,7 @@ export class ReportsService {
                 };
 
                 worksheet.mergeCells('AW' + temp);
-                worksheet.getCell('AW' + temp).value = measurement[i].lowEndValue;
+                worksheet.getCell('AW' + temp).value = measurement[i].nonNumeric;
                 worksheet.getCell('AW' + temp).alignment = { vertical: 'bottom', horizontal: 'left' };
                 worksheet.getCell('AW' + temp).font = {
                     size: 10,
@@ -1979,15 +1999,15 @@ export class ReportsService {
                 };
 
                 worksheet.mergeCells('AX' + temp);
-                worksheet.getCell('AX' + temp).value = measurement[i].units;
-                worksheet.getCell('AX' + temp).alignment = { vertical: 'bottom', horizontal: 'left' };
+                worksheet.getCell('AX' + temp).value = measurement[i].remark;
+                worksheet.getCell('AX' + temp).alignment = { vertical: 'bottom', horizontal: 'left', wrapText: true };
                 worksheet.getCell('AX' + temp).font = {
                     size: 10,
                     name: 'Calibri',
                 };
 
                 worksheet.mergeCells('AY' + temp);
-                worksheet.getCell('AY' + temp).value = measurement[i].nonNumeric;
+                worksheet.getCell('AY' + temp).value =  measurement[i].typeSlno2.type;
                 worksheet.getCell('AY' + temp).alignment = { vertical: 'bottom', horizontal: 'left', wrapText: true };
                 worksheet.getCell('AY' + temp).font = {
                     size: 10,
@@ -1995,7 +2015,7 @@ export class ReportsService {
                 };
 
                 worksheet.mergeCells('AZ' + temp);
-                worksheet.getCell('AZ' + temp).value = measurement[i].remark;
+                worksheet.getCell('AZ' + temp).value =  measurement[i].cell;
                 worksheet.getCell('AZ' + temp).alignment = { vertical: 'bottom', horizontal: 'left', wrapText: true };
                 worksheet.getCell('AZ' + temp).font = {
                     size: 10,
@@ -2003,7 +2023,7 @@ export class ReportsService {
                 };
 
                 worksheet.mergeCells('BA' + temp);
-                worksheet.getCell('BA' + temp).value = measurement[i].typeSlno2.type;
+                worksheet.getCell('BA' + temp).value = measurement[i].cellDetail;
                 worksheet.getCell('BA' + temp).alignment = { vertical: 'bottom', horizontal: 'left', wrapText: true };
                 worksheet.getCell('BA' + temp).font = {
                     size: 10,
@@ -2011,7 +2031,7 @@ export class ReportsService {
                 };
 
                 worksheet.mergeCells('BB' + temp);
-                worksheet.getCell('BB' + temp).value = measurement[i].cell;
+                worksheet.getCell('BB' + temp).value = measurement[i].organ;
                 worksheet.getCell('BB' + temp).alignment = { vertical: 'bottom', horizontal: 'left', wrapText: true };
                 worksheet.getCell('BB' + temp).font = {
                     size: 10,
@@ -2019,7 +2039,7 @@ export class ReportsService {
                 };
 
                 worksheet.mergeCells('BC' + temp);
-                worksheet.getCell('BC' + temp).value = measurement[i].cellDetail;
+                worksheet.getCell('BC' + temp).value = measurement[i].organDetail;
                 worksheet.getCell('BC' + temp).alignment = { vertical: 'bottom', horizontal: 'left', wrapText: true };
                 worksheet.getCell('BC' + temp).font = {
                     size: 10,
@@ -2027,7 +2047,7 @@ export class ReportsService {
                 };
 
                 worksheet.mergeCells('BD' + temp);
-                worksheet.getCell('BD' + temp).value = measurement[i].organ;
+                worksheet.getCell('BD' + temp).value =  measurement[i].species;
                 worksheet.getCell('BD' + temp).alignment = { vertical: 'bottom', horizontal: 'left', wrapText: true };
                 worksheet.getCell('BD' + temp).font = {
                     size: 10,
@@ -2035,7 +2055,7 @@ export class ReportsService {
                 };
 
                 worksheet.mergeCells('BE' + temp);
-                worksheet.getCell('BE' + temp).value = measurement[i].organDetail;
+                worksheet.getCell('BE' + temp).value = measurement[i].speciesDetail;
                 worksheet.getCell('BE' + temp).alignment = { vertical: 'bottom', horizontal: 'left', wrapText: true };
                 worksheet.getCell('BE' + temp).font = {
                     size: 10,
@@ -2043,7 +2063,7 @@ export class ReportsService {
                 };
 
                 worksheet.mergeCells('BF' + temp);
-                worksheet.getCell('BF' + temp).value = measurement[i].species;
+                worksheet.getCell('BF' + temp).value = measurement[i].gender;
                 worksheet.getCell('BF' + temp).alignment = { vertical: 'bottom', horizontal: 'left', wrapText: true };
                 worksheet.getCell('BF' + temp).font = {
                     size: 10,
@@ -2051,28 +2071,14 @@ export class ReportsService {
                 };
 
                 worksheet.mergeCells('BG' + temp);
-                worksheet.getCell('BG' + temp).value = measurement[i].speciesDetail;
+                worksheet.getCell('BG' + temp).value = measurement[i].ageGroup;
                 worksheet.getCell('BG' + temp).alignment = { vertical: 'bottom', horizontal: 'left', wrapText: true };
                 worksheet.getCell('BG' + temp).font = {
                     size: 10,
                     name: 'Calibri',
                 };
 
-                worksheet.mergeCells('BH' + temp);
-                worksheet.getCell('BH' + temp).value = measurement[i].gender;
-                worksheet.getCell('BH' + temp).alignment = { vertical: 'bottom', horizontal: 'left', wrapText: true };
-                worksheet.getCell('BH' + temp).font = {
-                    size: 10,
-                    name: 'Calibri',
-                };
-
-                worksheet.mergeCells('BI' + temp);
-                worksheet.getCell('BI' + temp).value = measurement[i].ageGroup;
-                worksheet.getCell('BI' + temp).alignment = { vertical: 'bottom', horizontal: 'left', wrapText: true };
-                worksheet.getCell('BI' + temp).font = {
-                    size: 10,
-                    name: 'Calibri',
-                };
+               
 
             }
 

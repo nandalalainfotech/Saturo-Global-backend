@@ -1,4 +1,6 @@
+import { Assay001wb } from "src/entity/Assay001wb";
 import { Ligand001wb } from "src/entity/Ligand001wb";
+import { Ligandtype001mb } from "src/entity/Ligandtype001mb";
 import { Ligandversion001mb } from "src/entity/Ligandversion001mb";
 
 export class LigandDTO {
@@ -32,7 +34,9 @@ export class LigandDTO {
     insertDatetime: Date;
     updatedUser: string | null;
     updatedDatetime: Date | null;
+    
     ligandVersionSlno2: Ligandversion001mb;
+    ligandTypeSlno2: Ligandtype001mb;
 
     setProperties(ligand001wb: Ligand001wb) {
         this.ligandId = ligand001wb.ligandId;
