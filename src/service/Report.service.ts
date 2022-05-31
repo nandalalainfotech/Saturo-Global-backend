@@ -49,7 +49,7 @@ export class ReportsService {
             { key: 'L', width: 20.0 }, { key: 'M', width: 20.0 }, { key: 'N', width: 20.0 }, { key: 'O', width: 20.0 },
             { key: 'P', width: 20.0 }, { key: 'Q', width: 20.0 }, { key: 'R', width: 20.0 }, { key: 'S', width: 20.0 },
             { key: 'T', width: 20.0 }, { key: 'U', width: 28.0 }, { key: 'V', width: 28.0 }, { key: 'W', width: 40.0 },
-            { key: 'X', width: 20.0 }, { key: 'Y', width: 20.0 }, { key: 'Z', width: 20.0 }, { key: 'AA', width: 20.0 },
+            { key: 'X', width: 90.0 }, { key: 'Y', width: 20.0 }, { key: 'Z', width: 20.0 }, { key: 'AA', width: 20.0 },
             { key: 'AB', width: 20.0 }, { key: 'AC', width: 20.0 }, { key: 'AD', width: 20.0 }, { key: 'AE', width: 20.0 },
             { key: 'AF', width: 20.0 }, { key: 'AG', width: 20.0 }, { key: 'AH', width: 20.0 }, { key: 'AI', width: 20.0 },
             { key: 'AJ', width: 20.0 }, { key: 'AK', width: 20.0 }, { key: 'AL', width: 20.0 }, { key: 'AM', width: 20.0 },

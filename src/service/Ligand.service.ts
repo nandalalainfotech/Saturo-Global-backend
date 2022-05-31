@@ -31,7 +31,7 @@ export class LigandService {
         // user.push(username);
         // console.log("username findAll-->", user[0]);
         return await this.ligandRepository.find({
-            relations: ["ligandVersionSlno2", "ligandTypeSlno2"], where: { "insertUser": username }
+            relations: ["ligandVersionSlno2", "ligandTypeSlno2"]
         });
     }
 
