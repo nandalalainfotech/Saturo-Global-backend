@@ -25,7 +25,7 @@ export class AssayService {
     }
 
     async findAll(username: any): Promise<Assay001wb[]> {
-        return await this.assayRepository.find({relations: ["assayTypeSlno2", "toxiCitySlno2", "routeSlno2", "unitSlno2", "unitedSlno2","ligandSlno2", "ligandSlno2.ligandVersionSlno2"], where: { "insertUser": username }});
+        return await this.assayRepository.find({relations: ["assayTypeSlno2", "toxiCitySlno2", "routeSlno2", "unitSlno2", "unitedSlno2","ligandSlno2", "ligandSlno2.ligandVersionSlno2"]});
     }
 
     findOne(id: number): Promise<Assay001wb> {
