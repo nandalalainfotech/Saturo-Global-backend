@@ -18,6 +18,7 @@ import { ReportsModule } from './module/Report.module';
 import { RoleModule } from './module/role.module';
 import { RouteOfAdministartionModule } from './module/Routeofadministartion.module';
 import { SystemPropertiesModule } from './module/system-properties.module';
+import { TaskallocationModule } from './module/Taskallocation.module';
 import { ToxicityModule } from './module/Toxicity.module';
 import { TypeModule } from './module/Type.module';
 import { UnitlowendvalueModule } from './module/Unitlowendvalue.module';
@@ -72,7 +73,8 @@ import { UserModule } from './module/user.module';
         TypeModule,
         UnitlowendvalueModule,
         UnitSingleValueModule,
-        ReportsModule
+        ReportsModule,
+        TaskallocationModule
     ],
     
       
