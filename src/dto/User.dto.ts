@@ -1,10 +1,12 @@
+import { Role001mb } from "src/entity/Role001mb";
 import { User001mb } from "src/entity/User001mb";
 import { Role } from "src/role/role.enum";
 import { BaseDTO } from "./Base.dto";
 import { PersonDTO } from "./person.dto";
+import { RoleDTO } from "./Role.dto";
 
 
-export class UserDTO extends PersonDTO {
+export class UserDTO extends PersonDTO{
     personId: number;
     username: string;
     roleid: number;
@@ -14,15 +16,18 @@ export class UserDTO extends PersonDTO {
     securityquestion: string;
     securityanswer: string;
     theme: string | null;
+    rolename: string | null;
     insertUser: string;
     insertDatetime: Date;
     updatedUser: string | null;
     updatedDatetime: Date | null;
+    role: Role001mb;
 
     setProperties(user001mb: User001mb) {
         this.personId = user001mb.personId;
         this.firstname = user001mb.person.firstname;
         this.lastname = user001mb.person.lastname;
+        this.rolename = user001mb.role.rolename;
         this.age = user001mb.person.age;
         this.dob = user001mb.person.dob;
         this.sex = user001mb.person.sex;
