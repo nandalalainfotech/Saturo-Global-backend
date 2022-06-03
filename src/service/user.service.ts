@@ -189,7 +189,17 @@ export class UserService {
 	}
 
 	async findAll(): Promise<User001mb[]> {
+		
+		
 		return this.userRepository.find({ relations: ["person","role"] });
+	}
+
+	async findCuratorAll(): Promise<User001mb[]> {
+		return this.userRepository.find({ where: { roleid: 2 } ,relations: ["person","role"] });
+	}
+
+	async findReviewerAll(): Promise<User001mb[]> {
+		return this.userRepository.find({ where: { roleid: 3 },relations: ["person","role"] });
 	}
 
 	findOne(id: number): Promise<User001mb> {

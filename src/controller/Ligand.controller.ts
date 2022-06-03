@@ -11,7 +11,7 @@ import { LigandService } from "src/service/Ligand.service";
 export class LigandController {
 	constructor(private readonly ligandService: LigandService) { }
 
-	@hasRole(Role.Admin,Role.User)
+	// @hasRole(Role.Admin,Role.User)
 	@UseGuards(JwtAuthGuard, RolesGuard)
 	@Post("save")
 	create(@Body() ligandDTO: LigandDTO): Promise<Ligand001wb> {
@@ -19,7 +19,7 @@ export class LigandController {
 	}
 
 	
-	@hasRole(Role.Admin,Role.User)
+	// @hasRole(Role.Admin,Role.User)
 	@UseGuards(JwtAuthGuard, RolesGuard)
 	@Put("update")
 	update(@Body() ligandDTO: LigandDTO): Promise<Ligand001wb> {
@@ -27,7 +27,7 @@ export class LigandController {
 	}
 
 	
-	@hasRole(Role.Admin,Role.User)
+	// @hasRole(Role.Admin,Role.User)
 	@UseGuards(JwtAuthGuard, RolesGuard)
 	@Get('findAll/:username')
 	findAll(@Param('username') username: any): Promise<Ligand001wb[]> {
@@ -43,7 +43,7 @@ export class LigandController {
 	// }
 
 	
-	@hasRole(Role.Admin,Role.User)
+	// @hasRole(Role.Admin,Role.User)
 	@UseGuards(JwtAuthGuard, RolesGuard)
 	@Delete('delete/:ligandId')
 	remove(@Param('ligandId') ligandId: number): Promise<void> {
@@ -51,7 +51,7 @@ export class LigandController {
 	}
 
 	
-	@hasRole(Role.Admin,Role.User)
+	// @hasRole(Role.Admin,Role.User)
 	@UseGuards(JwtAuthGuard, RolesGuard)
 	@Get(':id')
 	findOne(@Param('id') id: number): Promise<Ligand001wb> {

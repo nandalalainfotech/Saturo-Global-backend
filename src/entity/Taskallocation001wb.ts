@@ -6,6 +6,9 @@ export class Taskallocation001wb {
   @PrimaryGeneratedColumn({ type: "int", name: "curator_id" })
   curatorId: number;
 
+  @Column("int", { name: "curator_slno", nullable: true })
+  curatorSlno: number | null;
+
   @Column("varchar", { name: "curator_name", length: 50 })
   curatorName: string;
 
@@ -18,8 +21,8 @@ export class Taskallocation001wb {
   @Column("datetime", { name: "curator_complete_date" })
   curatorCompleteDate: Date;
 
-  @Column("varchar", { name: "curator_status", length: 50 })
-  curatorStatus: string;
+  @Column("int", { name: "reviewer_slno", nullable: true })
+  reviewerSlno: number | null;
 
   @Column("varchar", { name: "reviewer_name", length: 50 })
   reviewerName: string;
@@ -30,8 +33,8 @@ export class Taskallocation001wb {
   @Column("datetime", { name: "reviewer_allocate_date" })
   reviewerAllocateDate: Date;
 
-  @Column("varchar", { name: "reviewer_status", length: 50 })
-  reviewerStatus: string;
+  @Column("datetime", { name: "reviewer_complete_date" })
+  reviewerCompleteDate: Date;
 
   @Column("varchar", { name: "insert_user", length: 40 })
   insertUser: string;
@@ -45,17 +48,19 @@ export class Taskallocation001wb {
   @Column("datetime", { name: "updated_datetime", nullable: true })
   updatedDatetime: Date | null;
 
+
   setProperties(taskallocationDTO: TaskallocationDTO) {
     this.curatorId = taskallocationDTO.curatorId;
+    this.curatorSlno = taskallocationDTO.curatorSlno;
     this.curatorName = taskallocationDTO.curatorName;
     this.curatorTanNo = taskallocationDTO.curatorTanNo;
     this.curatorAllocateDate = taskallocationDTO.curatorAllocateDate;
     this.curatorCompleteDate = taskallocationDTO.curatorCompleteDate;
+    this.reviewerSlno = taskallocationDTO.reviewerSlno;
     this.reviewerName = taskallocationDTO.reviewerName;
-    this.curatorStatus = taskallocationDTO.curatorStatus;
     this.reviewerTanNo = taskallocationDTO.reviewerTanNo;
     this.reviewerAllocateDate = taskallocationDTO.reviewerAllocateDate;
-    this.reviewerStatus = taskallocationDTO.reviewerStatus;
+    this.reviewerCompleteDate = taskallocationDTO.reviewerCompleteDate;
     this.insertUser = taskallocationDTO.insertUser;
     this.insertDatetime = taskallocationDTO.insertDatetime;
     this.updatedUser = taskallocationDTO.updatedUser;

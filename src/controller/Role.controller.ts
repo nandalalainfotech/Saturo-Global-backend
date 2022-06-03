@@ -8,6 +8,11 @@ import { RoleService } from "src/service/role.service";
 export class RoleController {
 	constructor(private readonly roleService: RoleService ) { }
 
+	// @Get('loginRoleFindAll')
+	// loginRoleFindAll(): Promise<Role001mb[]> {
+	// 	return this.roleService.findAll();
+	// }
+
 	@UseGuards(JwtAuthGuard)
 	@Post("save")
 	create(@Body()roleDTO: RoleDTO): Promise<Role001mb> {

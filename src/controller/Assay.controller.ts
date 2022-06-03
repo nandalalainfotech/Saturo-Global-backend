@@ -11,7 +11,7 @@ import { AssayService } from "src/service/Assay.service";
 export class AssayController {
     constructor(private readonly assayService: AssayService) { }
 	
-	@hasRole(Role.Admin,Role.User)
+	// @hasRole(Role.Admin,Role.User)
 	@UseGuards(JwtAuthGuard, RolesGuard)
 	@Post("save")
 	create(@Body() assayDTO: AssayDTO): Promise<Assay001wb> {
@@ -19,7 +19,7 @@ export class AssayController {
 	}
 
 	
-	@hasRole(Role.Admin,Role.User)
+	// @hasRole(Role.Admin,Role.User)
 	@UseGuards(JwtAuthGuard, RolesGuard)
 	@Put("update")
 	update(@Body() assayDTO: AssayDTO): Promise<Assay001wb> {
@@ -27,7 +27,7 @@ export class AssayController {
 	}
 	
 	
-	@hasRole(Role.Admin,Role.User)
+	// @hasRole(Role.Admin,Role.User)
 	@UseGuards(JwtAuthGuard, RolesGuard)
 	@Get('findAll/:username')
 	findAll(@Param('username') username: any): Promise<Assay001wb[]> {
@@ -35,7 +35,7 @@ export class AssayController {
 	}
 
 	
-	@hasRole(Role.Admin,Role.User)
+	// @hasRole(Role.Admin,Role.User)
 	@UseGuards(JwtAuthGuard, RolesGuard)
 	@Delete('delete/:assayId')
 	remove(@Param('assayId') assayId: number): Promise<void> {
@@ -43,7 +43,7 @@ export class AssayController {
 	}
     
 	
-	@hasRole(Role.Admin,Role.User)
+	// @hasRole(Role.Admin,Role.User)
 	@UseGuards(JwtAuthGuard, RolesGuard)
 	@Get(':id')
 	findOne(@Param('id') id: number): Promise<Assay001wb> {
