@@ -1,4 +1,5 @@
-import { Body, Controller, Delete, Get, Param, Post, Put, UseGuards } from "@nestjs/common";
+import { Body, Controller, Delete, Get, Param, Post, Put, UploadedFile, UseGuards, UseInterceptors } from "@nestjs/common";
+import { FileInterceptor } from "@nestjs/platform-express";
 import { JwtAuthGuard } from "src/auth/jwt-auth.guard";
 import { TaskallocationDTO } from "src/dto/Taskallocation001wb.dto";
 import { Taskallocation001wb } from "src/entity/Taskallocation001wb";
@@ -7,10 +8,12 @@ import { TaskallocationService } from "src/service/Taskallocation.service";
 @Controller('/testandreportstudio/api/taskallocation')
 export class TaskAllocationController {
 	constructor(private readonly taskallocationService: TaskallocationService) { }
-	@UseGuards(JwtAuthGuard)
-	@Post("save")
-	create(@Body() taskallocationDTO: TaskallocationDTO): Promise<Taskallocation001wb> {
-		return this.taskallocationService.create(taskallocationDTO);
+
+	@Post('save')
+	@UseInterceptors(FileInterceptor('file'))
+	uploadFile(@UploadedFile() file: Express.Multer.File, @Body() taskallocationDTO: TaskallocationDTO) {
+		console.log("taskallocationDTOtaskallocationDTO", taskallocationDTO);
+		return this.taskallocationService.create(file, taskallocationDTO);
 	}
 
 	@UseGuards(JwtAuthGuard)
