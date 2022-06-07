@@ -2,18 +2,15 @@ import { Taskallocation001wb } from "src/entity/Taskallocation001wb";
 
 export class TaskallocationDTO {
     curatorId: number;
-    curatorSlno: number;
     curatorName: string;
-    curatorTanNo: string;
-    curatorAllocateDate: Date;
-    curatorCompleteDate: Date;
-    curatorStatus: string;
-    reviewerSlno: number;
-    reviewerName: string;
-    reviewerTanNo: string;
+    cbatchNo: string | null;
+    curatorTanNo: string | null;
+    curatorAllocateDate: Date | null;
+    reviewerName: string | null;
+    rbatchNo: string | null;
+    reviewerTanNo: string | null;
     reviewerAllocateDate: Date;
-    reviewerCompleteDate: Date;
-    reviewerStatus: string;
+    filename: string | null;
     insertUser: string;
     insertDatetime: Date;
     updatedUser: string | null;
@@ -21,16 +18,15 @@ export class TaskallocationDTO {
 
     setProperties(taskallocation001wb: Taskallocation001wb) {
         this.curatorId = taskallocation001wb.curatorId;
-        this.curatorSlno = taskallocation001wb.curatorSlno;
         this.curatorName = taskallocation001wb.curatorName;
+        this.cbatchNo = taskallocation001wb.cbatchNo;
         this.curatorTanNo = taskallocation001wb.curatorTanNo;
         this.curatorAllocateDate = taskallocation001wb.curatorAllocateDate;
-        this.curatorCompleteDate = taskallocation001wb.curatorCompleteDate;
-        this.reviewerSlno = taskallocation001wb.reviewerSlno;
         this.reviewerName = taskallocation001wb.reviewerName;
+        this.rbatchNo = taskallocation001wb.rbatchNo;
         this.reviewerTanNo = taskallocation001wb.reviewerTanNo;
+        this.filename = taskallocation001wb.filename;
         this.reviewerAllocateDate = taskallocation001wb.reviewerAllocateDate;
-        this.reviewerCompleteDate = taskallocation001wb.reviewerCompleteDate;
         this.insertUser = taskallocation001wb.insertUser;
         this.insertDatetime = taskallocation001wb.insertDatetime;
         this.updatedUser = taskallocation001wb.updatedUser;
