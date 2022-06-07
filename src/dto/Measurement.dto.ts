@@ -25,6 +25,7 @@ export class MeasurementDTO {
     species: string;
     speciesDetail: string;
     ageGroup: string;
+    status: string;
     gender: string;
     insertUser: string;
     insertDatetime: Date;
@@ -58,6 +59,7 @@ export class MeasurementDTO {
         this.speciesDetail = measurement001wb.speciesDetail;
         this.gender = measurement001wb.gender;
         this.ageGroup = measurement001wb.ageGroup;
+        this.status = measurement001wb.status;
         this.insertUser = measurement001wb.insertUser;
         this.insertDatetime = measurement001wb.insertDatetime;
         this.updatedUser = measurement001wb.updatedUser;

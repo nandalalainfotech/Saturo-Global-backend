@@ -30,6 +30,7 @@ export class AssayDTO {
     lowCondition: string;
     highLowUnit: string;
     unitedSlno: number;
+    status: string;
     insertUser: string;
     insertDatetime: Date;
     updatedUser: string | null;
@@ -67,6 +68,7 @@ export class AssayDTO {
         this.lowCondition = assay001wb.lowCondition;
         this.highLowUnit = assay001wb.highLowUnit;
         this.unitedSlno = assay001wb.unitedSlno;
+        this.status = assay001wb.status;
         this.insertUser = assay001wb.insertUser;
         this.insertDatetime = assay001wb.insertDatetime;
         this.updatedUser = assay001wb.updatedUser;

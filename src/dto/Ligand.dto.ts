@@ -30,6 +30,7 @@ export class LigandDTO {
     acronym: string;
     organism: string;
     variant: string;
+    status: string;
     insertUser: string;
     insertDatetime: Date;
     updatedUser: string | null;
@@ -65,6 +66,7 @@ export class LigandDTO {
         this.acronym = ligand001wb.acronym;
         this.organism = ligand001wb.organism;
         this.variant = ligand001wb.variant;
+        this.status = ligand001wb.status;
         this.insertUser = ligand001wb.insertUser;
         this.insertDatetime = ligand001wb.insertDatetime;
         this.updatedUser = ligand001wb.updatedUser;
