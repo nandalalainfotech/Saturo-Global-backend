@@ -89,6 +89,9 @@ export class Measurement001wb {
   @Column("varchar", { name: "ageGroup", length: 50 })
   ageGroup: string;
 
+  @Column("varchar", { name: "status", nullable: true, length: 50 })
+  status: string | null;
+
   @Column("varchar", { name: "insert_user", length: 40 })
   insertUser: string;
 
@@ -168,6 +171,7 @@ export class Measurement001wb {
     this.speciesDetail = measurementDTO.speciesDetail;
     this.gender = measurementDTO.gender;
     this.ageGroup = measurementDTO.ageGroup;
+    this.status = measurementDTO.status;
     this.insertUser = measurementDTO.insertUser;
     this.insertDatetime = measurementDTO.insertDatetime;
     this.updatedUser = measurementDTO.updatedUser;

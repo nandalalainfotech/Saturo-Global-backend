@@ -94,6 +94,9 @@ export class Assay001wb {
   @Column("int", { name: "united_slno" })
   unitedSlno: number;
 
+  @Column("varchar", { name: "status", nullable: true, length: 50 })
+  status: string | null;
+
   @Column("varchar", { name: "insert_user", length: 40 })
   insertUser: string;
 
@@ -186,6 +189,7 @@ export class Assay001wb {
     this.lowCondition = assayDTO.lowCondition;
     this.highLowUnit = assayDTO.highLowUnit;
     this.unitedSlno = assayDTO.unitedSlno;
+    this.status = assayDTO.status;
     this.insertUser = assayDTO.insertUser;
     this.insertDatetime = assayDTO.insertDatetime;
     this.updatedUser = assayDTO.updatedUser;

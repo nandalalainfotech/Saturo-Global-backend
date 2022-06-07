@@ -94,6 +94,9 @@ export class Ligand001wb {
   @Column("varchar", { name: "variant", length: 30 })
   variant: string;
 
+  @Column("varchar", { name: "status", nullable: true, length: 50 })
+  status: string | null;
+
   @Column("varchar", { name: "insert_user", length: 40 })
   insertUser: string;
 
@@ -155,6 +158,7 @@ export class Ligand001wb {
     this.acronym = ligandDTO.acronym;
     this.organism = ligandDTO.organism;
     this.variant = ligandDTO.variant;
+    this.status = ligandDTO.status;
     this.insertUser = ligandDTO.insertUser;
     this.insertDatetime = ligandDTO.insertDatetime;
     this.updatedUser = ligandDTO.updatedUser;
