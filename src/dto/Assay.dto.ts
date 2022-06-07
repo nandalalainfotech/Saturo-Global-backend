@@ -35,7 +35,7 @@ export class AssayDTO {
     updatedUser: string | null;
     updatedDatetime: Date | null;
 
-    ligandSlno2: Ligand001wb;
+    ligandSlno2: Ligand001wb[];
     assayTypeSlno2: Assaytype001mb;
     toxiCitySlno2: Toxicity001mb;
     routeSlno2: Routeofadministration001mb;

@@ -80,9 +80,9 @@ export class UserController {
 
 	@hasRole(Role.Admin)
 	@UseGuards(JwtAuthGuard, RolesGuard)
-	@Get('findReviewerAll')
-	findReviewerAll(): Promise<User001mb[]> {
-		return this.userService.findReviewerAll();
+	@Get('findAllReviewer')
+	findAllReviewer(): Promise<User001mb[]> {
+		return this.userService.findAllReviewer();
 	}
 
 	@hasRole(Role.Admin)
