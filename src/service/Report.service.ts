@@ -17,48 +17,19 @@ const excel = require('exceljs');
 @Injectable()
 export class ReportsService {
     constructor(
-        @InjectRepository(Ligand001wb) private readonly ligandReportRepository: Repository<Ligand001wb>,
-        @InjectRepository(Assay001wb) private readonly assayReportRepository: Repository<Assay001wb>,
         @InjectRepository(Measurement001wb) private readonly measurementReportRepository: Repository<Measurement001wb>,
     ) {
 
     }
 
-
-
-
     async downloadExcel(@Req() request: Request, @Res() response: Response) {
 
-
-        const xlsxFile = require('read-excel-file/node');
- 
-        xlsxFile('./test.xlsx', { sheet: 'Exec' }).then((rows) => {
-        for (let i in rows){
-                for (let j in rows[i]){
-                    console.log(rows[i][j]);
-                }
-            }
-        })
-  
-
-
-        let ligand = await this.ligandReportRepository.find({ relations: ["ligandVersionSlno2", "ligandTypeSlno2"] });
-
-        // console.log("ligand findAll in Report",ligand);
-        
-
-        let assay = await this.assayReportRepository.find({ relations: ["assayTypeSlno2", "toxiCitySlno2", "routeSlno2", "unitSlno2", "unitedSlno2", "ligandSlno2", "ligandSlno2.ligandVersionSlno2"] });
-
-
-        let measurement = await this.measurementReportRepository.find({ relations: ["categorySlno2", "functionSlno2", "originalPrefixSlno2", "typeSlno2",
-        "assaySlno2","assaySlno2.assayTypeSlno2", "assaySlno2.toxiCitySlno2","assaySlno2.routeSlno2","assaySlno2.unitSlno2","assaySlno2.unitedSlno2",
-        "assaySlno2.ligandSlno2","assaySlno2.ligandSlno2.ligandVersionSlno2","assaySlno2.ligandSlno2.ligandTypeSlno2"] });
-
-        // console.log("Measurement findAll in Report",measurement);
-        
-
-
-        if ((ligand.length < 0) && (assay.length < 0) && (measurement.length < 0)) {
+        let measurements: Measurement001wb[] = [];
+        measurements = await this.measurementReportRepository.find({ relations: ["categorySlno2", "functionSlno2", "originalPrefixSlno2", "typeSlno2", "assaySlno2", "assaySlno2.ligandSlno2", "assaySlno2.assayTypeSlno2", "assaySlno2.toxiCitySlno2", "assaySlno2.routeSlno2", "assaySlno2.unitSlno2", "assaySlno2.unitedSlno2", "assaySlno2.ligandSlno2.ligandVersionSlno2", "assaySlno2.ligandSlno2.ligandTypeSlno2"] });
+        for (let i = 0; i < measurements.length; i++) {
+        // console.log("measurement------------>>>>", measurements[i]);
+        }
+        if (measurements.length < 0) {
             return;
         }
         else {
@@ -801,7 +772,7 @@ export class ReportsService {
                 bold: true
             };
 
-           
+
 
 
 
@@ -1513,15 +1484,580 @@ export class ReportsService {
 
             // -----------------Ligand data in for loop--------------------------------
 
-           
+            for (let i = 0; i < measurements.length; i++) {
 
-           
+                let temp = i + 3;
 
-           
+                worksheet.mergeCells('A' + temp);
+                worksheet.getCell('A' + temp).value = measurements[i].assaySlno2.ligandSlno2.tanNumber;
+                worksheet.getCell('A' + temp).alignment = { vertical: 'bottom', horizontal: 'left', wrapText: true };
+                worksheet.getCell('A' + temp).font = {
+                    size: 10,
+                    name: 'Calibri',
+                };
+
+                worksheet.mergeCells('B' + temp);
+                worksheet.getCell('B' + temp).value = measurements[i].assaySlno2.ligandSlno2.ligandUri;
+                worksheet.getCell('B' + temp).alignment = { vertical: 'bottom', horizontal: 'left', wrapText: true };
+                worksheet.getCell('B' + temp).font = {
+                    size: 10,
+                    name: 'Calibri',
+                };
+
+                worksheet.mergeCells('C' + temp);
+                worksheet.getCell('C' + temp).value = measurements[i].assaySlno2.ligandSlno2.ligandVersionSlno2.ligandVersion;
+                worksheet.getCell('C' + temp).alignment = { vertical: 'bottom', horizontal: 'left', wrapText: true };
+                worksheet.getCell('C' + temp).font = {
+                    size: 10,
+                    name: 'Calibri',
+                };
+
+                worksheet.mergeCells('D' + temp);
+                worksheet.getCell('D' + temp).value = "embargoed";
+                worksheet.getCell('D' + temp).alignment = { vertical: 'bottom', horizontal: 'left', wrapText: true };
+                worksheet.getCell('D' + temp).font = {
+                    size: 10,
+                    name: 'Calibri',
+                };
 
 
+                worksheet.mergeCells('E' + temp);
+                worksheet.getCell('E' + temp).value = "cas";
+                worksheet.getCell('E' + temp).alignment = { vertical: 'bottom', horizontal: 'left', wrapText: true };
+                worksheet.getCell('E' + temp).font = {
+                    size: 10,
+                    name: 'Calibri',
+                };
 
 
+                worksheet.mergeCells('F' + temp);
+                worksheet.getCell('F' + temp).value = measurements[i].assaySlno2.ligandSlno2.ligandTypeSlno2.ligandtype;
+                worksheet.getCell('F' + temp).alignment = { vertical: 'bottom', horizontal: 'left', wrapText: true };
+                worksheet.getCell('F' + temp).font = {
+                    size: 10,
+                    name: 'Calibri',
+                };
+
+                worksheet.mergeCells('G' + temp);
+                worksheet.getCell('G' + temp).value = measurements[i].assaySlno2.ligandSlno2.identifier1;
+                worksheet.getCell('G' + temp).alignment = { vertical: 'bottom', horizontal: 'left', wrapText: true };
+                worksheet.getCell('G' + temp).font = {
+                    size: 10,
+                    name: 'Calibri',
+                };
+
+                worksheet.mergeCells('H' + temp);
+                worksheet.getCell('H' + temp).value = measurements[i].assaySlno2.ligandSlno2.identifier2;
+                worksheet.getCell('H' + temp).alignment = { vertical: 'bottom', horizontal: 'left', wrapText: true };
+                worksheet.getCell('H' + temp).font = {
+                    size: 10,
+                    name: 'Calibri',
+                };
+
+
+                worksheet.mergeCells('I' + temp);
+                worksheet.getCell('I' + temp).value = measurements[i].assaySlno2.ligandSlno2.identifier3;
+                worksheet.getCell('I' + temp).alignment = { vertical: 'bottom', horizontal: 'left', wrapText: true };
+                worksheet.getCell('I' + temp).font = {
+                    size: 10,
+                    name: 'Calibri',
+                };
+
+                worksheet.mergeCells('J' + temp);
+                worksheet.getCell('J' + temp).value = measurements[i].assaySlno2.ligandSlno2.collectionId;
+                worksheet.getCell('J' + temp).alignment = { vertical: 'bottom', horizontal: 'left', wrapText: true };
+                worksheet.getCell('J' + temp).font = {
+                    size: 10,
+                    name: 'Calibri',
+                };
+
+                worksheet.mergeCells('K' + temp);
+                worksheet.getCell('K' + temp).value = measurements[i].assaySlno2.ligandSlno2.ligandDetail;
+                worksheet.getCell('K' + temp).alignment = { vertical: 'bottom', horizontal: 'left', wrapText: true };
+                worksheet.getCell('K' + temp).font = {
+                    size: 10,
+                    name: 'Calibri',
+                };
+
+                worksheet.mergeCells('L' + temp);
+                worksheet.getCell('L' + temp).value = measurements[i].assaySlno2.ligandSlno2.locator;
+                worksheet.getCell('L' + temp).alignment = { vertical: 'bottom', horizontal: 'left', wrapText: true };
+                worksheet.getCell('L' + temp).font = {
+                    size: 10,
+                    name: 'Calibri',
+                };
+
+                worksheet.mergeCells('M' + temp);
+                worksheet.getCell('M' + temp).value = "journal";
+                worksheet.getCell('M' + temp).alignment = { vertical: 'bottom', horizontal: 'left', wrapText: true };
+                worksheet.getCell('M' + temp).font = {
+                    size: 10,
+                    name: 'Calibri',
+                };
+
+                worksheet.mergeCells('N' + temp);
+                worksheet.getCell('N' + temp).value = measurements[i].assaySlno2.ligandSlno2.tanNumber;
+                worksheet.getCell('N' + temp).alignment = { vertical: 'bottom', horizontal: 'left', wrapText: true };
+                worksheet.getCell('N' + temp).font = {
+                    size: 10,
+                    name: 'Calibri',
+                };
+
+                worksheet.mergeCells('O' + temp);
+                worksheet.getCell('O' + temp).value = measurements[i].assaySlno2.ligandSlno2.tanNumber;
+                worksheet.getCell('O' + temp).alignment = { vertical: 'bottom', horizontal: 'left', wrapText: true };
+                worksheet.getCell('O' + temp).font = {
+                    size: 10,
+                    name: 'Calibri',
+                };
+
+                worksheet.mergeCells('P' + temp);
+                worksheet.getCell('P' + temp).value = measurements[i].assaySlno2.ligandSlno2.collectionId;
+                worksheet.getCell('P' + temp).alignment = { vertical: 'bottom', horizontal: 'left', wrapText: true };
+                worksheet.getCell('P' + temp).font = {
+                    size: 10,
+                    name: 'Calibri',
+                };
+
+                worksheet.mergeCells('BH' + temp);
+                worksheet.getCell('BH' + temp).value = measurements[i].assaySlno2.ligandSlno2.diseaseName1;
+                worksheet.getCell('BH' + temp).alignment = { vertical: 'bottom', horizontal: 'left', wrapText: true };
+                worksheet.getCell('BH' + temp).font = {
+                    size: 10,
+                    name: 'Calibri',
+                };
+
+                worksheet.mergeCells('BI' + temp);
+                worksheet.getCell('BI' + temp).value = measurements[i].assaySlno2.ligandSlno2.diseaseName2;
+                worksheet.getCell('BI' + temp).alignment = { vertical: 'bottom', horizontal: 'left', wrapText: true };
+                worksheet.getCell('BI' + temp).font = {
+                    size: 10,
+                    name: 'Calibri',
+                };
+
+                worksheet.mergeCells('BJ' + temp);
+                worksheet.getCell('BJ' + temp).value = measurements[i].assaySlno2.ligandSlno2.diseaseName3;
+                worksheet.getCell('BJ' + temp).alignment = { vertical: 'bottom', horizontal: 'left', wrapText: true };
+                worksheet.getCell('BJ' + temp).font = {
+                    size: 10,
+                    name: 'Calibri',
+                };
+
+                worksheet.mergeCells('BK' + temp);
+                worksheet.getCell('BK' + temp).value = measurements[i].assaySlno2.ligandSlno2.target;
+                worksheet.getCell('BK' + temp).alignment = { vertical: 'bottom', horizontal: 'left', wrapText: true };
+                worksheet.getCell('BK' + temp).font = {
+                    size: 10,
+                    name: 'Calibri',
+                };
+
+                worksheet.mergeCells('BL' + temp);
+                worksheet.getCell('BL' + temp).value = measurements[i].assaySlno2.ligandSlno2.targetVersion;
+                worksheet.getCell('BL' + temp).alignment = { vertical: 'bottom', horizontal: 'left', wrapText: true };
+                worksheet.getCell('BL' + temp).font = {
+                    size: 10,
+                    name: 'Calibri',
+                };
+
+                worksheet.mergeCells('BM' + temp);
+                worksheet.getCell('BM' + temp).value = "embargoed";
+                worksheet.getCell('BM' + temp).alignment = { vertical: 'bottom', horizontal: 'left', wrapText: true };
+                worksheet.getCell('BM' + temp).font = {
+                    size: 10,
+                    name: 'Calibri',
+                };
+
+                worksheet.mergeCells('BN' + temp);
+                worksheet.getCell('BN' + temp).value = measurements[i].assaySlno2.ligandSlno2.collectionId1;
+                worksheet.getCell('BN' + temp).alignment = { vertical: 'bottom', horizontal: 'left', wrapText: true };
+                worksheet.getCell('BN' + temp).font = {
+                    size: 10,
+                    name: 'Calibri',
+                };
+
+                worksheet.mergeCells('BO' + temp);
+                worksheet.getCell('BO' + temp).value = measurements[i].assaySlno2.ligandSlno2.original;
+                worksheet.getCell('BO' + temp).alignment = { vertical: 'bottom', horizontal: 'left', wrapText: true };
+                worksheet.getCell('BO' + temp).font = {
+                    size: 10,
+                    name: 'Calibri',
+                };
+
+                worksheet.mergeCells('BP' + temp);
+                worksheet.getCell('BP' + temp).value = measurements[i].assaySlno2.ligandSlno2.acronym;
+                worksheet.getCell('BP' + temp).alignment = { vertical: 'bottom', horizontal: 'left', wrapText: true };
+                worksheet.getCell('BP' + temp).font = {
+                    size: 10,
+                    name: 'Calibri',
+                };
+
+                worksheet.mergeCells('BQ' + temp);
+                worksheet.getCell('BQ' + temp).value = measurements[i].assaySlno2.ligandSlno2.organism;
+                worksheet.getCell('BQ' + temp).alignment = { vertical: 'bottom', horizontal: 'left', wrapText: true };
+                worksheet.getCell('BQ' + temp).font = {
+                    size: 10,
+                    name: 'Calibri',
+                };
+
+                worksheet.mergeCells('BR' + temp);
+                worksheet.getCell('BR' + temp).value = measurements[i].assaySlno2.ligandSlno2.variant;
+                worksheet.getCell('BR' + temp).alignment = { vertical: 'bottom', horizontal: 'left', wrapText: true };
+                worksheet.getCell('BR' + temp).font = {
+                    size: 10,
+                    name: 'Calibri',
+                };
+
+
+    // -------------------------------------------Assay-------------------------------------
+
+                worksheet.mergeCells('Q' + temp);
+                worksheet.getCell('Q' + temp).value = i + 1;
+                worksheet.getCell('Q' + temp).alignment = { vertical: 'bottom', horizontal: 'left' };
+                worksheet.getCell('Q' + temp).font = {
+                    size: 10,
+                    name: 'Calibri',
+                };
+
+                worksheet.mergeCells('R' + temp);
+                worksheet.getCell('R' + temp).value = measurements[i].assaySlno2.ligandSlno2.tanNumber;
+                worksheet.getCell('R' + temp).alignment = { vertical: 'bottom', horizontal: 'left' };
+                worksheet.getCell('R' + temp).font = {
+                    size: 10,
+                    name: 'Calibri',
+                };
+
+                worksheet.mergeCells('S' + temp);
+                worksheet.getCell('S' + temp).value = measurements[i].assaySlno2.assayTypeSlno2.assayType;
+                worksheet.getCell('S' + temp).alignment = { vertical: 'bottom', horizontal: 'left' };
+                worksheet.getCell('S' + temp).font = {
+                    size: 10,
+                    name: 'Calibri',
+                };
+
+                worksheet.mergeCells('T' + temp);
+                worksheet.getCell('T' + temp).value = measurements[i].assaySlno2.toxiCitySlno2.toxiCity;
+                worksheet.getCell('T' + temp).alignment = { vertical: 'bottom', horizontal: 'left' };
+                worksheet.getCell('T' + temp).font = {
+                    size: 10,
+                    name: 'Calibri',
+                };
+
+                worksheet.mergeCells('U' + temp);
+                worksheet.getCell('U' + temp).value = measurements[i].assaySlno2.routeSlno2.route;
+                worksheet.getCell('U' + temp).alignment = { vertical: 'bottom', horizontal: 'left' };
+                worksheet.getCell('U' + temp).font = {
+                    size: 10,
+                    name: 'Calibri',
+                };
+
+                worksheet.mergeCells('V' + temp);
+                worksheet.getCell('V' + temp).value = measurements[i].assaySlno2.administration;
+                worksheet.getCell('V' + temp).alignment = { vertical: 'bottom', horizontal: 'left' };
+                worksheet.getCell('V' + temp).font = {
+                    size: 10,
+                    name: 'Calibri',
+                };
+
+                worksheet.mergeCells('W' + temp);
+                worksheet.getCell('W' + temp).value = measurements[i].assaySlno2.procedure;
+                worksheet.getCell('W' + temp).alignment = { vertical: 'bottom', horizontal: 'left' };
+                worksheet.getCell('W' + temp).font = {
+                    size: 10,
+                    name: 'Calibri',
+                };
+
+                worksheet.mergeCells('X' + temp);
+                worksheet.getCell('X' + temp).value = measurements[i].assaySlno2.target;
+                worksheet.getCell('X' + temp).alignment = { vertical: 'bottom', horizontal: 'left' };
+                worksheet.getCell('X' + temp).font = {
+                    size: 10,
+                    name: 'Calibri',
+                };
+
+                worksheet.mergeCells('Y' + temp);
+                worksheet.getCell('Y' + temp).value = measurements[i].assaySlno2.ligandSvalue;
+                worksheet.getCell('Y' + temp).alignment = { vertical: 'bottom', horizontal: 'left' };
+                worksheet.getCell('Y' + temp).font = {
+                    size: 10,
+                    name: 'Calibri',
+                };
+
+                worksheet.mergeCells('Z' + temp);
+                worksheet.getCell('Z' + temp).value = measurements[i].assaySlno2.unitSlno2.unit;
+                worksheet.getCell('Z' + temp).alignment = { vertical: 'bottom', horizontal: 'left' };
+                worksheet.getCell('Z' + temp).font = {
+                    size: 10,
+                    name: 'Calibri',
+                };
+
+                worksheet.mergeCells('AA' + temp);
+                worksheet.getCell('AA' + temp).value = measurements[i].assaySlno2.ligandHvalue;
+                worksheet.getCell('AA' + temp).alignment = { vertical: 'bottom', horizontal: 'left' };
+                worksheet.getCell('AA' + temp).font = {
+                    size: 10,
+                    name: 'Calibri',
+                };
+
+                worksheet.mergeCells('AB' + temp);
+                worksheet.getCell('AB' + temp).value = measurements[i].assaySlno2.ligandLvalue;
+                worksheet.getCell('AB' + temp).alignment = { vertical: 'bottom', horizontal: 'left' };
+                worksheet.getCell('AB' + temp).font = {
+                    size: 10,
+                    name: 'Calibri',
+                };
+
+                worksheet.mergeCells('AC' + temp);
+                worksheet.getCell('AC' + temp).value = measurements[i].assaySlno2.unitedSlno2.united;
+                worksheet.getCell('AC' + temp).alignment = { vertical: 'bottom', horizontal: 'left' };
+                worksheet.getCell('AC' + temp).font = {
+                    size: 10,
+                    name: 'Calibri',
+                };
+
+
+                worksheet.mergeCells('AD' + temp);
+                worksheet.getCell('AD' + temp).value = measurements[i].assaySlno2.conditionType;
+                worksheet.getCell('AD' + temp).alignment = { vertical: 'bottom', horizontal: 'left' };
+                worksheet.getCell('AD' + temp).font = {
+                    size: 10,
+                    name: 'Calibri',
+                };
+
+                worksheet.mergeCells('AE' + temp);
+                worksheet.getCell('AE' + temp).value = measurements[i].assaySlno2.conditionMaterial;
+                worksheet.getCell('AE' + temp).alignment = { vertical: 'bottom', horizontal: 'left' };
+                worksheet.getCell('AE' + temp).font = {
+                    size: 10,
+                    name: 'Calibri',
+                };
+
+                worksheet.mergeCells('AF' + temp);
+                worksheet.getCell('AF' + temp).value = measurements[i].assaySlno2.conditionMaterialid;
+                worksheet.getCell('AF' + temp).alignment = { vertical: 'bottom', horizontal: 'left' };
+                worksheet.getCell('AF' + temp).font = {
+                    size: 10,
+                    name: 'Calibri',
+                };
+
+                worksheet.mergeCells('AG' + temp);
+                worksheet.getCell('AG' + temp).value = measurements[i].assaySlno2.singleCondition;
+                worksheet.getCell('AG' + temp).alignment = { vertical: 'bottom', horizontal: 'left' };
+                worksheet.getCell('AG' + temp).font = {
+                    size: 10,
+                    name: 'Calibri',
+                };
+
+                worksheet.mergeCells('AH' + temp);
+                worksheet.getCell('AH' + temp).value = measurements[i].assaySlno2.singleUnit;
+                worksheet.getCell('AH' + temp).alignment = { vertical: 'bottom', horizontal: 'left' };
+                worksheet.getCell('AH' + temp).font = {
+                    size: 10,
+                    name: 'Calibri',
+                };
+
+                worksheet.mergeCells('AI' + temp);
+                worksheet.getCell('AI' + temp).value = measurements[i].assaySlno2.highCondition;
+                worksheet.getCell('AI' + temp).alignment = { vertical: 'bottom', horizontal: 'left' };
+                worksheet.getCell('AI' + temp).font = {
+                    size: 10,
+                    name: 'Calibri',
+                };
+
+                worksheet.mergeCells('AJ' + temp);
+                worksheet.getCell('AJ' + temp).value = measurements[i].assaySlno2.lowCondition;
+                worksheet.getCell('AJ' + temp).alignment = { vertical: 'bottom', horizontal: 'left' };
+                worksheet.getCell('AJ' + temp).font = {
+                    size: 10,
+                    name: 'Calibri',
+                };
+
+                worksheet.mergeCells('AK' + temp);
+                worksheet.getCell('AK' + temp).value = measurements[i].assaySlno2.highLowUnit;
+                worksheet.getCell('AK' + temp).alignment = { vertical: 'bottom', horizontal: 'left' };
+                worksheet.getCell('AK' + temp).font = {
+                    size: 10,
+                    name: 'Calibri',
+                };
+
+
+// --------------------------------------Measurement------------------------------
+
+            worksheet.mergeCells('AL' + temp);
+            worksheet.getCell('AL' + temp).value = measurements[i].dataLocator;
+            worksheet.getCell('AL' + temp).alignment = { vertical: 'bottom', horizontal: 'left' };
+            worksheet.getCell('AL' + temp).font = {
+                size: 10,
+                name: 'Calibri',
+            };
+
+            worksheet.mergeCells('AM' + temp);
+            worksheet.getCell('AM' + temp).value = measurements[i].categorySlno2.category;
+            worksheet.getCell('AM' + temp).alignment = { vertical: 'bottom', horizontal: 'left' };
+            worksheet.getCell('AM' + temp).font = {
+                size: 10,
+                name: 'Calibri',
+            };
+
+            worksheet.mergeCells('AN' + temp);
+            worksheet.getCell('AN' + temp).value = measurements[i].functionSlno2.function;
+            worksheet.getCell('AN' + temp).alignment = { vertical: 'bottom', horizontal: 'left' };
+            worksheet.getCell('AN' + temp).font = {
+                size: 10,
+                name: 'Calibri',
+            };
+
+            worksheet.mergeCells('AO' + temp);
+            worksheet.getCell('AO' + temp).value = measurements[i].parameter;
+            worksheet.getCell('AO' + temp).alignment = { vertical: 'bottom', horizontal: 'left' };
+            worksheet.getCell('AO' + temp).font = {
+                size: 10,
+                name: 'Calibri',
+            };
+
+            worksheet.mergeCells('AP' + temp);
+            worksheet.getCell('AP' + temp).value = measurements[i].parameterDetail;
+            worksheet.getCell('AP' + temp).alignment = { vertical: 'bottom', horizontal: 'left' };
+            worksheet.getCell('AP' + temp).font = {
+                size: 10,
+                name: 'Calibri',
+            };
+
+            worksheet.mergeCells('AQ' + temp);
+            worksheet.getCell('AQ' + temp).value = measurements[i].originalPrefixSlno2.originalPrefix;
+            worksheet.getCell('AQ' + temp).alignment = { vertical: 'bottom', horizontal: 'left' };
+            worksheet.getCell('AQ' + temp).font = {
+                size: 10,
+                name: 'Calibri',
+            };
+
+            worksheet.mergeCells('AR' + temp);
+            worksheet.getCell('AR' + temp).value = measurements[i].singleValue;
+            worksheet.getCell('AR' + temp).alignment = { vertical: 'bottom', horizontal: 'left' };
+            worksheet.getCell('AR' + temp).font = {
+                size: 10,
+                name: 'Calibri',
+            };
+
+            worksheet.mergeCells('AS' + temp);
+            worksheet.getCell('AS' + temp).value = measurements[i].unit;
+            worksheet.getCell('AS' + temp).alignment = { vertical: 'bottom', horizontal: 'left' };
+            worksheet.getCell('AS' + temp).font = {
+                size: 10,
+                name: 'Calibri',
+            };
+
+            worksheet.mergeCells('AT' + temp);
+            worksheet.getCell('AT' + temp).value = measurements[i].highEndValue;
+            worksheet.getCell('AT' + temp).alignment = { vertical: 'bottom', horizontal: 'left' };
+            worksheet.getCell('AT' + temp).font = {
+                size: 10,
+                name: 'Calibri',
+            };
+
+            worksheet.mergeCells('AU' + temp);
+            worksheet.getCell('AU' + temp).value = measurements[i].lowEndValue;
+            worksheet.getCell('AU' + temp).alignment = { vertical: 'bottom', horizontal: 'left' };
+            worksheet.getCell('AU' + temp).font = {
+                size: 10,
+                name: 'Calibri',
+            };
+
+            worksheet.mergeCells('AV' + temp);
+            worksheet.getCell('AV' + temp).value = measurements[i].units;
+            worksheet.getCell('AV' + temp).alignment = { vertical: 'bottom', horizontal: 'left' };
+            worksheet.getCell('AV' + temp).font = {
+                size: 10,
+                name: 'Calibri',
+            };
+
+            worksheet.mergeCells('AW' + temp);
+            worksheet.getCell('AW' + temp).value = measurements[i].nonNumeric;
+            worksheet.getCell('AW' + temp).alignment = { vertical: 'bottom', horizontal: 'left' };
+            worksheet.getCell('AW' + temp).font = {
+                size: 10,
+                name: 'Calibri',
+            };
+
+            worksheet.mergeCells('AX' + temp);
+            worksheet.getCell('AX' + temp).value = measurements[i].remark;
+            worksheet.getCell('AX' + temp).alignment = { vertical: 'bottom', horizontal: 'left', wrapText: true };
+            worksheet.getCell('AX' + temp).font = {
+                size: 10,
+                name: 'Calibri',
+            };
+
+            worksheet.mergeCells('AY' + temp);
+            worksheet.getCell('AY' + temp).value = measurements[i].typeSlno2.type;
+            worksheet.getCell('AY' + temp).alignment = { vertical: 'bottom', horizontal: 'left', wrapText: true };
+            worksheet.getCell('AY' + temp).font = {
+                size: 10,
+                name: 'Calibri',
+            };
+
+            worksheet.mergeCells('AZ' + temp);
+            worksheet.getCell('AZ' + temp).value = measurements[i].cell;
+            worksheet.getCell('AZ' + temp).alignment = { vertical: 'bottom', horizontal: 'left', wrapText: true };
+            worksheet.getCell('AZ' + temp).font = {
+                size: 10,
+                name: 'Calibri',
+            };
+
+            worksheet.mergeCells('BA' + temp);
+            worksheet.getCell('BA' + temp).value = measurements[i].cellDetail;
+            worksheet.getCell('BA' + temp).alignment = { vertical: 'bottom', horizontal: 'left', wrapText: true };
+            worksheet.getCell('BA' + temp).font = {
+                size: 10,
+                name: 'Calibri',
+            };
+
+            worksheet.mergeCells('BB' + temp);
+            worksheet.getCell('BB' + temp).value = measurements[i].organ;
+            worksheet.getCell('BB' + temp).alignment = { vertical: 'bottom', horizontal: 'left', wrapText: true };
+            worksheet.getCell('BB' + temp).font = {
+                size: 10,
+                name: 'Calibri',
+            };
+
+            worksheet.mergeCells('BC' + temp);
+            worksheet.getCell('BC' + temp).value = measurements[i].organDetail;
+            worksheet.getCell('BC' + temp).alignment = { vertical: 'bottom', horizontal: 'left', wrapText: true };
+            worksheet.getCell('BC' + temp).font = {
+                size: 10,
+                name: 'Calibri',
+            };
+
+            worksheet.mergeCells('BD' + temp);
+            worksheet.getCell('BD' + temp).value = measurements[i].species;
+            worksheet.getCell('BD' + temp).alignment = { vertical: 'bottom', horizontal: 'left', wrapText: true };
+            worksheet.getCell('BD' + temp).font = {
+                size: 10,
+                name: 'Calibri',
+            };
+
+            worksheet.mergeCells('BE' + temp);
+            worksheet.getCell('BE' + temp).value = measurements[i].speciesDetail;
+            worksheet.getCell('BE' + temp).alignment = { vertical: 'bottom', horizontal: 'left', wrapText: true };
+            worksheet.getCell('BE' + temp).font = {
+                size: 10,
+                name: 'Calibri',
+            };
+
+            worksheet.mergeCells('BF' + temp);
+            worksheet.getCell('BF' + temp).value = measurements[i].gender;
+            worksheet.getCell('BF' + temp).alignment = { vertical: 'bottom', horizontal: 'left', wrapText: true };
+            worksheet.getCell('BF' + temp).font = {
+                size: 10,
+                name: 'Calibri',
+            };
+
+            worksheet.mergeCells('BG' + temp);
+            worksheet.getCell('BG' + temp).value = measurements[i].ageGroup;
+            worksheet.getCell('BG' + temp).alignment = { vertical: 'bottom', horizontal: 'left', wrapText: true };
+            worksheet.getCell('BG' + temp).font = {
+                size: 10,
+                name: 'Calibri',
+            };
+        }
             return workbook.xlsx.write(response).then(function () {
                 response['status'](200).end();
             });
